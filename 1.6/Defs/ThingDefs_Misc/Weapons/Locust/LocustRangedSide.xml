@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWLocustBaseHumanMakeableGun">
+    <defName>Gun_GOW_Boltok</defName>
+    <label>Boltok Pistol</label>
+    <description>The Boltok is a high-caliber, double-action revolver with a 6-round capacity, a side swing chamber, and an enclosed hammer. It is heavy, slow to fire, and slow to reload, but does devastating damage on impact</description>
+    <techLevel>Industrial</techLevel>
+	<graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_BoltokPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>6500</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+	<weaponTags>
+	 <li>Locustsidearm</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Boltok</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <range>30.9</range>
+        <soundCast>Shot_GOW_Boltok</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Boltok</defName>
+    <label>boltok round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+	  <stoppingPower>1.5</stoppingPower>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWLocustBaseHumanMakeableGun">
+    <defName>Gun_GOW_Gorgon</defName>
+    <label>Gorgon SMG</label>
+    <description>Typically wielded by the Kantus Priesthood or Theron Guard, The Gorgon is a dual magazine sidearm with a deadly burst fire capabilities. It is known for its complicated internal systems, which make use of the guns own recoil to load rounds into the chamber.</description>
+    <techLevel>Industrial</techLevel>
+	<graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_GorgonSMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.35</drawSize>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>301</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>8500</WorkToMake>
+      <Mass>2.9</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.40</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+	<weaponTags>
+	 <li>LocustElitesidearm</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GOW_Gorgon</defaultProjectile>
+		<burstShotCount>8</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <warmupTime>0.5</warmupTime>
+        <range>21.9</range>
+        <soundCast>Shot_GOW_Gorgon</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GOW_Gorgon</defName>
+    <label>gorgon round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+	  <stoppingPower>0.5</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

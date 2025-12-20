@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_BeastriderHelm</defName>
+    <label>Beastrider Helmet</label>
+    <description>Tall helmets favored by the locusts mounted soldiers, they provide ample protection and keep vision clear.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>101</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>2</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <AnimalGatherSpeed>0.20</AnimalGatherSpeed>
+	 <AnimalGatherYield>0.10</AnimalGatherYield>
+	 <HuntingStealth>0.10</HuntingStealth>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>45</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustBeastrider</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+  
+</Defs>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWCogArmorMachineableBase">
+    <defName>Apparel_GOW_CoghelmA</defName>
+    <label>COG Combat Helmet</label>
+    <description>The standard issue helmets worn by the soldiers of the COG, used extensively during both the Pendulum Wars and the Locust War. Comes with a built in filtration system to allow operations in hostile terrain.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>101</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>65</Steel>
+	  <Plasteel>10</Plasteel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+		  	<drawData>
+                <dataSouth>
+                </dataSouth>
+                <dataWest>
+                </dataWest>
+                <dataEast>
+                </dataEast>
+                <dataNorth>
+                </dataNorth>
+            </drawData>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA</wornGraphicPath>
+	  <tags>
+        <li>COGGear</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+  
+</Defs>

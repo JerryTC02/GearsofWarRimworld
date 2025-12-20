@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerLocustPersonDrone</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Locust_Name_First] [Locust_Name_Last]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_Name_First->Names/Locust_Name_First</li>
+	   <li>Locust_Name_Last->Names/Locust_Name_First</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerLocustFaction</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Locust_Faction]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_Faction->Names/Locust_Faction</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerLocustLeader</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_leaderTitle->[Locust_Leader]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_Leader->Names/Locust_Leader</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerLocustReligion</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_ideoName->[Locust_Religion]</li>
+		<li>r_memberName->[Locust_Member]</li>
+		<li>r_ideoAdjective->[Locust_Ad]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_Religion->Names/Locust_Religion</li>
+	   <li>Locust_Member->Names/Locust_Member</li>
+	   <li>Locust_Ad->Names/Locust_Ad</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerLocustGod</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_deityName->The [Locust_God]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_God->Names/Locust_God</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>NamerCOGFaction</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[COG_Faction]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>COG_Faction->Names/COG_Faction</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

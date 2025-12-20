@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWCogBaseHumanMakeableGun">
+    <defName>Gun_GOW_MK2Lancer</defName>
+    <label>MK2 Lancer Assault Rifle</label>
+    <description>The MK2 Lancer Assault Rifle was a direct upgrade to its predecessor, armed with an inbuilt chainsaw, increased accuracy, lower recoil, and magazine capacity. Designed by Professor Adam Jonathon Fenix during the first year of the Locust War, the second-generation Lancer soon became the standard weapon of the COG.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWcog/Weapons/GOW_Mark2LancerAssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_CogWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>47500</WorkToMake>
+      <Mass>5</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+	 <li>COGlancer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MK2Lancer</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>28.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_GOW_MK2Lancer</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>chainsaw</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+		<soundMeleeHit>Shot_GOW_LancerHit</soundMeleeHit>
+        <soundMeleeMiss>Shot_GOW_LancerMiss</soundMeleeMiss>
+	    <extraMeleeDamages>
+          <li>
+            <def>Cut</def>
+            <amount>3</amount>
+            <chance>1</chance>
+          </li>
+		  <li>
+            <def>Cut</def>
+            <amount>3</amount>
+            <chance>1</chance>
+          </li>
+		  <li>
+            <def>Cut</def>
+            <amount>3</amount>
+            <chance>1</chance>
+          </li>
+		  <li>
+            <def>Cut</def>
+            <amount>3</amount>
+            <chance>1</chance>
+          </li>
+        </extraMeleeDamages>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MK2Lancer</defName>
+    <label>lancer mk2 bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+  
+  <!--ThingDef ParentName="RWCogBaseHumanMakeableGun">
+    <defName>Gun_GOW_RetroLancer</defName>
+    <label>MK1 Lancer Assault Rifle</label>
+    <description>The Mk I Lancer was once the standard infantry assault weapon for COG forces during the later decades of the Pendulum Wars, undergoing very little change due to its reliability. Once renowned for its ability to strike fear into UIR forces, the MK1 was phased out early into the Locust Wars in favor of its chainsaw bearing successor.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWcog/Weapons/GOW_Mark1LancerAssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_CogWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>40500</WorkToMake>
+      <Mass>4.7</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+	 <li>COGRetrolancer</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MK2Lancer</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>28.9</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Bullet_MK1Lancer</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>bayonet</label>
+        <capacities>
+          <li>Stab</li>
+          <li>edge</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef-->
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MK1Lancer</defName>
+    <label>lancer mk1 bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWCogBaseHumanMakeableGun">
+    <defName>Gun_GOW_Longshot</defName>
+    <label>Longshot Sniper Rifle</label>
+    <description>The "Longshot" is a high-caliber, single-shot, bolt-action sniper rifle, created by the COG during the Pendulum Wars. Highly accurate and extremely deadly, the Longshot specialized in crippling or outright killing threats before they can reach the user.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWcog/Weapons/GOW_LongshotSniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+	<equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_CogWeapons</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>6.5</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>95</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+	 <li>COGLongshot</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Longshot</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>48.9</range>
+        <soundCast>Shot_GOW_Longshot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Longshot</defName>
+    <label>longshot round</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWCogBaseHumanMakeableGun">
+    <defName>Gun_GOW_Gnasher</defName>
+    <label>Gnasher Shotgun</label>
+    <description>A short-barrel lever-action shotgun commonly deployed by the COG. Relatively simple and easy to aim, making it exceptionally useful for close quarters combat.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWcog/Weapons/GOW_GnasherShotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>25500</WorkToMake>
+      <Mass>5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+	 <li>COGGnasher</li>
+    </weaponTags>
+    <verbs>
+	  <li Class="Shotgunz.Verb_Properties_Shotgunz">
+        <verbClass>Shotgunz.Verb_Shoot_Shotgunz</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Gnasher</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>23.9</range>
+        <soundCast>Shot_GOW_Gnasher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+	    <pellets>9</pellets>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Gnasher</defName>
+    <label>shotgun blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <stoppingPower>1.4</stoppingPower>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

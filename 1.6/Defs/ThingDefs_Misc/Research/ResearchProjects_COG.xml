@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+   <ResearchProjectDef>
+	 <defName>GOW_Cogbasic</defName>
+	 <label>Octus Canon Study</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>A deep study of the founding beliefs of the Coalition of Order Governments.</description>
+	 <baseCost>1500</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>Machining</li>
+	 </prerequisites>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
+	 <defName>GOW_Cogmillitary</defName>
+	 <label>Fortification Act</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>A study on the technological and political structure of the C.O.G millitary, allowing production of baseline Coalition equipment.</description>
+	 <baseCost>1000</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_Cogbasic</li>
+	  <li>FlakArmor</li>
+	  <li>GasOperation</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <!--ResearchProjectDef>
+	 <defName>GOW_CogArmor</defName>
+	 <label>Specialized Armor</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>Information and schematics on the multitude of variants and advancements on the traditional COG Trooper armor.</description>
+	 <baseCost>1250</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_Cogmillitary</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+   </ResearchProjectDef-->
+   
+   <ResearchProjectDef>
+	 <defName>GOW_CogWeapons</defName>
+	 <label>Coalition Armaments</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>Design specs on the munitions and weaponry of the Coalition, allowing production of baseline Coalition firearms.</description>
+	 <baseCost>1250</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_Cogmillitary</li>
+	  <li>PrecisionRifling</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+   </ResearchProjectDef>
+
+</Defs>

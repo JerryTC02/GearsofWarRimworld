@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ScenarioDef ParentName="ScenarioBase">
+        <defName>JTC_COG</defName>
+        <label>Lost Squad</label>
+        <description>Your team was sent to scout out the local area, and managed to lose contact with your higher ups after being ambushed by the Grubs. HQ has already written you off as MIA, so you'll be on your own forawhile.</description>
+        <scenario>
+            <summary>A squadron of lost gears, in a typical rimworld situation</summary>
+            <playerFaction>
+             <def>PlayerFaction</def>
+             <factionDef>PlayerColony</factionDef>
+            </playerFaction>
+            <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>8</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+				<li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GOW_Cogbasic</project>
+			    </li>
+                <!-- Items -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <count>20</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>ComponentIndustrial</thingDef>
+                    <count>20</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>42</count>
+                </li>
+				<!-- Apparel -->
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_GOW_Cogsoldier</thingDef>
+                    <count>3</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_GOW_CoghelmA</thingDef>
+                    <count>2</count>
+                </li>
+				<!-- Weapon -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gun_GOW_MK2Lancer</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gun_GOW_SnubPistol</thingDef>
+                    <count>2</count>
+                </li>
+				<!-- Scattered -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>200</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>200</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>5</count>
+                </li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Steel</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>225</count>
+                </li>
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>Typical mission turned into a nightmare, so a fairly average day for a Gear. your squad plans to hunker down here to rest, you'll want to decide if you plan to re-establish contact with the C.O.G, or try and make the best of your MIA status to make a new life for yourself out here on the rim.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+  
+</Defs>

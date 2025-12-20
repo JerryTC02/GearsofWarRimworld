@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ 
+  <ThingDef ParentName="RWLocustBaseHumanMakeableGun">
+    <defName>Gun_GOW_Boomshot</defName>
+    <label>Boomshot</label>
+    <description>A simple pump action grenade launcher made for Boomers, Woefully inaccurate due to its poorly made ironsights. The Boomshots design is theorized to have originated from the UIR Booshka Grenade launcher.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_BoomshotGrenadeLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.15</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustboomers</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>77500</WorkToMake>
+      <Mass>7.5</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.30</AccuracyShort>
+      <AccuracyMedium>0.20</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>125</Steel>
+      <ComponentIndustrial>11</ComponentIndustrial>
+	  <Chemfuel>125</Chemfuel>
+    </costList>
+    <weaponTags>
+	 <li>LocustBoomshot</li>
+    </weaponTags>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.25</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Boomshot</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>24.9</range>
+        <soundCast>Shot_GOW_Boomshot</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<forcedMissRadius>3.9</forcedMissRadius>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.1</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Boomshot</defName>
+    <label>Boomshot Grenade</label>
+	<thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>2</explosionRadius >
+      <damageDef>Bomb</damageDef>
+	  <damageAmountBase>20</damageAmountBase>
+      <speed>30</speed>
+    </projectile>
+	<comps>
+     <li Class="ProjectileEffecterGeneric.CompProperties_ProjectileEffecterGeneric">
+      <effecterDef>Smoke_GOW_Ozz</effecterDef>
+     </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GOW_Ozz</defName>
+    <thingClass>MoteThrown</thingClass>
+    <graphicData>
+      <texPath>Things/Mote/Smoke</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <solidTime>0.75</solidTime>
+      <fadeOutTime>0.7</fadeOutTime>
+      <growthRate>0.47</growthRate>
+      <acceleration>(0,0,0.0014)</acceleration>
+    </mote>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>Smoke_GOW_Ozz</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <moteDef>Mote_GOW_Ozz</moteDef>
+        <ticksBetweenMotes>1</ticksBetweenMotes>
+        <scale>0.40~0.50</scale>
+        <absoluteAngle>true</absoluteAngle>
+        <angle>30~70</angle>
+        <speed>0.18~0.3</speed>
+        <color>(0,0,0,1)</color>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

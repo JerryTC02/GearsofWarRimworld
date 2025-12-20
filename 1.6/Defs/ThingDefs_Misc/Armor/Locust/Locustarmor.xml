@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_Drone</defName>
+    <label>Drone Armor</label>
+    <description>The most common, identifiable and ubiquitous armor made by the Locust Horde. These armor pieces are made primarily out of leather rather than composite materials, resulting in most users modifying it to suit the situation.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>1</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_Drone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>24500</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>7</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>0.10</MoveSpeed>
+	  <MiningSpeed>0.10</MiningSpeed>
+	  <DeepDrillingSpeed>0.10</DeepDrillingSpeed>
+	  <SmoothingSpeed>0.10</SmoothingSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>50</Leather_Patch>
+	  <Steel>40</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>Locustdrone</li>
+      </tags>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_Drone</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<ResearchTabDef>
+		<defName>GOW_Cog</defName>
+		<label>COG</label>
+	</ResearchTabDef>
+	
+	<ResearchTabDef>
+		<defName>GOW_Locust</defName>
+		<label>Locust</label>
+	</ResearchTabDef>
+
+</Defs>

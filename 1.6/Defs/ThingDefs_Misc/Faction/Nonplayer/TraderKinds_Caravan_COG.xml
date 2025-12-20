@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <TraderKindDef>
+    <defName>Caravan_COG_CombatSupplier</defName>
+    <label>COG Supply Convoy</label>
+    <stockGenerators>
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>750~1200</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>10~20</countRange>
+      </li>
+      <!-- Drugs -->
+      <!-- none -->
+      <!-- Techprints -->
+      <li Class="StockGenerator_Techprints">
+        <countChances>
+          <li>
+            <count>1</count>
+            <chance>1</chance>
+          </li>
+        </countChances>
+      </li>
+      <!-- Books -->
+      <!-- none -->
+      <!-- Weapons -->
+	  <li Class="StockGenerator_MarketValue">
+        <tradeTag>CogRanged</tradeTag>
+        <countRange>3~6</countRange>
+      </li>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>MortarShell</tradeTag>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>5~15</countRange>
+        <excludedThingDefs>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">Shell_Deadlife</li>
+        </excludedThingDefs>
+      </li>
+      <!-- Apparel -->
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>CogArmor</tradeTag>
+        <countRange>2~5</countRange>
+      </li>
+      <!-- Implants -->
+      <!-- none -->
+      <!-- Buildings -->
+      <!-- none -->
+      <!-- Exotic -->
+      <!-- none -->
+      <!-- Genepacks -->
+      <li MayRequire="Ludeon.RimWorld.Biotech" Class="StockGenerator_SingleDef">
+        <thingDef>Genepack</thingDef>
+        <countRange>1~1</countRange>
+      </li>
+      <!-- Slaves -->
+      <!-- none -->
+      <!-- Animals -->
+      <!-- none -->
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>HoraxWeapon</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

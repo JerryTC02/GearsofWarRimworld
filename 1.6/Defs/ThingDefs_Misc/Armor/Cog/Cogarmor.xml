@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="RWCogArmorMachineableBase">
+    <defName>Apparel_GOW_Cogsoldier</defName>
+    <label>COG Trooper Armor</label>
+    <description>The most common armor in the COG army, Trooper armor is capable of protecting against small arms fire whilst providing some resistance to hostile enviroments.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>1</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>32500</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>12</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>15</Insulation_Cold>
+      <Insulation_Heat>5</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>140</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGGear</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <!--ThingDef ParentName="RWCogArmorMachineableBase">
+    <defName>Apparel_GOW_Cogsoldier</defName>
+    <label>COG Cadet Armor</label>
+    <description>A stripped down version of Trooper armor worn by Gears in training, Cadet armor is noticeably lighter and easier to mass produce.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>2</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>32500</WorkToMake>
+      <MaxHitPoints>225</MaxHitPoints>
+      <Mass>9</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>13</Insulation_Cold>
+      <Insulation_Heat>8</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>115</Steel>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGCadetGear</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+
+</Defs>

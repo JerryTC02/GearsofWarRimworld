@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+ 
+  <ThingDef ParentName="RWLocustBaseHumanMakeableGun">
+    <defName>Gun_GOW_Hammerburst</defName>
+    <label>Hammerburst Assault Rifle</label>
+    <description>The standard-issue Locust assault rifle early in the Locust War, the Hammerburst is known for its deadly 6 round burst fire. Despite its effectiveness in medium range combat, the hammerburst is overall disliked due to its lack of CQC options, alongside not quite being accurate enough for long range engagement.</description>
+	<techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_HammerburstAssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>200</displayPriority>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>47500</WorkToMake>
+      <Mass>4.5</Mass>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>9</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+	 <li>LocustHammerburst</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Hammerburst</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>25.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>Shot_GOW_MK2Hammerburst</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Hammerburst</defName>
+    <label>hammerburst bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseLocustMakeableGrenade">
+    <defName>Weapon_GOW_LocustFrag</defName>
+    <label>Locust Bolo-Frag</label>
+    <description>A small explosive tied to the end of a long chain, capable of reaching further distances then standard grenades. This Bolo is of locust manufacture.</description>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_FragGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.1</drawSize>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1.5</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>20000</WorkToMake>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Chemfuel>85</Chemfuel>
+    </costList>
+    <weaponTags>
+      <li>LocustGrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <verbs>
+      <li>
+        <label>throw bolo-frag</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>21.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>2.1</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>Shot_GOW_Bolo</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_GOW_LocustGrenadeFrag</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1.66</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_GOW_LocustGrenadeFrag</defName>
+	<label>bolo-frag</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/RWlocust/Weapons/GOW_FragGrenade_Thrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.9</explosionRadius >
+      <damageDef>Bomb</damageDef>
+      <explosionDelay>75</explosionDelay>
+	  <spinRate>2</spinRate>
+    </projectile>
+  </ThingDef>
+
+</Defs>

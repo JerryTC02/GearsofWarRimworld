@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <HeadTypeDef Name="LocustDroneBase" Abstract="True">
+    <randomChosen>True</randomChosen>
+    <requiredGenes>
+      <li>GOW_LocustDrone</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+  <HeadTypeDef Name="LocustBoomerBase" Abstract="True">
+    <randomChosen>True</randomChosen>
+    <requiredGenes>
+      <li>GOW_LocustBoomer</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="LocustDroneBase">
+    <defName>Male_Locust_Drone</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Drone/Male_Average_GOWdrone</graphicPath>
+    <gender>Male</gender>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="LocustBoomerBase">
+    <defName>Male_Locust_Boomer</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Boomer/Male_Average_GOWboomer</graphicPath>
+    <gender>Male</gender>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+
+</Defs>

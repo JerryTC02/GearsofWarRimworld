@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+ <Operation Class="PatchOperationAdd">
+  <xpath>Defs/ScenarioDef[defName="JTC_LocustBasic"]/scenario/parts</xpath>
+  <value>
+        <li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
+            <factionDef>LocustRoughFaction</factionDef>
+            <affectStartingGoodwill>True</affectStartingGoodwill>
+            <startingGoodwillRange>20~25</startingGoodwillRange>
+            <affectNaturalGoodwill>True</affectNaturalGoodwill>
+            <naturalGoodwillRange>0~5</naturalGoodwillRange>
+            <def>VFEC_ForcedFactionGoodwill</def>
+        </li>
+  </value>
+ </Operation>
+
+</Patch>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+ <!-- if its commented like this? IT ISNT READY SO DONT GO TOUCHING IT -->
+
+  <FurDef>
+    <defName>GOW_LocustDrone</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
+      <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
+	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
+	  <Fat>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Fat>
+      <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
+	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+  <FurDef>
+    <defName>GOW_LocustBoomer</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
+      <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
+	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
+	  <Fat>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Fat>
+      <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
+	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
+      <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
+    </bodyTypeGraphicPaths>
+  </FurDef>
+
+  <GeneCategoryDef>
+    <defName>LOCUST</defName>
+    <label>LOCUST</label>
+    <displayPriorityInXenotype>100000</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  
+  <GeneDef Name="LocustGenes" Abstract="True">
+    <displayCategory>LOCUST</displayCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="LocustGenes">
+    <defName>GOW_LocustDrone</defName>
+    <label>Drone Caste</label>
+    <description>Drones are the rank and file of the Locust Horde, handling the majority of its tasks and defense. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>5</biostatCpx>
+    <fur>GOW_LocustDrone</fur>
+	<forcedHeadTypes>
+      <li>Male_Locust_Drone</li>
+    </forcedHeadTypes>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statFactors>
+      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
+	  <SM_BodySizeMultiplier>1.10</SM_BodySizeMultiplier>
+	  <IncomingDamageFactor>0.90</IncomingDamageFactor>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.20</Flame>
+    </damageFactors>
+    <statOffsets>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+    </statOffsets>
+    <skinIsHairColor>false</skinIsHairColor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  
+  <GeneDef ParentName="LocustGenes">
+    <defName>GOW_LocustBoomer</defName>
+    <label>Boomer Caste</label>
+    <description>Boomers are the dumb muscle of the Locust Horde, dealing with heavy lifting and menial tasks. Boomer hides are thicker then the standard Locust hide.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Boomer</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatMet>-1</biostatMet>
+    <biostatCpx>5</biostatCpx>
+    <fur>GOW_LocustDrone</fur>
+	<forcedHeadTypes>
+      <li>Male_Locust_Boomer</li>
+    </forcedHeadTypes>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statFactors>
+      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.15</CertaintyLossFactor>
+	  <SM_BodySizeMultiplier>1.40</SM_BodySizeMultiplier>
+	  <IncomingDamageFactor>0.80</IncomingDamageFactor>
+    </statFactors>
+    <damageFactors>
+      <Flame>1.10</Flame>
+    </damageFactors>
+    <statOffsets>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+    </statOffsets>
+    <skinIsHairColor>false</skinIsHairColor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  
+  <!--GeneDef ParentName="LocustGenes">
+    <defName>GOW_LocustKantus</defName>
+    <label>Kantus Caste</label>
+    <description>Kantus are the Leaders of the Locust Horde, orchestrating and adminstering the Queens Will. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+    <fur>GOW_LocustDrone</fur>
+	<forcedHeadTypes>
+      <li>Male_Locust_Drone</li>
+    </forcedHeadTypes>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+	<abilities>
+      <li>Locust_AnimalWarcall</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>AnimalWarcall</AbilityDef>
+    </descriptionHyperlinks>
+    <statFactors>
+      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
+	  <SM_BodySizeMultiplier>1.20</SM_BodySizeMultiplier>
+	  <IncomingDamageFactor>0.90</IncomingDamageFactor>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.20</Flame>
+    </damageFactors>
+    <statOffsets>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+    </statOffsets>
+    <skinIsHairColor>false</skinIsHairColor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef-->
+  
+  <!--GeneDef ParentName="LocustGenes">
+    <defName>GOW_LocustBerserker</defName>
+    <label>Berserker Caste</label>
+    <description>Berserkers are the unhinged females of the Locust, incapable of most higher thoughts except rage and hatred.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+    <fur>GOW_LocustDrone</fur>
+	<forcedHeadTypes>
+      <li>Male_Locust_Drone</li>
+    </forcedHeadTypes>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+    <statFactors>
+      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
+	  <SM_BodySizeMultiplier>1.75</SM_BodySizeMultiplier>
+	  <IncomingDamageFactor>0.75</IncomingDamageFactor>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.10</Flame>
+    </damageFactors>
+    <statOffsets>
+      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+    </statOffsets>
+    <skinIsHairColor>false</skinIsHairColor>
+    <renderNodeProperties Inherit="False">
+      <li>
+        <parentTagDef>Body</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Skin</colorType>
+      </li>
+    </renderNodeProperties>
+  </GeneDef-->
+
+  <GeneDef ParentName="LocustGenes">
+    <defName>GOW_LocustMental</defName>
+    <label>Locust Mentality</label>
+    <labelShortAdj>Locust Mentality</labelShortAdj>
+    <description>Locust are uniquely xenophobic, stemming from Queen Myrrahs extreme Anti-COG and Anti-Human propaganda. Locust also possess an incredibly low level of empathy, and tend not to care about things such as death or cannibalism.</description>
+    <iconPath>UI/Icons/LocustGene</iconPath>
+    <missingGeneRomanceChanceFactor>0.1</missingGeneRomanceChanceFactor>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+	<biostatCpx>5</biostatCpx>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Locust_pale</defName>
+    <label>pale skin</label>
+    <labelShortAdj>pale</labelShortAdj>
+    <description>Carriers of this gene have pale skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(158, 137, 125)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Locust_palee</defName>
+    <label>pale skin</label>
+    <labelShortAdj>pale</labelShortAdj>
+    <description>Carriers of this gene have pale skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(165, 144, 135)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Locust_paleee</defName>
+    <label>pale skin</label>
+    <labelShortAdj>pale</labelShortAdj>
+    <description>Carriers of this gene have pale skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(206, 177, 146)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Locust_paleeee</defName>
+    <label>pale skin</label>
+    <labelShortAdj>pale</labelShortAdj>
+    <description>Carriers of this gene have pale skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(194, 172, 166)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <ThoughtDef>
+    <defName>GOW_LocustMentalThought</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>CVNGeneUtils.ThoughtWorker_Gene</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Locust</label>
+		<description>Locust swarm together, locust work together, locust win together.</description>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+	  	<li>
+			<label>Not Locust</label>
+			<description>Will kill this one, someday.</description>
+			<baseOpinionOffset>-50</baseOpinionOffset>
+		</li>
+    </stages>
+    <modExtensions>
+     <li Class="CVNGeneUtils.ThoughtExtension_GeneOpinion">
+      <geneDefs>
+      <li>GOW_LocustMental</li>
+      </geneDefs>
+      <state>0</state>
+	  <isGiveThoughtToPawnNotMatching>True</isGiveThoughtToPawnNotMatching>
+	  <stateNotMatch>1</stateNotMatch>
+     </li>
+    </modExtensions>
+  </ThoughtDef>
+
+  <XenotypeDef>
+    <defName>Locust_Drone</defName>
+    <label>Drone</label>
+    <description>Drones, often referred to as Grubs, are the foot soldiers of the Locust Horde. Completely loyal to their Queen and aggressive to outsiders, Drones are willing to toss their lives away to kill a single foe.</description>
+    <descriptionShort>Drones are the foot soldiers of the Locust Horde, loyal and highly aggressive to outsiders.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>GOW_LocustDrone</li>
+	  <li>GOW_LocustMental</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>AptitudeStrong_Mining</li>
+	  <li>AptitudeStrong_Melee</li>
+	  <li>AptitudePoor_Intellectual</li>
+	  <li>AptitudePoor_Social</li>
+	  <li>AptitudePoor_Medicine</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>Mood_Optimist</li>
+	  <li>Body_Standard</li>
+	  <li>Skin_Locust_pale</li>
+	  <li>Skin_Locust_palee</li>
+	  <li>Skin_Locust_paleee</li>
+	  <li>Skin_Locust_paleeee</li>
+    </genes>
+  </XenotypeDef>
+  
+  <XenotypeDef>
+    <defName>Locust_Boomer</defName>
+    <label>Boomer</label>
+    <description>Boomers are a large, brutish, and vastly less intelligent then the standard Drone. being Incredibly bulky but dimwitted leads to them mostly dealing with more menial tasks such as butchery, hauling, and mining.</description>
+    <descriptionShort>Boomers are a large, brutish, and vastly less intelligent caste of Locust.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/GOW_Boomer</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>GOW_LocustBoomer</li>
+	  <li>GOW_LocustMental</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>AptitudeStrong_Cooking</li>
+	  <li>AptitudeStrong_Mining</li>
+	  <li>AptitudeStrong_Melee</li>
+	  <li>AptitudeTerrible_Intellectual</li>
+	  <li>AptitudeTerrible_Social</li>
+	  <li>AptitudePoor_Medicine</li>
+	  <li>AptitudePoor_Crafting</li>
+	  <li>MeleeDamage_Strong</li>
+	  <li>Unstoppable</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>Mood_Optimist</li>
+	  <li>Body_Standard</li>
+	  <li>Skin_Locust_pale</li>
+	  <li>Skin_Locust_palee</li>
+	  <li>Skin_Locust_paleee</li>
+	  <li>Skin_Locust_paleeee</li>
+    </genes>
+  </XenotypeDef>
+  
+  <!--XenotypeDef>
+    <defName>Locust_Kantus</defName>
+    <label>Kantus</label>
+    <description>WIP.</description>
+    <descriptionShort>Kantus are the Priests and Leaders of the Locust Horde, possessing the ability to heal and inspire the Horde.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>GOW_LocustKantus</li>
+	  <li>GOW_LocustMental</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>AptitudeStrong_Intellectual</li>
+	  <li>AptitudeStrong_Social</li>
+	  <li>AptitudeStrong_Animals</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>Body_Standard</li>
+	  <li>Skin_Locust_pale</li>
+	  <li>Skin_Locust_palee</li>
+	  <li>Skin_Locust_paleee</li>
+	  <li>Skin_Locust_paleeee</li>
+    </genes>
+  </XenotypeDef>
+  
+  <AbilityDef>
+    <defName>Locust_AnimalWarcall</defName>
+    <label>kantus war chant</label>
+    <description>WIP.</description>
+    <iconPath>UI/Abilities/AnimalWarcall</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+    <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <groupAbility>true</groupAbility>
+    <statBases>
+      <Ability_Duration>500</Ability_Duration>
+    </statBases>
+    <charges>2</charges>
+    <cooldownPerCharge>true</cooldownPerCharge>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <label>warcall</label>
+      <warmupTime>2</warmupTime>
+      <range>49.9</range>
+      <drawAimPie>true</drawAimPie>      
+      <requireLineOfSight>false</requireLineOfSight>
+      <warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+      <mouseTargetingText>Choose an animal to call</mouseTargetingText>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetEntities>False</canTargetEntities>
+        <canTargetSubhumans>False</canTargetSubhumans>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveMentalState">
+        <compClass>CompAbilityEffect_GiveMentalState</compClass>
+        <stateDef>BerserkWarcall</stateDef>
+        <goodwillImpact>-75</goodwillImpact>
+        <casterEffect>AnimalWarcall_Cast</casterEffect>
+        <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
+        <excludeNPCFactions>true</excludeNPCFactions>
+      </li>
+    </comps>
+  </AbilityDef-->
+
+</Defs>

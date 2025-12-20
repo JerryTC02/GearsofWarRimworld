@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ScenarioDef ParentName="ScenarioBase">
+        <defName>JTC_LocustBasic</defName>
+        <label>Rockworm Hunt</label>
+        <description>Hunting in the hollow has many dangers, and today? You've experienced many of them. The Kantus summoned the prey, but his control over them was weak, they soon overwhelmed your party and you were forced to scatter. you, a fellow drone, and the teams butcher plan to emerge nearby to avoid further angering the Hollows beasts.</description>
+        <scenario>
+            <summary>A hunting trip gone wrong, leaving 3 locust stranded outside.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>PlayerColonyLocust</factionDef>
+            </playerFaction>
+            <parts>
+            <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+             <def>ConfigurePawnsXenotypes</def>
+             <pawnChoiceCount>0</pawnChoiceCount>
+             <overrideKinds>
+              <li>
+               <xenotype>Locust_Drone</xenotype>
+               <pawnKind>GOW_Locust_Colonist</pawnKind>
+              </li>
+             </overrideKinds>
+			        <xenotypeCounts>
+                        <li>
+                            <xenotype>Locust_Drone</xenotype>
+                            <count>2</count>
+                        </li>
+						<li>
+                            <xenotype>Locust_Boomer</xenotype>
+                            <count>1</count>
+                        </li>
+                    </xenotypeCounts>
+             </li>
+         <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+				<li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GOW_Locustbasic</project>
+			    </li>
+                <!-- Items -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineHerbal</thingDef>
+                    <count>15</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <count>5</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>ComponentIndustrial</thingDef>
+                    <count>18</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>30</count>
+                </li>
+				<!-- Apparel -->
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_GOW_Drone</thingDef>
+                    <count>2</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_GOW_BeastriderHelm</thingDef>
+                    <count>1</count>
+                </li>
+				<!-- Weapon -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gun_GOW_Hammerburst</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Gun_GOW_Boltok</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_Gladius</thingDef>
+                    <count>1</count>
+					<stuff>Steel</stuff>
+                </li>
+				<!-- Scattered -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>250</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>275</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>5</count>
+                </li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Steel</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>250</count>
+                </li>
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>The light of the sun is unpleasant, but the roars of beasts drive you forward unto the surface. You feel uneasy, you cannot tell why but your link to the Queen feels, weak, you begin to wonder if returning is worth it, a very new thought to you but one that will not please the Horde should you choose to follow it.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+	
+	<FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerColonyLocust</defName>
+    <label>Locust Colony</label>
+    <description>A colony of Locusts.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>GOW_Locust_Colonist</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+	<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Locust_Drone>5</Locust_Drone>
+		<Locust_Boomer>2</Locust_Boomer>
+      </xenotypeChances>
+    </xenotypeSet>
+    <techLevel>Industrial</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>LocustCul</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+		        <li>LocustLarva</li>
+		        <li>LocustDrone</li>
+		        <li>LocustCyclops</li>
+	            <li>LocustBeastrider</li>
+                <li>LocustBolter</li>
+				<li>LocustBoomer</li>
+                <li>LocustButcher</li>
+				<li>LocustKantus</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>UI/Icons/LocustFaction</factionIconPath>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Leather_Patch</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+	
+  <PawnKindDef>
+    <defName>GOW_Locust_Colonist</defName>
+    <label>Colonist</label>
+	<defaultFactionType>PlayerColonyLocust</defaultFactionType>
+    <race>Human</race>
+	<nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>30</combatPower>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <backstoryFilters>
+      <li>
+        <categories>
+		        <li>LocustLarva</li>
+		        <li>LocustDrone</li>
+		        <li>LocustCyclops</li>
+	            <li>LocustBeastrider</li>
+                <li>LocustBolter</li>
+				<li>LocustBoomer</li>
+                <li>LocustButcher</li>
+				<li>LocustKantus</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <minGenerationAge>20</minGenerationAge>
+    <maxGenerationAge>40</maxGenerationAge>
+    <initialWillRange>8~10</initialWillRange>
+    <initialResistanceRange>18~25</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<disallowedTraits>
+	  <li>Nudist</li>
+    </disallowedTraits>
+	<apparelMoney>200~300</apparelMoney>
+    <apparelTags>
+		<li>IndustrialBasic</li>
+    </apparelTags>
+	<xenotypeSet>
+      <xenotypeChances>
+        <Locust_Drone>5</Locust_Drone>
+		<Locust_Boomer>2</Locust_Boomer>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+</Defs>

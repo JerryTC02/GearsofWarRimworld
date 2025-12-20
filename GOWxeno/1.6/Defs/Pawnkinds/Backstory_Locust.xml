@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <BackstoryDef>
+    <defName>GOW_LocustLarva</defName>
+    <identifier>Locust Larva</identifier>
+    <slot>Childhood</slot> 
+    <title>Larva</title>
+    <titleShort>Larva</titleShort>
+    <description>[PAWN_nameDef] was born in a dark cave somewhere in the Hollow.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustLarva</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Drone</defName>
+    <identifier>Drone</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+      <Mining>1</Mining>
+	  <Construction>1</Construction>
+      <Plants>1</Plants>
+	  <Social>-2</Social>
+    </skillGains>
+    <title>Drone</title>
+    <titleShort>Drone</titleShort>
+    <description>[PAWN_nameDef] grew into a simple Drone, [PAWN_pronoun] is the backbone of the Nexus, and a loyal servant of the Queen.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustDrone</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Cyclops</defName>
+    <identifier>Cyclops</identifier>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>3</Melee>
+	  <Social>-1</Social>
+    </skillGains>
+    <title>Cyclops</title>
+    <titleShort>Cyclops</titleShort>
+    <description>An elite class of drone, [PAWN_nameDef] serves as the shocktrooper of the Locust Horde.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustCyclops</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Beastrider</defName>
+    <identifier>Beastrider</identifier>
+    <slot>Adulthood</slot>
+	<workDisables>
+      <li>Intellectual</li>
+      <li>Artistic</li>
+    </workDisables>
+    <skillGains>
+      <Animals>2</Animals>
+    </skillGains>	
+    <title>Beastrider</title>
+    <titleShort>Beastrider</titleShort>
+    <description>[PAWN_nameDef] is a drone who specializes in tending to the many beasts of the hollow.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+	  <li>LocustBeastrider</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Bolter</defName>
+    <identifier>Bolter</identifier>
+    <slot>Adulthood</slot> 
+    <title>Bolter</title>
+    <titleShort>Bolter</titleShort>
+    <description>[PAWN_nameDef] is a drone specialized in hit and run tactics, darting between cover and harasssing enemy troops.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+	  <li>LocustBolter</li>
+    </spawnCategories>
+	<skillGains>
+      <Shooting>3</Shooting>
+      <Plants>1</Plants>
+	  <Social>-1</Social>
+    </skillGains>
+	<forcedTraits>
+      <SpeedOffset>2</SpeedOffset>
+    </forcedTraits>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Boomer</defName>
+    <identifier>Boomer</identifier>
+    <slot>Adulthood</slot> 
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <title>Boomer</title>
+    <titleShort>Boomer</titleShort>
+    <description>[PAWN_nameDef] grew into a boomer, quite strong but not very intelligent. [PAWN_pronoun] is good at breaking things and not much else.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustBoomer</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>2</Shooting>
+      <Melee>2</Melee>
+    </skillGains>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Butcher</defName>
+    <identifier>Butcher</identifier>
+    <slot>Adulthood</slot> 
+    <title>Butcher</title>
+    <titleShort>Boomer</titleShort>
+    <description>[PAWN_nameDef] is a boomer with slightly higher intelligence, and a talent for "cooking".</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustButcher</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Cooking>2</Cooking>
+    </skillGains>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Kantus</defName>
+    <identifier>Kantus</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>1</Melee>
+      <Animals>1</Animals>
+	  <Social>2</Social>
+    </skillGains>
+    <title>Kantus</title>
+    <titleShort>Kantus</titleShort>
+    <description>[PAWN_nameDef] grew into a Kantus, [PAWN_pronoun] is a leader in every sense of the word, enforcing the queens law without question.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustKantus</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+    
+</Defs>

@@ -122,7 +122,7 @@
         </scenario>
     </ScenarioDef>
 	
-	<FactionDef ParentName="PlayerFactionBase">
+  <FactionDef ParentName="PlayerFactionBase">
     <defName>PlayerColonyLocust</defName>
     <label>Locust Colony</label>
     <description>A colony of Locusts.</description>
@@ -145,12 +145,8 @@
         <categories>
 		        <li>LocustLarva</li>
 		        <li>LocustDrone</li>
-		        <li>LocustCyclops</li>
-	            <li>LocustBeastrider</li>
-                <li>LocustBolter</li>
 				<li>LocustBoomer</li>
                 <li>LocustButcher</li>
-				<li>LocustKantus</li>
         </categories>
       </li>
     </backstoryFilters>
@@ -182,12 +178,8 @@
         <categories>
 		        <li>LocustLarva</li>
 		        <li>LocustDrone</li>
-		        <li>LocustCyclops</li>
-	            <li>LocustBeastrider</li>
-                <li>LocustBolter</li>
 				<li>LocustBoomer</li>
                 <li>LocustButcher</li>
-				<li>LocustKantus</li>
         </categories>
       </li>
     </backstoryFilters>

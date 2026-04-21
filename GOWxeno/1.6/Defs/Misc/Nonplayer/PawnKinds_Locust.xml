@@ -6,14 +6,15 @@
 
   <PawnKindDef>
     <defName>GOW_Locust_Trader</defName>
-    <label>Commander</label>
+    <label>Monk</label>
+	<nameMaker>NamerLocustPersonDrone</nameMaker>
     <race>Human</race>
     <defaultFactionType>LocustRoughFaction</defaultFactionType>
     <minGenerationAge>21</minGenerationAge>
     <maxGenerationAge>50</maxGenerationAge>
     <trader>true</trader>
     <isFighter>false</isFighter>
-    <chemicalAddictionChance>0.10</chemicalAddictionChance>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
     <invNutrition>2</invNutrition>
     <itemQuality>Normal</itemQuality>
     <inventoryOptions>
@@ -30,33 +31,36 @@
       <li>
         <categories>
                 <li>LocustLarva</li>
-                <li>LocustDrone</li>
+                <li>LocustKantus</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
     <weaponTags>
       <li>LocustElitesidearm</li>
+	  <li>MedievalMeleeAdvanced</li>
     </weaponTags>
-    <weaponMoney>500~1000</weaponMoney>
-    <apparelMoney>850~1250</apparelMoney>
+	<weaponMoney>300~1000</weaponMoney>
+    <apparelMoney>1000~1500</apparelMoney>
     <apparelTags>
-		<li>Locustdrone</li>
+		<li>LocustKantus</li>
     </apparelTags>
 	<apparelRequired>
-      <li>Apparel_GOW_Drone</li>
+      <li>Apparel_GOW_Kantus</li>
+	  <li>Apparel_GOW_KantusHelm</li>
     </apparelRequired>
     <techHediffsChance>0.05</techHediffsChance>
     <techHediffsMoney>500~750</techHediffsMoney>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <initialWillRange>10~12</initialWillRange>
-    <initialResistanceRange>16~25</initialResistanceRange>
+    <initialWillRange>25~30</initialWillRange>
+    <initialResistanceRange>30~35</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
-        <Locust_Drone>1</Locust_Drone>
+        <Locust_Kantus>1</Locust_Kantus>
       </xenotypeChances>
     </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
 	<skills>
       <li>
         <skill>Shooting</skill>
@@ -68,11 +72,11 @@
       </li>
 	  <li>
         <skill>Construction</skill>
-        <range>1~2</range>
+        <range>2~3</range>
       </li>
 	  <li>
         <skill>Mining</skill>
-        <range>2~4</range>
+        <range>1~2</range>
       </li>
 	  <li>
         <skill>Cooking</skill>
@@ -80,11 +84,11 @@
       </li>
 	  <li>
         <skill>Plants</skill>
-        <range>1~2</range>
+        <range>1~5</range>
       </li>
 	  <li>
         <skill>Animals</skill>
-        <range>2~4</range>
+        <range>2~5</range>
       </li>
 	  <li>
         <skill>Crafting</skill>
@@ -92,7 +96,7 @@
       </li>
 	  <li>
         <skill>Artistic</skill>
-        <range>2~3</range>
+        <range>2~5</range>
       </li>
 	  <li>
         <skill>Medicine</skill>
@@ -100,7 +104,7 @@
       </li>
 	  <li>
         <skill>Social</skill>
-        <range>5~6</range>
+        <range>5~7</range>
       </li>
 	  <li>
         <skill>Intellectual</skill>
@@ -112,26 +116,29 @@
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>Locust_Fighter_FactionLeader</defName>
     <label>High General</label>
-	<combatPower>40</combatPower>
+	<nameMaker>NamerLocustPersonDrone</nameMaker>
+	<combatPower>45</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
                 <li>LocustLarva</li>
-                <li>LocustKantus</li>
+                <li>LocustTheron</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
 	<factionLeader>true</factionLeader>
 	<isFighter>false</isFighter>
-	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
 	<weaponTags>
-      <li>LocustElitesidearm</li>
+	  <li>LocustHammerburstTwo</li>
+	  <li>LocustTorqueBow</li>
+	  <li>COGGnasher</li>
     </weaponTags>
     <apparelTags>
-		<li>Locustdrone</li>
+		<li>LocustTheron</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_GOW_Drone</li>
+      <li>Apparel_GOW_Theron</li>
     </apparelRequired>
 	<invNutrition>2.25</invNutrition>
     <skills>
@@ -184,10 +191,337 @@
         <range>4~7</range>
       </li>
     </skills>
-    <initialResistanceRange>30~35</initialResistanceRange>
+    <initialResistanceRange>80~100</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Drone>1</Locust_Drone>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_DroneGuard</defName>
+    <label>Drone Guard</label>
+    <nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>28</combatPower>
+	<invNutrition>2</invNutrition>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustDrone</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<weaponTags>
+	  <li>LocustHammerburst</li>
+	  <li>Locustsidearm</li>
+    </weaponTags>
+	<weaponMoney>475~950</weaponMoney>
+	<apparelTags>
+	 <li>Locustdrone</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Drone</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>2~2</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>2~4</range>
+      </li>
+    </skills>
+    <initialResistanceRange>28~40</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Drone>1</Locust_Drone>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_CyclopsGuard</defName>
+    <label>Cyclops Guard</label>
+    <nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>33</combatPower>
+    <invNutrition>2</invNutrition>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustCyclops</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponTags>
+	  <li>LocustHammerburstTwo</li>
+	  <li>COGlancer</li>
+    </weaponTags>
+	<weaponMoney>700~925</weaponMoney>
+	<apparelTags>
+	 <li>Locustdrone</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Drone</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>2~4</range>
+      </li>
+    </skills>
+    <initialResistanceRange>35~42</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Drone>1</Locust_Drone>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_BoomerGuard</defName>
+    <label>Boomer Guard</label>
+	<nameMaker>NamerLocustPersonDrone</nameMaker>
+	<combatPower>45</combatPower>
+    <invNutrition>3</invNutrition>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustBoomer</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponTags>
+	  <li>LocustBoomshot</li>
+    </weaponTags>
+	<weaponMoney>1200~1500</weaponMoney>
+	<apparelTags>
+	 <li>Locustboomer</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GOW_Boomer</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>3~4</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~3</range>
+      </li>
+    </skills>
+    <initialResistanceRange>35~42</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Boomer>1</Locust_Boomer>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_ButcherGuard</defName>
+    <label>Butcher Guard</label>
+	<nameMaker>NamerLocustPersonDrone</nameMaker>
+	<combatPower>40</combatPower>
+	<invNutrition>6</invNutrition>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustButcher</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponTags>
+	  <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+	<weaponMoney>900~1000</weaponMoney>
+	<apparelTags>
+	 <li>Locustboomer</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GOW_Boomer</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>4~6</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>4~6</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>1~3</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~1</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>1~2</range>
+      </li>
+    </skills>
+    <initialResistanceRange>37~45</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Boomer>1</Locust_Boomer>
       </xenotypeChances>
     </xenotypeSet>
   </PawnKindDef>
@@ -218,10 +552,11 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<useFactionXenotypes>false</useFactionXenotypes>
     <disallowedTraits>
       <li>Nudist</li>
     </disallowedTraits>
-	<initialWillRange>15~20</initialWillRange>
+	<initialWillRange>23~28</initialWillRange>
   </PawnKindDef>
 
   <PawnKindDef Name="LocustFighterMale" Abstract="True" ParentName="LocustFighterBase">
@@ -236,7 +571,7 @@
     <defName>GOW_Locust_Fighter_Drone</defName>
     <label>Drone</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>30</combatPower>
+    <combatPower>28</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -250,7 +585,7 @@
 	  <li>LocustHammerburst</li>
 	  <li>Locustsidearm</li>
     </weaponTags>
-	<weaponMoney>250~650</weaponMoney>
+	<weaponMoney>475~950</weaponMoney>
 	<apparelTags>
 	 <li>Locustdrone</li>
     </apparelTags>
@@ -260,11 +595,11 @@
     <skills>
       <li>
         <skill>Shooting</skill>
-        <range>4~6</range>
+        <range>3~5</range>
       </li>
 	  <li>
         <skill>Melee</skill>
-        <range>4~6</range>
+        <range>2~2</range>
       </li>
 	  <li>
         <skill>Construction</skill>
@@ -307,7 +642,7 @@
         <range>2~4</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>28~40</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Drone>1</Locust_Drone>
@@ -319,7 +654,7 @@
     <defName>GOW_Locust_Fighter_Cyclops</defName>
     <label>Cyclops</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>30</combatPower>
+    <combatPower>33</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -328,12 +663,12 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
-    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 	<weaponTags>
-	  <li>LocustHammerburst</li>
+	  <li>LocustHammerburstTwo</li>
 	  <li>COGlancer</li>
     </weaponTags>
-	<weaponMoney>650~925</weaponMoney>
+	<weaponMoney>700~925</weaponMoney>
 	<apparelTags>
 	 <li>Locustdrone</li>
     </apparelTags>
@@ -347,7 +682,7 @@
       </li>
 	  <li>
         <skill>Melee</skill>
-        <range>4~6</range>
+        <range>2~4</range>
       </li>
 	  <li>
         <skill>Construction</skill>
@@ -390,7 +725,7 @@
         <range>2~4</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>35~42</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Drone>1</Locust_Drone>
@@ -411,7 +746,7 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
-    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 	<weaponTags>
 	  <li>Locustsidearm</li>
     </weaponTags>
@@ -425,7 +760,7 @@
     <skills>
       <li>
         <skill>Shooting</skill>
-        <range>5~7</range>
+        <range>4~6</range>
       </li>
 	  <li>
         <skill>Melee</skill>
@@ -472,7 +807,7 @@
         <range>2~4</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>35~42</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Drone>1</Locust_Drone>
@@ -484,7 +819,7 @@
     <defName>GOW_Locust_Fighter_Beastrider</defName>
     <label>Beastrider</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>30</combatPower>
+	<combatPower>28</combatPower>
     <backstoryFiltersOverride>
       <li>
         <categories>
@@ -513,7 +848,7 @@
       </li>
 	  <li>
         <skill>Melee</skill>
-        <range>3~5</range>
+        <range>2~4</range>
       </li>
 	  <li>
         <skill>Construction</skill>
@@ -548,7 +883,92 @@
         <range>2~5</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>35~42</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Drone>1</Locust_Drone>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_Theron</defName>
+    <label>Theron Guard</label>
+    <nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>45</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustTheron</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponTags>
+	  <li>LocustHammerburstTwo</li>
+	  <li>LocustTorqueBow</li>
+	  <li>COGGnasher</li>
+    </weaponTags>
+	<weaponMoney>750~1500</weaponMoney>
+	<apparelTags>
+	 <li>LocustTheron</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Theron</li>
+	  <li>Apparel_GOW_TheronHelm</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~6</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~1</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>1~4</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~3</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>3~6</range>
+      </li>
+    </skills>
+    <initialResistanceRange>40~45</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Drone>1</Locust_Drone>
@@ -569,21 +989,21 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
-	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 	<weaponTags>
 	  <li>LocustBoomshot</li>
     </weaponTags>
 	<weaponMoney>1200~1500</weaponMoney>
 	<apparelTags>
-	 <li>Locustdrone</li>
+	 <li>Locustboomer</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_GOW_Drone</li>
+      <li>Apparel_GOW_Boomer</li>
     </apparelRequired>
     <skills>
       <li>
         <skill>Shooting</skill>
-        <range>3~4</range>
+        <range>2~4</range>
       </li>
 	  <li>
         <skill>Melee</skill>
@@ -626,7 +1046,7 @@
         <range>1~1</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>35~42</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Boomer>1</Locust_Boomer>
@@ -653,10 +1073,10 @@
     </weaponTags>
 	<weaponMoney>900~1000</weaponMoney>
 	<apparelTags>
-	 <li>Locustdrone</li>
+	 <li>Locustboomer</li>
     </apparelTags>
     <apparelRequired>
-      <li>Apparel_GOW_Drone</li>
+      <li>Apparel_GOW_Boomer</li>
     </apparelRequired>
     <skills>
       <li>
@@ -665,7 +1085,7 @@
       </li>
 	  <li>
         <skill>Melee</skill>
-        <range>4~6</range>
+        <range>4~5</range>
       </li>
 	  <li>
         <skill>Construction</skill>
@@ -708,10 +1128,176 @@
         <range>1~2</range>
       </li>
     </skills>
-    <initialResistanceRange>22~28</initialResistanceRange>
+    <initialResistanceRange>36~47</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
         <Locust_Boomer>1</Locust_Boomer>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_KantusAcolyte</defName>
+    <label>Acolyte</label>
+    <nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>25</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustKantusAcolyte</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<weaponTags>
+      <li>LocustElitesidearm</li>
+	  <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+	<weaponMoney>300~1000</weaponMoney>
+	<apparelTags>
+	 <li>LocustKantus</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Kantus</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~6</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>3~5</range>
+      </li>
+    </skills>
+    <initialResistanceRange>30~35</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Kantus>1</Locust_Kantus>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterMale">
+    <defName>GOW_Locust_Fighter_Kantus</defName>
+    <label>Kantus</label>
+    <nameMaker>NamerLocustPersonDrone</nameMaker>
+    <combatPower>35</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustKantus</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponTags>
+      <li>LocustElitesidearm</li>
+    </weaponTags>
+	<weaponMoney>750~1000</weaponMoney>
+	<apparelTags>
+	 <li>LocustKantus</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Kantus</li>
+	  <li>Apparel_GOW_KantusHelm</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>4~6</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>3~6</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~4</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>3~6</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>4~6</range>
+      </li>
+    </skills>
+    <initialResistanceRange>40~45</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Kantus>1</Locust_Kantus>
       </xenotypeChances>
     </xenotypeSet>
   </PawnKindDef>
@@ -779,6 +1365,9 @@
     </structureMemeWeights>
 	<xenotypeSet>
       <xenotypeChances>
+	        <Locust_Drone>6</Locust_Drone>
+	        <Locust_Boomer>3</Locust_Boomer>
+	        <Locust_Kantus>1</Locust_Kantus>
       </xenotypeChances>
     </xenotypeSet>
     <backstoryFilters>
@@ -792,6 +1381,7 @@
 				<li>LocustBoomer</li>
                 <li>LocustButcher</li>
 				<li>LocustKantus</li>
+				<li>LocustTheron</li>
         </categories>
         <commonality>1</commonality>
       </li>
@@ -871,9 +1461,9 @@
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-		  <GOW_Locust_Fighter_Boomer>2</GOW_Locust_Fighter_Boomer>
-		  <GOW_Locust_Fighter_Drone>5</GOW_Locust_Fighter_Drone>
-		  <GOW_Locust_Fighter_Cyclops>4</GOW_Locust_Fighter_Cyclops>
+		  <GOW_Locust_Fighter_CyclopsGuard>4</GOW_Locust_Fighter_CyclopsGuard>
+		  <GOW_Locust_Fighter_DroneGuard>5</GOW_Locust_Fighter_DroneGuard>
+		  <GOW_Locust_Fighter_BoomerGuard>2</GOW_Locust_Fighter_BoomerGuard>
 		  <Locust_Fighter_FactionLeader>5</Locust_Fighter_FactionLeader>
         </options>
       </li>
@@ -888,27 +1478,28 @@
         </carriers>
         <guards>
 		  <Megaspider>45</Megaspider>
-		  <GOW_Locust_Fighter_Cyclops>4</GOW_Locust_Fighter_Cyclops>
-		  <GOW_Locust_Fighter_Drone>5</GOW_Locust_Fighter_Drone>
-		  <GOW_Locust_Fighter_Beastrider>3</GOW_Locust_Fighter_Beastrider>
+		  <GOW_Locust_Fighter_CyclopsGuard>3</GOW_Locust_Fighter_CyclopsGuard>
+		  <GOW_Locust_Fighter_DroneGuard>5</GOW_Locust_Fighter_DroneGuard>
+		  <GOW_Locust_Fighter_BoomerGuard>2</GOW_Locust_Fighter_BoomerGuard>
+		  <GOW_Locust_Fighter_ButcherGuard>1</GOW_Locust_Fighter_ButcherGuard>
         </guards>
       </li>
       <li>
-        <!-- Hunting Parade -->
+        <!-- Rage of the Hollow -->
         <kindDef>Combat</kindDef>
         <commonality>35</commonality>
         <disallowedStrategies>
           <li>Siege</li>
         </disallowedStrategies>
         <options>
-          <GOW_Locust_Fighter_Beastrider>5</GOW_Locust_Fighter_Beastrider>
-		  <GOW_Locust_Fighter_Butcher>3</GOW_Locust_Fighter_Butcher>
-		  <Spelopede>75</Spelopede>
-		  <Megaspider>45</Megaspider>
+		  <GOW_Locust_Fighter_Butcher>2</GOW_Locust_Fighter_Butcher>
+		  <GOW_Locust_Fighter_Kantus>1</GOW_Locust_Fighter_Kantus>
+		  <Spelopede>85</Spelopede>
+		  <Megaspider>55</Megaspider>
         </options>
       </li>
 	  <li>
-        <!-- Scouting Party -->
+        <!-- Surface Scouting -->
         <kindDef>Combat</kindDef>
         <commonality>45</commonality>
 		<disallowedStrategies>
@@ -923,7 +1514,7 @@
         </options>
       </li>
       <li>
-        <!-- Raid -->
+        <!-- Attack the Groundfeeders -->
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
@@ -932,15 +1523,17 @@
 		  <GOW_Locust_Fighter_Bolter>7</GOW_Locust_Fighter_Bolter>
 		  <GOW_Locust_Fighter_Drone>7</GOW_Locust_Fighter_Drone>
 		  <GOW_Locust_Fighter_Cyclops>5</GOW_Locust_Fighter_Cyclops>
+		  <GOW_Locust_Fighter_KantusAcolyte>1</GOW_Locust_Fighter_KantusAcolyte>
 		  <Megaspider>25</Megaspider>
         </options>
       </li>
 	  <li>
-        <!-- Big Raid -->
+        <!-- EMERGENCE -->
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
 		  <GOW_Locust_Fighter_Butcher>1</GOW_Locust_Fighter_Butcher>
+		  <GOW_Locust_Fighter_Kantus>1</GOW_Locust_Fighter_Kantus>
 		  <GOW_Locust_Fighter_Boomer>3</GOW_Locust_Fighter_Boomer>
 		  <GOW_Locust_Fighter_Bolter>7</GOW_Locust_Fighter_Bolter>
 		  <GOW_Locust_Fighter_Cyclops>5</GOW_Locust_Fighter_Cyclops>
@@ -948,11 +1541,13 @@
         </options>
       </li>
 	  <li>
-        <!-- Emergence -->
+        <!-- SINK THIS PLACE -->
         <kindDef>Combat</kindDef>
         <commonality>25</commonality>
         <options>
-		  <GOW_Locust_Fighter_Boomer>3</GOW_Locust_Fighter_Boomer>
+		  <GOW_Locust_Fighter_Kantus>1</GOW_Locust_Fighter_Kantus>
+		  <GOW_Locust_Fighter_Theron>2</GOW_Locust_Fighter_Theron>
+		  <GOW_Locust_Fighter_Boomer>4</GOW_Locust_Fighter_Boomer>
 		  <GOW_Locust_Fighter_Cyclops>7</GOW_Locust_Fighter_Cyclops>
 		  <GOW_Locust_Fighter_Drone>8</GOW_Locust_Fighter_Drone>
         </options>
@@ -961,6 +1556,7 @@
         <!-- Locust Base -->
         <kindDef>Settlement</kindDef>
         <options>
+		  <GOW_Locust_Fighter_Theron>1</GOW_Locust_Fighter_Theron> 
 		  <GOW_Locust_Fighter_Cyclops>5</GOW_Locust_Fighter_Cyclops>
 		  <GOW_Locust_Fighter_Drone>6</GOW_Locust_Fighter_Drone>
 		  <Megaspider>25</Megaspider>

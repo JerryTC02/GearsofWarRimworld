@@ -140,6 +140,10 @@
         <countRange>2~5</countRange>
       </li>
 	  <li Class="StockGenerator_MarketValue">
+        <tradeTag>LocustArmorRare</tradeTag>
+        <countRange>1~2</countRange>
+      </li>
+	  <li Class="StockGenerator_MarketValue">
         <tradeTag>Armor</tradeTag>
         <countRange>1~3</countRange>
       </li>

@@ -15,6 +15,13 @@
       <li>GOW_LocustBoomer</li>
     </requiredGenes>
   </HeadTypeDef>
+  
+  <HeadTypeDef Name="LocustKantusBase" Abstract="True">
+    <randomChosen>True</randomChosen>
+    <requiredGenes>
+      <li>GOW_LocustKantus</li>
+    </requiredGenes>
+  </HeadTypeDef>
 
   <HeadTypeDef ParentName="LocustDroneBase">
     <defName>Male_Locust_Drone</defName>
@@ -26,6 +33,13 @@
   <HeadTypeDef ParentName="LocustBoomerBase">
     <defName>Male_Locust_Boomer</defName>
     <graphicPath>Things/Pawn/Humanlike/Heads/Boomer/Male_Average_GOWboomer</graphicPath>
+    <gender>Male</gender>
+    <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="LocustKantusBase">
+    <defName>Male_Locust_Kantus</defName>
+    <graphicPath>Things/Pawn/Humanlike/Heads/Kantus/Male_Average_GOWKantus</graphicPath>
     <gender>Male</gender>
     <eyeOffsetEastWest>(0.15, 0, 0.17)</eyeOffsetEastWest>
   </HeadTypeDef>

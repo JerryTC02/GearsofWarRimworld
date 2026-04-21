@@ -8,7 +8,7 @@
         <li Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
             <factionDef>LocustRoughFaction</factionDef>
             <affectStartingGoodwill>True</affectStartingGoodwill>
-            <startingGoodwillRange>20~25</startingGoodwillRange>
+            <startingGoodwillRange>40~65</startingGoodwillRange>
             <affectNaturalGoodwill>True</affectNaturalGoodwill>
             <naturalGoodwillRange>0~5</naturalGoodwillRange>
             <def>VFEC_ForcedFactionGoodwill</def>

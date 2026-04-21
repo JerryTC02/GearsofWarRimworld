@@ -11,7 +11,7 @@
       <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
       <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
 	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
-	  <Fat>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Fat>
+	  <Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Fat>
       <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
 	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
       <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
@@ -25,7 +25,7 @@
       <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
       <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
 	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
-	  <Fat>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Fat>
+	  <Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Fat>
       <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
 	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
       <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
@@ -35,7 +35,7 @@
   <GeneCategoryDef>
     <defName>LOCUST</defName>
     <label>LOCUST</label>
-    <displayPriorityInXenotype>100000</displayPriorityInXenotype>
+    <displayPriorityInXenotype>100002132131</displayPriorityInXenotype>
   </GeneCategoryDef>
   
   <GeneDef Name="LocustGenes" Abstract="True">
@@ -66,6 +66,7 @@
       <Flame>1.20</Flame>
     </damageFactors>
     <statOffsets>
+	  <PainShockThreshold>0.10</PainShockThreshold>
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
     </statOffsets>
@@ -92,7 +93,7 @@
     <displayOrderInCategory>1</displayOrderInCategory>
     <biostatMet>-1</biostatMet>
     <biostatCpx>5</biostatCpx>
-    <fur>GOW_LocustDrone</fur>
+    <fur>GOW_LocustBoomer</fur>
 	<forcedHeadTypes>
       <li>Male_Locust_Boomer</li>
     </forcedHeadTypes>
@@ -101,13 +102,14 @@
     </exclusionTags>
     <statFactors>
       <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.15</CertaintyLossFactor>
-	  <SM_BodySizeMultiplier>1.40</SM_BodySizeMultiplier>
+	  <SM_BodySizeMultiplier>1.35</SM_BodySizeMultiplier>
 	  <IncomingDamageFactor>0.80</IncomingDamageFactor>
     </statFactors>
     <damageFactors>
       <Flame>1.10</Flame>
     </damageFactors>
     <statOffsets>
+	  <PainShockThreshold>0.20</PainShockThreshold>
       <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
     </statOffsets>
@@ -126,17 +128,17 @@
     </renderNodeProperties>
   </GeneDef>
   
-  <!--GeneDef ParentName="LocustGenes">
+  <GeneDef ParentName="LocustGenes">
     <defName>GOW_LocustKantus</defName>
     <label>Kantus Caste</label>
-    <description>Kantus are the Leaders of the Locust Horde, orchestrating and adminstering the Queens Will. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
-    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <description>Kantus are the religious leaders of the Locust Horde, orchestrating and adminstering the Queens Will. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Kantus</iconPath>
     <displayOrderInCategory>1</displayOrderInCategory>
-    <biostatMet>0</biostatMet>
+    <biostatMet>1</biostatMet>
     <biostatCpx>5</biostatCpx>
     <fur>GOW_LocustDrone</fur>
 	<forcedHeadTypes>
-      <li>Male_Locust_Drone</li>
+      <li>Male_Locust_Kantus</li>
     </forcedHeadTypes>
 	<exclusionTags>
       <li>Fur</li>
@@ -145,7 +147,7 @@
       <li>Locust_AnimalWarcall</li>
     </abilities>
     <descriptionHyperlinks>
-      <AbilityDef>AnimalWarcall</AbilityDef>
+      <AbilityDef>Locust_AnimalWarcall</AbilityDef>
     </descriptionHyperlinks>
     <statFactors>
       <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
@@ -156,8 +158,9 @@
       <Flame>1.20</Flame>
     </damageFactors>
     <statOffsets>
-      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+	  <PainShockThreshold>0.15</PainShockThreshold>
+      <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.07</ArmorRating_Blunt>
     </statOffsets>
     <skinIsHairColor>false</skinIsHairColor>
     <renderNodeProperties Inherit="False">
@@ -172,12 +175,12 @@
         <colorType>Skin</colorType>
       </li>
     </renderNodeProperties>
-  </GeneDef-->
+  </GeneDef>
   
   <!--GeneDef ParentName="LocustGenes">
     <defName>GOW_LocustBerserker</defName>
     <label>Berserker Caste</label>
-    <description>Berserkers are the unhinged females of the Locust, incapable of most higher thoughts except rage and hatred.</description>
+    <description>Berserkers are the giant females of the Locust, incapable of most higher thoughts except rage and hatred.</description>
     <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
     <displayOrderInCategory>1</displayOrderInCategory>
     <biostatMet>0</biostatMet>
@@ -198,6 +201,7 @@
       <Flame>1.10</Flame>
     </damageFactors>
     <statOffsets>
+	  <PainShockThreshold>0.30</PainShockThreshold>
       <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
     </statOffsets>
@@ -355,7 +359,7 @@
 	  <li>DarkVision</li>
 	  <li>CaveDweller</li>
 	  <li>Mood_Optimist</li>
-	  <li>Body_Standard</li>
+	  <li>Body_Fat</li>
 	  <li>Skin_Locust_pale</li>
 	  <li>Skin_Locust_palee</li>
 	  <li>Skin_Locust_paleee</li>
@@ -363,12 +367,12 @@
     </genes>
   </XenotypeDef>
   
-  <!--XenotypeDef>
+  <XenotypeDef>
     <defName>Locust_Kantus</defName>
     <label>Kantus</label>
-    <description>WIP.</description>
-    <descriptionShort>Kantus are the Priests and Leaders of the Locust Horde, possessing the ability to heal and inspire the Horde.</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <description>The Kantus Priesthood, a mysterious order within the Locust Horde that is the subject of many rumors and theories but one thing is for certain, they take great pride in the power they wield over the Horde. Even the most cruel and foolish of Locust Queens value the wisdom of the Kantus, with many of them often holding positions on the Locust Council.</description>
+    <descriptionShort>Kantus are a mysterious and vastly more intelligent breed of Locust.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/GOW_Kantus</iconPath>
     <inheritable>true</inheritable>
     <chanceToUseNameMaker>1</chanceToUseNameMaker>
     <genes>
@@ -393,9 +397,9 @@
   
   <AbilityDef>
     <defName>Locust_AnimalWarcall</defName>
-    <label>kantus war chant</label>
-    <description>WIP.</description>
-    <iconPath>UI/Abilities/AnimalWarcall</iconPath>
+    <label>Hollow Chant</label>
+    <description>A guttural shriek that invokes the essence of the hollows, it is capable of instilling rage and fear in even the most docile of animals.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Kantus</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
     <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
@@ -438,6 +442,6 @@
         <excludeNPCFactions>true</excludeNPCFactions>
       </li>
     </comps>
-  </AbilityDef-->
+  </AbilityDef>
 
 </Defs>

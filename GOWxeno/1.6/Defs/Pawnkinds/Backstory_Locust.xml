@@ -43,11 +43,11 @@
     <skillGains>
       <Shooting>2</Shooting>
       <Melee>3</Melee>
-	  <Social>-1</Social>
+	  <Social>-3</Social>
     </skillGains>
     <title>Cyclops</title>
     <titleShort>Cyclops</titleShort>
-    <description>An elite class of drone, [PAWN_nameDef] serves as the shocktrooper of the Locust Horde.</description>
+    <description>[PAWN_nameDef] has survived many battles on the surface world, and developed a tendency to loot the equipment of fallen enemy soldiers.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustCyclops</li>
@@ -68,7 +68,7 @@
     </skillGains>	
     <title>Beastrider</title>
     <titleShort>Beastrider</titleShort>
-    <description>[PAWN_nameDef] is a drone who specializes in tending to the many beasts of the hollow.</description>
+    <description>[PAWN_nameDef] has a talent for taming the many beasts of the hollow, [PAWN_pronoun] ensures the Horde will always have an ample supply of warbeasts.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
 	  <li>LocustBeastrider</li>
@@ -82,7 +82,7 @@
     <slot>Adulthood</slot> 
     <title>Bolter</title>
     <titleShort>Bolter</titleShort>
-    <description>[PAWN_nameDef] is a drone specialized in hit and run tactics, darting between cover and harasssing enemy troops.</description>
+    <description>[PAWN_nameDef] has been specially trained in hit and run tactics, skilled in darting between cover and harasssing enemy troops.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
 	  <li>LocustBolter</li>
@@ -95,6 +95,48 @@
 	<forcedTraits>
       <SpeedOffset>2</SpeedOffset>
     </forcedTraits>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <TraitDef>
+    <defName>GOW_Stock</defName>
+    <commonality>0.000000001</commonality>
+    <degreeDatas>
+      <li>
+        <label>Size Mutation</label>
+        <description>{PAWN_nameDef} has a size mutation which makes them more durable.</description>
+        <statFactors>
+          <SM_BodySizeMultiplier>1.25</SM_BodySizeMultiplier>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+	  <li>Large</li>
+      <li>Gigantism</li>
+      <li>Small</li>
+      <li>Dwarfism</li>
+    </exclusionTags>
+  </TraitDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Theron</defName>
+    <identifier>Theron Guard</identifier>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Melee>3</Melee>
+	  <Social>-2</Social>
+    </skillGains>
+	<forcedTraits>
+      <GOW_Stock>0</GOW_Stock>
+    </forcedTraits>
+    <title>Theron Guard</title>
+    <titleShort>Theron</titleShort>
+    <description>[PAWN_nameDef] grew larger than most drones, fought harder than other drones, and has shown absolute and utter devotion to the Queen. For these reasons [PAWN_pronoun] has been granted the honor of serving in the Queens personal army, the Theron Guard.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustTheron</li>
+    </spawnCategories>
     <shuffleable>True</shuffleable>
   </BackstoryDef>
   
@@ -125,7 +167,7 @@
     <slot>Adulthood</slot> 
     <title>Butcher</title>
     <titleShort>Boomer</titleShort>
-    <description>[PAWN_nameDef] is a boomer with slightly higher intelligence, and a talent for "cooking".</description>
+    <description>[PAWN_nameDef] is a boomer born with slightly higher intelligence then other boomers, and a talent for "cooking".</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustButcher</li>
@@ -133,22 +175,41 @@
     <skillGains>
       <Melee>4</Melee>
       <Cooking>2</Cooking>
+	  <Animals>1</Animals>
     </skillGains>
     <shuffleable>True</shuffleable>
   </BackstoryDef>
   
   <BackstoryDef>
-    <defName>GOW_Kantus</defName>
-    <identifier>Kantus</identifier>
+    <defName>GOW_KantusAcolyte</defName>
+    <identifier>Kantus Acolyte</identifier>
     <slot>Adulthood</slot> 
     <skillGains>
-	  <Melee>1</Melee>
-      <Animals>1</Animals>
+	  <Melee>2</Melee>
 	  <Social>2</Social>
+    </skillGains>
+    <title>Kantus Acolyte</title>
+    <titleShort>Acolyte</titleShort>
+    <description>[PAWN_nameDef] grew into a Kantus and was inducted into the ranks of the Kantus Priesthood to begin training, they spent their days memorizing the various scripture of the Trinity and sparring with staves.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustKantusAcolyte</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Kantus</defName>
+    <identifier>Kantus Priest</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>2</Melee>
+      <Animals>1</Animals>
+	  <Social>3</Social>
     </skillGains>
     <title>Kantus</title>
     <titleShort>Kantus</titleShort>
-    <description>[PAWN_nameDef] grew into a Kantus, [PAWN_pronoun] is a leader in every sense of the word, enforcing the queens law without question.</description>
+    <description>[PAWN_nameDef] finished training as an Acolyte and now serves as a full Priest of the Trinity of Worms, [PAWN_pronoun] is a leader in every sense of the word, enforcing the queens law without question.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustKantus</li>

@@ -62,7 +62,7 @@
     </apparel>
 	<modExtensions>
      <li Class="taranchuk_apparelgraphics.ApparelExtension">
-      <hideBody>False</hideBody>
+      <hideBody>True</hideBody>
       <femaleBody>Female</femaleBody>
       <maleBody>Male</maleBody>
      </li>

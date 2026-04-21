@@ -18,11 +18,11 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
-      <displayPriority>200</displayPriority>
+      <displayPriority>2000</displayPriority>
     </recipeMaker>
     <statBases>
       <WorkToMake>47500</WorkToMake>
-      <Mass>4.5</Mass>
+      <Mass>5</Mass>
       <AccuracyTouch>0.40</AccuracyTouch>
       <AccuracyShort>0.55</AccuracyShort>
       <AccuracyMedium>0.65</AccuracyMedium>
@@ -85,78 +85,87 @@
     </projectile>
   </ThingDef>
   
-  <ThingDef ParentName="BaseLocustMakeableGrenade">
-    <defName>Weapon_GOW_LocustFrag</defName>
-    <label>Locust Bolo-Frag</label>
-    <description>A small explosive tied to the end of a long chain, capable of reaching further distances then standard grenades. This Bolo is of locust manufacture.</description>
-    <recipeMaker>
-      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
-    </recipeMaker>
-    <tickerType>Normal</tickerType>
+  <ThingDef ParentName="RWLocustBaseHumanMakeableGun">
+    <defName>Gun_GOW_HammerburstTwo</defName>
+    <label>Hammerburst Assault Rifle II</label>
+    <description>Based on the common Hammerburst, the MK2 variant has been improved with an extended barrel and more refined ironsights to provide higher accuracy at long ranges. Much like its predecessor, it still lacks good defense against CQC.</description>
+	<techLevel>Industrial</techLevel>
     <graphicData>
-      <texPath>Things/RWlocust/Weapons/GOW_FragGrenade</texPath>
+      <texPath>Things/RWlocust/Weapons/GOW_HammerburstAssaultRifleTwo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.1</drawSize>
+	  <drawSize>0.90</drawSize>
     </graphicData>
-    <uiIconScale>1.3</uiIconScale>
-    <soundInteract>Interact_Grenade</soundInteract>
-    <techLevel>Industrial</techLevel>
+    <equippedAngleOffset>40</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>2001</displayPriority>
+    </recipeMaker>
     <statBases>
-      <Mass>1.5</Mass>
-      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
-      <WorkToMake>20000</WorkToMake>
+      <WorkToMake>52500</WorkToMake>
+      <Mass>5.5</Mass>
+      <AccuracyTouch>0.45</AccuracyTouch>
+      <AccuracyShort>0.63</AccuracyShort>
+      <AccuracyMedium>0.72</AccuracyMedium>
+      <AccuracyLong>0.38</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>40</Steel>
-      <Chemfuel>85</Chemfuel>
+      <Steel>110</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
     </costList>
     <weaponTags>
-      <li>LocustGrenadeDestructive</li>
+	 <li>LocustHammerburstTwo</li>
     </weaponTags>
-    <thingCategories>
-      <li>Grenades</li>
-    </thingCategories>
-    <smeltable>true</smeltable>
     <verbs>
       <li>
-        <label>throw bolo-frag</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
+        <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <range>21.9</range>
-        <forcedMissRadius>1.9</forcedMissRadius>
-        <warmupTime>2.1</warmupTime>
-        <noiseRadius>4</noiseRadius>
-        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
-        <soundCast>Shot_GOW_Bolo</soundCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-        <defaultProjectile>Proj_GOW_LocustGrenadeFrag</defaultProjectile>
-        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <defaultProjectile>Bullet_Hammerbursttwo</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>27.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>Shot_GOW_MK2Hammerburst</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>1.66</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
       </li>
-    </comps>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
   </ThingDef>
-
-  <ThingDef ParentName="BaseGrenadeProjectile">
-    <defName>Proj_GOW_LocustGrenadeFrag</defName>
-	<label>bolo-frag</label>
-    <thingClass>Projectile_Explosive</thingClass>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Hammerbursttwo</defName>
+    <label>hammerburst II bullet</label>
     <graphicData>
-      <texPath>Things/RWlocust/Weapons/GOW_FragGrenade_Thrown</texPath>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>1.9</explosionRadius >
-      <damageDef>Bomb</damageDef>
-      <explosionDelay>75</explosionDelay>
-	  <spinRate>2</spinRate>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>70</speed>
     </projectile>
   </ThingDef>
 

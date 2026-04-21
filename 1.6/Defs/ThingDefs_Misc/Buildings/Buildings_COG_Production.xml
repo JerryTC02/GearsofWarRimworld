@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>GOW_COG_SimpleResearchBench</defName>
     <label>COG Database</label>
-    <description>An advanced database containing information on Coalition and some UIR based technology.</description>
+    <description>An advanced database containing information on Coalition and some UIR based technology.\n\nRequired for most C.O.G researchs, also functions as a normal research bench</description>
     <thingClass>Building_ResearchBench</thingClass>
     <size>(5,2)</size>
     <costList>

@@ -6,7 +6,7 @@
 	 <defName>GOW_Cogbasic</defName>
 	 <label>Octus Canon Study</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>A deep study of the founding beliefs of the Coalition of Order Governments.</description>
+	 <description>A deep study of the founding beliefs of the Coalition of Order Governments.\n\nRequired for most C.O.G researchs, also functions as a normal research bench</description>
 	 <baseCost>1500</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>

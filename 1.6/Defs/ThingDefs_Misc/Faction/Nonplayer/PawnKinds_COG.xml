@@ -143,6 +143,148 @@
     <initialWillRange>2~5</initialWillRange>
     <initialResistanceRange>12~18</initialResistanceRange>
   </PawnKindDef>
+  
+  <PawnKindDef ParentName="COGfighterBase">
+    <defName>GOW_COG_Fighter_GearGuard</defName>
+    <label>Gear Guard</label>
+    <combatPower>40</combatPower>
+	<invNutrition>2</invNutrition>
+	<weaponTags>
+	  <li>COGlancer</li>
+	  <li>COGGnasher</li>
+    </weaponTags>
+	<weaponMoney>500~1150</weaponMoney>
+    <apparelTags>
+		<li>COGGear</li>
+		<li>IndustrialBasic</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Cogsoldier</li>
+	  <li>Apparel_GOW_CoghelmA</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>4~6</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>4~5</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>1~3</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>1~4</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>2~5</range>
+      </li>
+    </skills>
+    <initialResistanceRange>12~20</initialResistanceRange>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="COGfighterBase">
+    <defName>GOW_COG_Onyx_GearGuard</defName>
+    <label>Onyx Caravan Guard</label>
+    <combatPower>45</combatPower>
+	<invNutrition>2</invNutrition>
+	<weaponTags>
+	  <li>COGlancer</li>
+	  <li>COGGnasher</li>
+    </weaponTags>
+	<weaponMoney>500~1500</weaponMoney>
+    <apparelTags>
+		<li>COGGear</li>
+		<li>IndustrialBasic</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_GOW_Cogsoldier</li>
+	  <li>Apparel_GOW_CoghelmA</li>
+    </apparelRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>5~7</range>
+      </li>
+	  <li>
+        <skill>Melee</skill>
+        <range>4~6</range>
+      </li>
+	  <li>
+        <skill>Construction</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Mining</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Cooking</skill>
+        <range>1~3</range>
+      </li>
+	  <li>
+        <skill>Plants</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Crafting</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Artistic</skill>
+        <range>0~2</range>
+      </li>
+	  <li>
+        <skill>Medicine</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~5</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>3~6</range>
+      </li>
+    </skills>
+    <initialResistanceRange>12~20</initialResistanceRange>
+  </PawnKindDef>
 
   <PawnKindDef>
     <defName>GOW_COG_Trader</defName>
@@ -318,6 +460,11 @@
         </categories>
       </li>
     </backstoryFiltersOverride>
+	<requiredWorkTags>
+      <li>Violent</li>
+      <li>Caring</li>
+	  <li>Commoner</li>
+    </requiredWorkTags>
     <invNutrition>0</invNutrition>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
@@ -735,6 +882,11 @@
         <commonality>1</commonality>
       </li>
     </backstoryFilters>
+	<arrivalModeWhitelist>
+      <li>EdgeWalkIn</li>
+	  <li>EdgeWalkInGroups</li>
+	  <li>EdgeWalkInDistributed</li>
+    </arrivalModeWhitelist>
     <caravanTraderKinds>
       <li>Caravan_Outlander_BulkGoods</li>
       <li>Caravan_Outlander_Exotic</li>
@@ -773,8 +925,8 @@
         <options>
           <Villager>15</Villager>
           <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
-          <GOW_COG_Onyx_Gear>8</GOW_COG_Onyx_Gear>
-		  <GOW_COG_Fighter_Gear>12</GOW_COG_Fighter_Gear>
+          <GOW_COG_Onyx_GearGuard>8</GOW_COG_Onyx_GearGuard>
+		  <GOW_COG_Fighter_GearGuard>12</GOW_COG_Fighter_GearGuard>
 		  <GOW_COG_Sniper_Gear>3</GOW_COG_Sniper_Gear>
 		  <COG_Fighter_FactionLeader>5</COG_Fighter_FactionLeader>
         </options>
@@ -790,8 +942,7 @@
         </carriers>
         <guards>
           <Villager>3</Villager>
-          <GOW_COGC_Fighter_Gear>7</GOW_COGC_Fighter_Gear>
-		  <GOW_COG_Fighter_Gear>6</GOW_COG_Fighter_Gear>
+          <GOW_COG_Fighter_GearGuard>7</GOW_COG_Fighter_GearGuard>
         </guards>
       </li>
       <li>

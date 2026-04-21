@@ -62,7 +62,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/LancerMeleeMiss</clipFolderPath>
+            <clipFolderPath>Weapon/Melee/LancerMeleeMiss</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>45.2941~45.2941</volumeRange>      
@@ -80,7 +80,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/LancerMeleeHit</clipFolderPath>
+            <clipFolderPath>Weapon/Melee/LancerMeleeHit</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>45.2941~45.2941</volumeRange>      
@@ -186,6 +186,62 @@
             <clipFolderPath>Weapon/LocustBoomShot</clipFolderPath>
           </li>
         </grains>
+        <volumeRange>45.2941~45.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_TorqueBow</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/LocustTorqueBow</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>36.2941~38.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_TorqueBow_Aiming</defName>
+    <sustain>true</sustain>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/LocustTorqueBowAiming/LocustTorqueBowAiming</clipPath>
+          </li>
+        </grains>
+        <pitchRange>0.99~1.01</pitchRange>
+        <volumeRange>25</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_TorqueBowMelee</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Melee/LocustTorqueBowMelee</clipFolderPath>
+          </li>
+        </grains>      
         <volumeRange>45.2941~45.2941</volumeRange>      
         <pitchRange>1.091765~1</pitchRange>      
         <sustainLoop>False</sustainLoop>

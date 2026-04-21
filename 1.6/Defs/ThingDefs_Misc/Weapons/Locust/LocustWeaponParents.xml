@@ -72,7 +72,7 @@
         <li>TableMachining</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <displayPriority>500</displayPriority>
+      <displayPriority>700</displayPriority>
     </recipeMaker>
     <tradeTags>
       <li>LocustRanged</li>

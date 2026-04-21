@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>GOW_Locust_SimpleResearchBench</defName>
     <label>Locust Research Station</label>
-    <description>An intricate bench with Locust runic scriptures and crude research tools.</description>
+    <description>An intricate bench with Locust runic scriptures and crude research tools.\n\nRequired for most Locust researchs, also functions as a normal research bench</description>
     <thingClass>Building_ResearchBench</thingClass>
     <size>(5,2)</size>
     <costList>

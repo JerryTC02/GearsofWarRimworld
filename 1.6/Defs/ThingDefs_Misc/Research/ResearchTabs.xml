@@ -5,11 +5,13 @@
 	<ResearchTabDef>
 		<defName>GOW_Cog</defName>
 		<label>COG</label>
+		<generalDescription>Research and study the structure of the Coalition at a COG database.</generalDescription>
 	</ResearchTabDef>
 	
 	<ResearchTabDef>
 		<defName>GOW_Locust</defName>
 		<label>Locust</label>
+		<generalDescription>Investigate the ancient scripture and beliefs of the Horde at a Locust Research Station.</generalDescription>
 	</ResearchTabDef>
 
 </Defs>

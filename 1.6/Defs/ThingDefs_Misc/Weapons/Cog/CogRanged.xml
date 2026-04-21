@@ -21,8 +21,8 @@
       <displayPriority>300</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>47500</WorkToMake>
-      <Mass>5</Mass>
+      <WorkToMake>48500</WorkToMake>
+      <Mass>5.2</Mass>
       <AccuracyTouch>0.55</AccuracyTouch>
       <AccuracyShort>0.55</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
@@ -95,7 +95,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>9</damageAmountBase>
+      <damageAmountBase>10</damageAmountBase>
       <speed>65</speed>
     </projectile>
   </ThingDef>

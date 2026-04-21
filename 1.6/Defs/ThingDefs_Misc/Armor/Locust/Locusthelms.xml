@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- if something is like this, that means it isnt done yet so dont touch it -->
+
 <Defs>
 
   <ThingDef ParentName="RWLocustArmorMachineableBase">
@@ -11,7 +13,7 @@
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
       <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
       <skillRequirements>
-        <Crafting>5</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
 	  <displayPriority>101</displayPriority>
     </recipeMaker>
@@ -26,7 +28,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.1</Flammability>
-      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.30</ArmorRating_Heat>
       <Insulation_Cold>2</Insulation_Cold>
@@ -42,8 +44,9 @@
       <li>ArmorHeadgear</li>
     </thingCategories>
     <costList>
-	  <Steel>45</Steel>
-	  <ComponentIndustrial>2</ComponentIndustrial>
+	  <Leather_Patch>25</Leather_Patch>
+	  <Steel>40</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <apparel>
       <bodyPartGroups>
@@ -52,6 +55,641 @@
       <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
 	  <tags>
         <li>LocustBeastrider</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_GunnerHelm</defName>
+    <label>Gunner Helmet</label>
+    <description>Bulky enclosed helmets equipped with advanced optics and scopes to provide Gunners with increased accuacy, this however comes at the downside of situational awareness and requires they be paired with a Spotter Drone to protect them.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>102</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>21500</WorkToMake>
+      <MaxHitPoints>245</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.50</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+	 <RangedCooldownFactor>-0.1</RangedCooldownFactor>
+	 <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>55</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustGunner</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_BolterHelm</defName>
+    <label>Bolter Helmet</label>
+    <description>Heavy and thick plated helmets favored by Locust Bolters, providing ample defense against low caliber arms fire.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>103</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <MaxHitPoints>275</MaxHitPoints>
+      <Mass>3.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+	 <RangedCooldownFactor>-0.1</RangedCooldownFactor>
+	 <MoveSpeed>0.05</MoveSpeed>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>60</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustBolter</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_MinerHelm</defName>
+    <label>Miner Helmet</label>
+    <description>Simple leather helmets designed to keep dust and debris out of a Drones eyes.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	  <displayPriority>104</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>1</Mass>
+      <Flammability>0.5</Flammability>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>5</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <MiningYield>0.05</MiningYield>
+	 <DeepDrillingSpeed>0.05</DeepDrillingSpeed>
+	 <MiningSpeed>0.15</MiningSpeed>
+	 <SmoothingSpeed>0.10</SmoothingSpeed>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>50</Leather_Patch>
+	  <Steel>10</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustMiner</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_SniperGogglesLocust/defName>
+    <label>Sniper Goggles</label>
+    <description>WIP.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	  <displayPriority>105</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Flammability>0.3</Flammability>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.10</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>10</Steel>
+	  <Leather_Patch>15</Leather_Patch>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+	    <li>Eyes</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustSniper</li>
+      </tags>
+      <layers>
+        <li>EyeCover</li>
+      </layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_FlamerMaskLocust</defName>
+    <label>Flamer Mask</label>
+    <description>Repurposed welding masks fielded by Locust incendiary troops, while heavily armored they tend to obscure the wearers vision.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <displayPriority>106</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>305</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.75</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>7</Insulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+	 <ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+	 <SmeltingSpeed>0.10</SmeltingSpeed>
+	 <ConstructionSpeed>0.10</ConstructionSpeed>
+	 <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+	 <MoveSpeed>-0.05</MoveSpeed>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>15</Leather_Patch>
+	  <Steel>65</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustFlamer</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_Hunterhelm</defName>
+    <label>Hunter Helmet</label>
+    <description>The last thing many soldiers ever see, the task of hunter is one of sheer dedication to the extermination of those marked for death by the Queen.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>107</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>21500</WorkToMake>
+      <MaxHitPoints>245</MaxHitPoints>
+      <Mass>2.8</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <RangedCooldownFactor>-0.15</RangedCooldownFactor>
+	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+	 <MoveSpeed>0.10</MoveSpeed>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>10</Leather_Patch>
+	  <Steel>65</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustHunter</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+ 
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_CyclopsHelm</defName>
+    <label>Cyclops Helmet</label>
+    <description>Unique helmets worn by eccentric drones, fairly expensive but well worth the inbuilt optics and solid defense.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>107</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>29500</WorkToMake>
+      <MaxHitPoints>285</MaxHitPoints>
+      <Mass>3.2</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>55</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustCyclops</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_SpotterHelm</defName>
+    <label>Spotter Helmet</label>
+    <description>WIP.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>108</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>29500</WorkToMake>
+      <MaxHitPoints>285</MaxHitPoints>
+      <Mass>3.2</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.55</ArmorRating_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>55</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>LocustCyclops</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+
+  <ThingDef ParentName="RWLocustRAREArmorMachineableBase">
+    <defName>Apparel_GOW_TheronHelm</defName>
+    <label>Theron Helmet</label>
+    <description>Plated helmets worn by the personal guard of the Locust Queen, the thick plated visor protects the users vision and instills fear in any soldier unfortunate enough to encounter it.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustqueen</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+	  <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_Theron/GOW_TheronHelm/GOW_TheronHelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>17500</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>2</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <SocialImpact>-0.1</SocialImpact>
+	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>45</Leather_Patch>
+	  <Steel>85</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+		<li>Eyes</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_Theron/GOW_TheronHelm/GOW_TheronHelm</wornGraphicPath>
+	  <tags>
+        <li>LocustTheron</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_ButcherHat</defName>
+    <label>Butcher Cap</label>
+    <description>A leather cap worn by locust butchers, seemingly pointless but boomers enjoy wearing them.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+	  <displayPriority>500</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <Flammability>0.7</Flammability>
+      <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.05</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>50</Leather_Patch>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_BeastRhelm/GOW_BeastRhelm</wornGraphicPath>
+	  <tags>
+        <li>Locustbutcher</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>false</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_KantusHelm</defName>
+    <label>Kantus Helmet</label>
+    <description>Ornate helms decorated with the symbol of the Locust Horde, they signify the rank of Priest among the Trinity of Worms.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustkantus</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>700</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Kantus/GOW_KantusHelm/GOW_KantusHelm_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>225</MaxHitPoints>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.33</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <SocialImpact>0.15</SocialImpact>
+	  <PsychicSensitivityOffset>0.05</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.10</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+	<thingCategories>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>40</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWlocust/GOW_Kantus/GOW_KantusHelm/GOW_KantusHelm</wornGraphicPath>
+	  <tags>
+        <li>LocustKantus</li>
       </tags>
       <layers>
         <li>Overhead</li>

@@ -48,21 +48,37 @@
     <researchViewY>2.00</researchViewY>
    </ResearchProjectDef>
    
-   <!--ResearchProjectDef>
-	 <defName>GOW_Locustqueen</defName>
-	 <label>Queen</label>
+   <ResearchProjectDef>
+	 <defName>GOW_Locustkantus</defName>
+	 <label>Kantus Priesthood</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>The Queen produces strong drones, and leads the Horde.</description>
-	 <baseCost>5000</baseCost>
+	 <description>The spiritual leaders of the Horde, maintaining faith and inventing new ways for Nexus to prosper.</description>
+	 <baseCost>1750</baseCost>
+	 <tab>GOW_Locust</tab>
+     <prerequisites>
+	  <li>GOW_Locustboomers</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
+	 <defName>GOW_Locustqueen</defName>
+	 <label>Queens Guard</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>The Queen produces strong drones, and leads the Horde to glory.</description>
+	 <baseCost>3500</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
 	  <li>GOW_Locustbasic</li>
+	  <li>GOW_Locustboomers</li>
 	 </prerequisites>
     <researchViewX>1.00</researchViewX>
     <researchViewY>3.00</researchViewY>
    </ResearchProjectDef>
    
-   <ResearchProjectDef>
+   <!--ResearchProjectDef>
 	 <defName>GOW_Locustnexus</defName>
 	 <label>Nexus</label>
 	 <techLevel>Industrial</techLevel>

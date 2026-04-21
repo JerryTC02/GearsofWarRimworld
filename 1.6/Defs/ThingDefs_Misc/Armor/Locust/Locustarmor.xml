@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- if something is like this, that means it isnt done yet so dont touch it -->
+
 <Defs>
 
   <ThingDef ParentName="RWLocustArmorMachineableBase">
@@ -21,13 +23,13 @@
 	  <drawSize>0.85</drawSize>
     </graphicData>
     <statBases>
-      <WorkToMake>24500</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Mass>7</Mass>
-      <Flammability>0</Flammability>
-      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <WorkToMake>2150</WorkToMake>
+      <MaxHitPoints>210</MaxHitPoints>
+      <Mass>6.5</Mass>
+      <Flammability>0.2</Flammability>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.42</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.38</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
       <Insulation_Heat>10</Insulation_Heat>
       <EquipDelay>3</EquipDelay>
@@ -42,8 +44,8 @@
       <li>ApparelArmor</li>
     </thingCategories>
     <costList>
-	  <Leather_Patch>50</Leather_Patch>
-	  <Steel>40</Steel>
+	  <Leather_Patch>45</Leather_Patch>
+	  <Steel>30</Steel>
 	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <apparel>
@@ -59,6 +61,280 @@
       <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_Drone</wornGraphicPath>
       <layers>
         <li>Middle</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWLocustRAREArmorMachineableBase">
+    <defName>Apparel_GOW_Theron</defName>
+    <label>Theron Armor</label>
+    <description>Easily identified by the large armored collar, Theron armor has become an unwelcome sight among the enemies of the Locust Horde, as it signals the arrival of the personal army of the Queen.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustqueen</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+	  <displayPriority>201</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_Theron/GOW_Theron_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>46750</WorkToMake>
+      <MaxHitPoints>325</MaxHitPoints>
+      <Mass>13.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>12</Insulation_Cold>
+      <Insulation_Heat>9</Insulation_Heat>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PainShockThreshold>0.20</PainShockThreshold>
+	  <IncomingDamageFactor>-0.15</IncomingDamageFactor>
+	  <StaggerDurationFactor>-0.20</StaggerDurationFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>100</Leather_Patch>
+	  <Steel>125</Steel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>LocustTheron</li>
+      </tags>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_Theron/GOW_Theron</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Male</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_Boomer</defName>
+    <label>Boomer Armor</label>
+    <description>Thick metal plates forged into a large chestplate to provide ample defense against enemy fire. Boomers of all variants are seen wearing this armor, and much like the more common Drone Armor, it is easily modified by its user to suit the task at hand.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustboomers</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+	  <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Boomer/GOW_Boomer_Fat_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>29500</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>11.5</Mass>
+      <Flammability>0.15</Flammability>
+      <ArmorRating_Sharp>0.82</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.43</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>8</Insulation_Cold>
+      <Insulation_Heat>11</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PainShockThreshold>0.15</PainShockThreshold>
+	  <IncomingDamageFactor>-0.10</IncomingDamageFactor>
+	  <StaggerDurationFactor>-0.10</StaggerDurationFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>75</Leather_Patch>
+	  <Steel>105</Steel>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>Locustboomer</li>
+      </tags>
+      <wornGraphicPath>Things/RWlocust/GOW_Boomer/GOW_Boomer</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Fat</femaleBody>
+      <maleBody>Fat</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef>
+  
+  <!--ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_Butcher</defName>
+    <label>Butcher Apron</label>
+    <description>WIP.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+	  <displayPriority>401</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Drone/GOW_Drone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>24500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>0.25</Flammability>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>14</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>2.8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>-0.10</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>125</Leather_Patch>
+	  <Steel>45</Steel>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+		<li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>Locustbutcher</li>
+      </tags>
+      <wornGraphicPath>Things/RWlocust/GOW_Drone/GOW_Drone</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>False</hideBody>
+      <femaleBody>Male</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <ThingDef ParentName="RWLocustArmorMachineableBase">
+    <defName>Apparel_GOW_Kantus</defName>
+    <label>Kantus Vestments</label>
+    <description>Long robes made of hard leather for members of the Kantus Priesthood. These robes are designed more for religious purposes than battle despite Kantus Priests being a common sight in the front lines and during Rockworm hunts, resulting in them lacking protection.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Locustkantus</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWlocust/GOW_Kantus/GOW_Kantus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>22750</WorkToMake>
+      <MaxHitPoints>195</MaxHitPoints>
+      <Mass>3.5</Mass>
+      <Flammability>0.35</Flammability>
+      <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.25</ArmorRating_Heat>
+      <Insulation_Cold>9</Insulation_Cold>
+      <Insulation_Heat>15</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MoveSpeed>0.15</MoveSpeed>
+	  <SocialImpact>0.25</SocialImpact>
+	  <PsychicSensitivityOffset>0.05</PsychicSensitivityOffset>
+      <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.015</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Leather_Patch>85</Leather_Patch>
+	  <Steel>20</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>LocustKantus</li>
+      </tags>
+      <wornGraphicPath>Things/RWlocust/GOW_Kantus/GOW_Kantus</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
       </layers>
     </apparel>
 	<modExtensions>

@@ -18,7 +18,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
-      <displayPriority>300</displayPriority>
+      <displayPriority>2001</displayPriority>
     </recipeMaker>
     <statBases>
       <WorkToMake>48500</WorkToMake>
@@ -116,7 +116,7 @@
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
-      <displayPriority>300</displayPriority>
+      <displayPriority>2000</displayPriority>
     </recipeMaker>
     <statBases>
       <WorkToMake>40500</WorkToMake>
@@ -200,7 +200,7 @@
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
-      <displayPriority>400</displayPriority>
+      <displayPriority>3000</displayPriority>
     </recipeMaker>
     <statBases>
       <WorkToMake>50000</WorkToMake>
@@ -282,7 +282,7 @@
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
-      <displayPriority>500</displayPriority>
+      <displayPriority>4000</displayPriority>
     </recipeMaker>
     <statBases>
       <WorkToMake>25500</WorkToMake>

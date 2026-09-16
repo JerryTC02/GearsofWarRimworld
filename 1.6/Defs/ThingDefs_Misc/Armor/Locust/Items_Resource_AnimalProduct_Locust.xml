@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  
+  <ThingDef ParentName="LeatherBase">
+    <defName>GOW_Leather_Hollow</defName>
+    <label>hollow leather</label>
+    <description>Pale and tan hides taken from various beasts that dwell deep below in the Hollow. Incredibly durable and makes for good quality armor but its quite ugly.</description>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <genericMarketSellable>true</genericMarketSellable>
+    <graphicData>
+      <color>(138,121,102)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.2</MarketValue>
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.29</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.25</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>14</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(138,121,102)</color>
+      <statFactors>
+	    <MaxHitPoints>1.65</MaxHitPoints>
+        <Beauty>-1</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+</Defs>

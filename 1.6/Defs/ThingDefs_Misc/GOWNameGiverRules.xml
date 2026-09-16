@@ -16,6 +16,19 @@
   </RulePackDef>
   
   <RulePackDef>
+    <defName>NamerLocustBerserker</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[Locust_FemaleName_First] [Locust_FemaleName_Last]</li>
+      </rulesStrings>
+	  <rulesFiles>
+	   <li>Locust_FemaleName_First->Names/Locust_Berserker</li>
+	   <li>Locust_FemaleName_Last->Names/Locust_FemaleLast</li>
+	  </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
     <defName>NamerLocustFaction</defName>
     <rulePack>
       <rulesStrings>

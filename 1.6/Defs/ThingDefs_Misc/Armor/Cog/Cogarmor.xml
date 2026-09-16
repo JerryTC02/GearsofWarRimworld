@@ -5,18 +5,18 @@
   <ThingDef ParentName="RWCogArmorMachineableBase">
     <defName>Apparel_GOW_Cogsoldier</defName>
     <label>COG Trooper Armor</label>
-    <description>The most common armor in the COG army, Trooper armor is capable of protecting against small arms fire whilst providing some resistance to hostile enviroments.</description>
+    <description>The standard-issue armor in the COG army, Trooper armor is designed to provide ample protection against small arms fire without impeding mobility during combat. While many modifications have been made to it over the years, the Troopers basic design concepts have never quite been fully retired.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
       <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
       <skillRequirements>
-        <Crafting>5</Crafting>
+        <Crafting>6</Crafting>
       </skillRequirements>
 	  <displayPriority>1</displayPriority>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
+      <texPath>Things/RWcog/Apparel/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.2</drawSize>
     </graphicData>
@@ -33,7 +33,7 @@
       <EquipDelay>5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.15</MoveSpeed>
+      <MoveSpeed>-0.10</MoveSpeed>
 	  <PainShockThreshold>0.05</PainShockThreshold>
     </equippedStatOffsets>
     <thingCategories>
@@ -54,7 +54,7 @@
 	  <tags>
         <li>COGGear</li>
       </tags>
-      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
       <layers>
         <li>Middle</li>
 		<li>Shell</li>
@@ -83,24 +83,23 @@
 	  <displayPriority>2</displayPriority>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
+      <texPath>Things/RWcog/Apparel/GOW_CogSoldier/GOW_CogSoldier_Male_south</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.2</drawSize>
     </graphicData>
     <statBases>
-      <WorkToMake>32500</WorkToMake>
-      <MaxHitPoints>225</MaxHitPoints>
+      <WorkToMake>28500</WorkToMake>
+      <MaxHitPoints>245</MaxHitPoints>
       <Mass>9</Mass>
       <Flammability>0</Flammability>
       <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
       <ArmorRating_Heat>0.30</ArmorRating_Heat>
       <Insulation_Cold>13</Insulation_Cold>
-      <Insulation_Heat>8</Insulation_Heat>
-      <EquipDelay>3</EquipDelay>
+      <Insulation_Heat>9</Insulation_Heat>
+      <EquipDelay>3.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.05</MoveSpeed>
     </equippedStatOffsets>
     <thingCategories>
       <li>ApparelArmor</li>
@@ -119,7 +118,7 @@
 	  <tags>
         <li>COGCadetGear</li>
       </tags>
-      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
+      <texPath>Things/RWcog/Apparel/GOW_CogSoldier/GOW_CogSoldier</texPath>
       <layers>
         <li>Middle</li>
 		<li>Shell</li>
@@ -128,6 +127,360 @@
 	<modExtensions>
      <li Class="taranchuk_apparelgraphics.ApparelExtension">
       <hideBody>False</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_OnyxGuard</defName>
+    <label>Onyx Guard Armor</label>
+    <description>Black Trooper Armor worn exclusively by members of the Special Operations branch known as the Onyx Guard. Fully enclosed and made from lighter yet higher grade materials, this armor is better in every way from basic Gear equipment.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_CogSpecOps</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+	  <displayPriority>201</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_OldOnyxGuard/GOW_OldOnyxGuard_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>11</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>18</Insulation_Cold>
+      <Insulation_Heat>8</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+	  <PainShockThreshold>0.10</PainShockThreshold>
+	  <RangedCooldownFactor>-0.1</RangedCooldownFactor>
+	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+	  <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+	  <HuntingStealth>0.05</HuntingStealth>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>160</Steel>
+	  <Plasteel>15</Plasteel>
+	  <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGOnyxGuard</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_OldOnyxGuard/GOW_OldOnyxGuard</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>True</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_OnyxGuardOfficer</defName>
+    <label>Onyx Guard Officer Armor</label>
+    <description>Modified Onyx Guard Armor that has been decorated with a large silver symbol representing the Coalition. Worn by Officers of the Onyx Guard, who unlike the typical Officers seen among the standard COG millitary, rarely receive the rank through political connections and tend to show almost fanatical dedication to achieving victory for the Coalition.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_CogSpecOps</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+	  <displayPriority>202</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_LoomisArmor/GOW_LoomisArmor_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>55500</WorkToMake>
+      <MaxHitPoints>285</MaxHitPoints>
+      <Mass>9.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.88</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>18</Insulation_Cold>
+      <Insulation_Heat>8</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <PainShockThreshold>0.10</PainShockThreshold>
+	  <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+	  <ToxicEnvironmentResistance>0.10</ToxicEnvironmentResistance>
+	  <SocialImpact>0.10</SocialImpact>
+	  <NegotiationAbility>0.10</NegotiationAbility>
+	  <ArrestSuccessChance>0.20</ArrestSuccessChance>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>135</Steel>
+	  <Plasteel>15</Plasteel>
+	  <Silver>8</Silver>
+	  <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGOnyxGuardOfficer</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_LoomisArmor/GOW_LoomisArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>True</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_NewOnyxGuard</defName>
+    <label>Onyx Guard Armor (R.E)</label>
+    <description>Black Trooper Armor worn exclusively by members of the Special Operations branch known as the Onyx Guard. Fully enclosed and made from lighter yet higher grade materials, this armor is better in every way from basic Gear equipment.\n\nDespite this variant coming from the Post Locust-War Era, the fundamental design has changed little, with the primary changes being in production quality and material budget.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_NewCogSpecOps</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+	  <displayPriority>203</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_NewOnyxGuard/GOW_NewOnyxGuard_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>75000</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Insulation_Cold>20</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+	  <PainShockThreshold>0.15</PainShockThreshold>
+	  <RangedCooldownFactor>-0.15</RangedCooldownFactor>
+	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+	  <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+	  <HuntingStealth>0.05</HuntingStealth>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>165</Steel>
+	  <Plasteel>35</Plasteel>
+	  <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGOnyxNewGuard</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_NewOnyxGuard/GOW_NewOnyxGuard</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>True</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_CouncilArmor</defName>
+    <label>COG Councilman Armor</label>
+    <description>A lightweight and simplified armor that appears to be somewhere between Cadet and Trooper armor, typically worn by Coalition councilmen or the children of important politicians.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_CogLeaders</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+	  <displayPriority>401</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_Prescott_Armor/GOW_Prescott_Armor_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>29500</WorkToMake>
+      <MaxHitPoints>235</MaxHitPoints>
+      <Mass>8.5</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.72</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>12</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>2.8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+	  <SocialImpact>0.10</SocialImpact>
+	  <NegotiationAbility>0.10</NegotiationAbility>
+	  <TradePriceImprovement>0.05</TradePriceImprovement>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Steel>110</Steel>
+	  <Silver>5</Silver>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGChairmanBattle</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_Prescott_Armor/GOW_Prescott_Armor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+		<li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>True</hideBody>
+      <femaleBody>Female</femaleBody>
+      <maleBody>Male</maleBody>
+     </li>
+    </modExtensions>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_Council</defName>
+    <label>COG Councilman Suit</label>
+    <description>A fairly plain suit decorated with small golden medals, worn by high ranking politicians and the Chairman of the Coalition.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_CogLeaders</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+	  <displayPriority>402</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_PrescottUniform/PrescottUniform_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>13500</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>4</Mass>
+      <Flammability>0.45</Flammability>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>13</Insulation_Cold>
+      <Insulation_Heat>9</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	    <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.15</ConversionPower>
+	    <SocialImpact>0.35</SocialImpact>
+	    <TradePriceImprovement>0.20</TradePriceImprovement>
+	    <NegotiationAbility>0.15</NegotiationAbility>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+	  <Cloth>125</Cloth>
+	  <Silver>5</Silver>
+	  <Gold>1</Gold>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+	  <tags>
+        <li>COGChairman</li>
+      </tags>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_PrescottUniform/PrescottUniform</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+    </apparel>
+	<modExtensions>
+     <li Class="taranchuk_apparelgraphics.ApparelExtension">
+      <hideBody>True</hideBody>
       <femaleBody>Female</femaleBody>
       <maleBody>Male</maleBody>
      </li>

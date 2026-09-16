@@ -15,6 +15,7 @@
           <li>Offworld</li>
           <li>Outlander</li>
           <li>Outsider</li>
+		  <li>COG</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
@@ -146,7 +147,7 @@
   
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Fighter_GearGuard</defName>
-    <label>Gear Guard</label>
+    <label>Gear Caravan Guard</label>
     <combatPower>40</combatPower>
 	<invNutrition>2</invNutrition>
 	<weaponTags>
@@ -291,6 +292,8 @@
     <label>Supply Officer</label>
     <race>Human</race>
     <defaultFactionType>COGFaction</defaultFactionType>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
     <minGenerationAge>21</minGenerationAge>
     <maxGenerationAge>50</maxGenerationAge>
     <trader>true</trader>
@@ -457,6 +460,7 @@
       <li>
         <categories>
           <li>Outlander</li>
+		  <li>COGmillitary</li>
         </categories>
       </li>
     </backstoryFiltersOverride>
@@ -475,6 +479,8 @@
     <techHediffsChance>0</techHediffsChance>
     <techHediffsMoney>750~1000</techHediffsMoney>
     <biocodeWeaponChance>0</biocodeWeaponChance>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
 	<inventoryOptions>
       <skipChance>0.80</skipChance>
       <subOptionsChooseOne>
@@ -501,7 +507,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COGC_Fighter_Gear</defName>
     <label>Gear Cadet</label>
-    <combatPower>35</combatPower>
+    <combatPower>45</combatPower>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 	<weaponTags>
 	  <li>COGlancer</li>
@@ -571,7 +577,7 @@
   <!--PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Sapper_Gear</defName>
     <label>Gear Sapper</label>
-    <combatPower>35</combatPower>
+    <combatPower>45</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
     </weaponTags>
@@ -639,7 +645,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Fighter_Gear</defName>
     <label>Gear</label>
-    <combatPower>40</combatPower>
+    <combatPower>50</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
 	  <li>COGGnasher</li>
@@ -709,7 +715,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Onyx_Gear</defName>
     <label>Onyx Guard</label>
-    <combatPower>45</combatPower>
+    <combatPower>65</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
 	  <li>COGGnasher</li>
@@ -779,7 +785,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Sniper_Gear</defName>
     <label>Gear Sniper</label>
-    <combatPower>45</combatPower>
+    <combatPower>55</combatPower>
 	<weaponTags>
 	  <li>COGLongshot</li>
     </weaponTags>
@@ -878,6 +884,7 @@
       <li>
         <categories>
           <li>Outlander</li>
+		  <li>COG</li>
         </categories>
         <commonality>1</commonality>
       </li>
@@ -1032,7 +1039,7 @@
   <FactionDef ParentName="COGRoughBase">
     <defName>COGFaction</defName>
     <label>Coalition of Ordered Governments</label>
-    <description>The Coalition of Ordered Governments, otherwise known as COG, is a socialist regime founded on the teachings of Alexiy Desipich and the Austere Canon. The COG highly value loyalty, order, and discipline, resulting in strict laws and heavy use of propaganda.</description>
+    <description>The Coalition of Ordered Governments, otherwise known as the C.O.G, is a socialist regime founded on the teachings of Alexiy Desipich and the Austere Canon. The C.O.G highly value loyalty, order, and discipline, resulting in strict laws and heavy use of propaganda.</description>
     <factionIconPath>UI/Icons/FactionGOW</factionIconPath>
   </FactionDef>
 

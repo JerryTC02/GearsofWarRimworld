@@ -2,6 +2,12 @@
 
 <Defs>
 
+	<ThingCategoryDef>
+        <defName>GOW_Category_COG_Armor</defName>
+        <label>COG</label>
+        <parent>ApparelArmor</parent>
+    </ThingCategoryDef>
+
   <ThingDef Name="RWCogArmorMachineableBase" ParentName="ApparelBase" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -26,12 +32,51 @@
         </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_COG_Armor</li>
+        </thingCategories>
 	<apparel>
 	  <tags Inherit="False">
       </tags>
     </apparel>
 	<tradeTags Inherit="False">
       <li>CogArmor</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef Name="RWCogRAREArmorMachineableBase" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedArmor</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_COG_Armor</li>
+        </thingCategories>
+	<apparel>
+	  <tags Inherit="False">
+      </tags>
+    </apparel>
+	<tradeTags Inherit="False">
+      <li>CogArmorRare</li>
     </tradeTags>
   </ThingDef>
 

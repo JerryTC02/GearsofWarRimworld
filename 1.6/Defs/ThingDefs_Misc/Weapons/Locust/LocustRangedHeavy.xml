@@ -182,7 +182,6 @@
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <muzzleFlashScale>9</muzzleFlashScale>
-		<forcedMissRadius>1</forcedMissRadius>
       </li>
     </verbs>
     <tools>
@@ -214,20 +213,60 @@
     </tools>
   </ThingDef>
   
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_TorqueBow</defName>
-    <label>Torque Arrow</label>
-	<thingClass>Projectile_Explosive</thingClass>
+  <FleckDef ParentName="FleckBase">
+    <defName>GW_Locust_TorqueFleck</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.0</solidTime>
+    <fadeOutTime>0.14</fadeOutTime>
     <graphicData>
-      <texPath>Things/Projectile/GOW_TorquebowShot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Projectile/GOW_TorquebowBeam</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <color>(150,150,150)</color>
     </graphicData>
-    <projectile>
-      <explosionRadius>1.9</explosionRadius >
-      <damageDef>Bomb</damageDef>
-	  <damageAmountBase>20</damageAmountBase>
-      <speed>60</speed>
-    </projectile>
+  </FleckDef>
+
+  <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_TorqueBow</defName>
+        <label>Torque Arrow</label>
+        <description>Arrow</description>
+        <thingClass>MstToyBox.Mst_BezierProjectile_Explosive</thingClass>
+        <drawOffscreen>true</drawOffscreen>
+        <seeThroughFog>true</seeThroughFog>
+        <graphicData>
+            <texPath>Things/Projectile/GOW_TorquebowShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <projectile>
+         <damageDef>Bomb</damageDef>
+	     <damageAmountBase>20</damageAmountBase>
+		 <explosionRadius>1.9</explosionRadius >
+         <speed>30</speed>
+        </projectile>
+    <comps>
+    </comps>
+    <modExtensions>
+      <li Class="MstToyBox.ModExt_Mst_BezierProjectile">
+        <drawStartDelay>1</drawStartDelay>
+        <trailFleckDef>GW_Locust_TorqueFleck</trailFleckDef>
+        <trailThickness>0.5</trailThickness>
+        <probeStep>0.05</probeStep> 
+        <useCubieCurve>true</useCubieCurve>
+        <enableRandomSide>true</enableRandomSide>
+        <randomSideChance>0</randomSideChance>
+        <randOffsetRange>
+          <min>0</min>
+          <max>0</max>
+        </randOffsetRange>
+        <P1Offset>0</P1Offset>
+        <P1Side>0</P1Side>
+        <P2Offset>0</P2Offset>
+        <P2Side>0</P2Side>
+      </li>
+        </modExtensions>
   </ThingDef>
 
 </Defs>

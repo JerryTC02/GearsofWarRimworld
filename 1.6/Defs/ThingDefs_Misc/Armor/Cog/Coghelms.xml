@@ -2,10 +2,85 @@
 
 <Defs>
 
+    <ThingCategoryDef>
+        <defName>GOW_Category_COG_Headgear</defName>
+        <label>COG</label>
+        <parent>ArmorHeadgear</parent>
+    </ThingCategoryDef>
+	
+	<!--ThingDef ParentName="RWCogArmorMachineableBase">
+     <defName>Apparel_GOW_Cogtag</defName>
+     <label>COG Dogtags</label>
+     <description>Steel plates made in the shape of a cog stamped with the name of the soldier carrying it, used as a way to identify Gears who fell in battle.\n\n"Property of the Coalition of Ordered Governments" is stamped on another part of the tag.</description>
+     <techLevel>Industrial</techLevel>
+     <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+       <skillRequirements>
+         <Crafting>5</Crafting>
+       </skillRequirements>
+	  <displayPriority>100</displayPriority>
+     </recipeMaker>
+     <graphicData>
+       <texPath>Things/RWcog/Apparel/GOW_Cogtag/COGTag_item</texPath>
+       <graphicClass>Graphic_Single</graphicClass>
+	   <drawSize>1.2</drawSize>
+     </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>0.10</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+      <EquipDelay>0.2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+    </equippedStatOffsets>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_COG_Headgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>5</Steel>
+    </costList>
+    <apparel>
+		  	<drawData>
+                <dataSouth>
+                </dataSouth>
+                <dataWest>
+                </dataWest>
+                <dataEast>
+                </dataEast>
+                <dataNorth>
+                </dataNorth>
+            </drawData>
+      <bodyPartGroups>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_Cogtag/COGTag</wornGraphicPath>
+	  <tags>
+        <li>COGGearTag</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+	  <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+
   <ThingDef ParentName="RWCogArmorMachineableBase">
     <defName>Apparel_GOW_CoghelmA</defName>
     <label>COG Combat Helmet</label>
-    <description>The standard issue helmets worn by the soldiers of the COG, used extensively during both the Pendulum Wars and the Locust War. Comes with a built in filtration system to allow operations in hostile terrain.</description>
+    <description>The standard-issue helmets worn by the soldiers of the C.O.G, used extensively during both the Pendulum Wars and the Locust War. Comes with a built in filtration system to allow operations in hostile terrain.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
@@ -16,7 +91,7 @@
 	  <displayPriority>101</displayPriority>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/RWcog/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA_south</texPath>
+      <texPath>Things/RWcog/Apparel/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA_south</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>1.2</drawSize>
     </graphicData>
@@ -36,8 +111,8 @@
     <equippedStatOffsets>
 	  <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_COG_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>65</Steel>
@@ -58,7 +133,7 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/RWcog/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA</wornGraphicPath>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_CogSoldier/CogSoldierHelmetA/CogSoldierHelmetA</wornGraphicPath>
 	  <tags>
         <li>COGGear</li>
       </tags>
@@ -68,5 +143,145 @@
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
   </ThingDef>
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_OnyxGuardhelmA</defName>
+    <label>Onyx Guard Helmet</label>
+    <description>Sleek black helmets worn by members of the Onyx Guard, with enhanced filtration systems and optics allowing for operation in a wider range of enviroments compared to average Gear helmets.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_CogSpecOps</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+	  <displayPriority>301</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_OldOnyxGuard/OldOnyxGuardHelmetA/OldOnyxGuard_Helmet_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>225</MaxHitPoints>
+      <Mass>1.35</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>7</Insulation_Cold>
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <ToxicEnvironmentResistance>0.30</ToxicEnvironmentResistance>
+	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+	  <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_COG_Headgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>50</Steel>
+	  <Plasteel>25</Plasteel>
+	  <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <apparel>
+		  	<drawData>
+                <dataSouth>
+                </dataSouth>
+                <dataWest>
+                </dataWest>
+                <dataEast>
+                </dataEast>
+                <dataNorth>
+                </dataNorth>
+            </drawData>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_OldOnyxGuard/OldOnyxGuardHelmetA/OldOnyxGuard_Helmet</wornGraphicPath>
+	  <tags>
+        <li>COGOnyxGuard</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
+  
+  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+    <defName>Apparel_GOW_NewOnyxGuardhelmA</defName>
+    <label>Onyx Guard Helmet (R.E)</label>
+    <description>Sleek black helmets worn by members of the Onyx Guard, with enhanced filtration systems and optics allowing for operation in a wider range of enviroments compared to average Gear helmets.\n\nDespite this variant coming from the Post Locust-War Era, the fundamental design has changed little, with the primary changes being in production quality and material budget.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_NewCogSpecOps</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+	  <displayPriority>302</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_NewOnyxGuard/NewOnyxGuardHelmetA/NewOnyxGuard_Helmet_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>22500</WorkToMake>
+      <MaxHitPoints>275</MaxHitPoints>
+      <Mass>1.35</Mass>
+      <Flammability>0</Flammability>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.45</ArmorRating_Heat>
+      <Insulation_Cold>9</Insulation_Cold>
+      <Insulation_Heat>5</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <ToxicEnvironmentResistance>0.40</ToxicEnvironmentResistance>
+	  <PainShockThreshold>0.08</PainShockThreshold>
+	  <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+	  <ShootingAccuracyPawn>0.08</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_COG_Headgear</li>
+    </thingCategories>
+    <costList>
+	  <Steel>60</Steel>
+	  <Plasteel>45</Plasteel>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <apparel>
+		  	<drawData>
+                <dataSouth>
+                </dataSouth>
+                <dataWest>
+                </dataWest>
+                <dataEast>
+                </dataEast>
+                <dataNorth>
+                </dataNorth>
+            </drawData>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_NewOnyxGuard/NewOnyxGuardHelmetA/NewOnyxGuard_Helmet</wornGraphicPath>
+	  <tags>
+        <li>COGOnyxNewGuard</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef-->
   
 </Defs>

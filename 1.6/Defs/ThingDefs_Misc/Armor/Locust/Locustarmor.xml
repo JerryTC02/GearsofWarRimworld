@@ -40,9 +40,6 @@
 	  <DeepDrillingSpeed>0.10</DeepDrillingSpeed>
 	  <SmoothingSpeed>0.10</SmoothingSpeed>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <costList>
 	  <Leather_Patch>45</Leather_Patch>
 	  <Steel>30</Steel>
@@ -107,9 +104,6 @@
 	  <IncomingDamageFactor>-0.15</IncomingDamageFactor>
 	  <StaggerDurationFactor>-0.20</StaggerDurationFactor>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <costList>
 	  <Leather_Patch>100</Leather_Patch>
 	  <Steel>125</Steel>
@@ -176,9 +170,6 @@
 	  <IncomingDamageFactor>-0.10</IncomingDamageFactor>
 	  <StaggerDurationFactor>-0.10</StaggerDurationFactor>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <costList>
 	  <Leather_Patch>75</Leather_Patch>
 	  <Steel>105</Steel>
@@ -243,9 +234,6 @@
     <equippedStatOffsets>
 	  <MoveSpeed>-0.10</MoveSpeed>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <costList>
 	  <Leather_Patch>125</Leather_Patch>
 	  <Steel>45</Steel>
@@ -313,9 +301,6 @@
 	  <PsychicSensitivityOffset>0.05</PsychicSensitivityOffset>
       <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.015</PsychicEntropyRecoveryRate>
     </equippedStatOffsets>
-    <thingCategories>
-      <li>ApparelArmor</li>
-    </thingCategories>
     <costList>
 	  <Leather_Patch>85</Leather_Patch>
 	  <Steel>20</Steel>

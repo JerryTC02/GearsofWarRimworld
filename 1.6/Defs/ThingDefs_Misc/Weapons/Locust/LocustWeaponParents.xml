@@ -2,9 +2,24 @@
 
 <Defs>
 
+    <ThingCategoryDef>
+        <defName>GOW_Category_Locust_Weapon</defName>
+        <label>Locust</label>
+        <parent>WeaponsRanged</parent>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+        <defName>GOW_Category_Locust_Melee_Weapon</defName>
+        <label>Locust</label>
+        <parent>WeaponsMelee</parent>
+    </ThingCategoryDef>
+
   <ThingDef Name="RWLocustBaseHumanMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
     <weaponTags Inherit="False">
     </weaponTags>
+	    <thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Weapon</li>
+        </thingCategories>
     <recipeMaker>
 	  <recipeUsers Inherit="False">
         <li>TableMachining</li>
@@ -31,6 +46,9 @@
     </comps>
 	<weaponTags Inherit="False">
     </weaponTags>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Melee_Weapon</li>
+        </thingCategories>
 	<tradeTags Inherit="False">
       <li>LocustMelee</li>
     </tradeTags>
@@ -52,6 +70,9 @@
     </comps>
 	<weaponTags Inherit="False">
     </weaponTags>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Melee_Weapon</li>
+        </thingCategories>
     <tradeTags Inherit="False">
       <li>LocustMelee</li>
     </tradeTags>
@@ -60,6 +81,9 @@
   <ThingDef Name="BaseLocustMakeableGrenade" ParentName="BaseWeapon" Abstract="True">
     <weaponTags Inherit="False">
     </weaponTags>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Weapon</li>
+        </thingCategories>
     <weaponClasses>
       <li>Ranged</li>
     </weaponClasses>

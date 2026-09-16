@@ -31,9 +31,6 @@
     <weaponTags>
       <li>LocustGrenadeDestructive</li>
     </weaponTags>
-    <thingCategories>
-      <li>Grenades</li>
-    </thingCategories>
     <smeltable>true</smeltable>
     <verbs>
       <li>

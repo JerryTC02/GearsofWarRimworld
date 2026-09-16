@@ -2,6 +2,12 @@
 
 <Defs>
 
+	<ThingCategoryDef>
+        <defName>GOW_Category_Locust_Armor</defName>
+        <label>Locust</label>
+        <parent>ApparelArmor</parent>
+    </ThingCategoryDef>
+
   <ThingDef Name="RWLocustArmorMachineableBase" ParentName="ApparelBase" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -26,6 +32,9 @@
         </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
+	    <thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Armor</li>
+        </thingCategories>
 	<apparel>
 	  <tags Inherit="False">
       </tags>
@@ -59,6 +68,9 @@
         </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
+		<thingCategories Inherit="False">
+            <li>GOW_Category_Locust_Armor</li>
+        </thingCategories>
 	<apparel>
 	  <tags Inherit="False">
       </tags>

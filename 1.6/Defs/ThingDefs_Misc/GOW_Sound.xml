@@ -226,7 +226,7 @@
           </li>
         </grains>
         <pitchRange>0.99~1.01</pitchRange>
-        <volumeRange>25</volumeRange>
+        <volumeRange>22</volumeRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -245,6 +245,82 @@
         <volumeRange>45.2941~45.2941</volumeRange>      
         <pitchRange>1.091765~1</pitchRange>      
         <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_LocustAnimalScream</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>KantusScreams/Animal</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>40.2941~42.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+		<volumeRange>20</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_LocustStunScreamone</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>KantusScreams/Stun/KantusSonicScreampartone1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>45.2941~45.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+	    <volumeRange>15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_LocustStunScreamtwo</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>KantusScreams/Stun/KantusSonicScreamparttwo1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>45.2941~45.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+		<volumeRange>15</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_LocustHealScream</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>KantusScreams/Heal/Heal1a</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>35.2941~37.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+		<volumeRange>15</volumeRange>
       </li>
     </subSounds>
   </SoundDef>

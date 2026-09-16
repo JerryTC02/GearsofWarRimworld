@@ -4,23 +4,23 @@
 
    <ResearchProjectDef>
 	 <defName>GOW_Cogbasic</defName>
-	 <label>Octus Canon Study</label>
+	 <label>Octus Canon</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>A deep study of the founding beliefs of the Coalition of Order Governments.\n\nRequired for most C.O.G researchs, also functions as a normal research bench</description>
-	 <baseCost>1500</baseCost>
+	 <description>The founding beliefs of the Coalition of Order Governments, understanding these is essential to understanding every aspect of the C.O.G from millitary to civillian life.</description>
+	 <baseCost>750</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
 	  <li>Machining</li>
 	 </prerequisites>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
+    <researchViewY>2.00</researchViewY>
    </ResearchProjectDef>
    
    <ResearchProjectDef>
 	 <defName>GOW_Cogmillitary</defName>
-	 <label>Fortification Act</label>
+	 <label>Enlistment Propaganda</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>A study on the technological and political structure of the C.O.G millitary, allowing production of baseline Coalition equipment.</description>
+	 <description>To fight for your country is not just considered honorable, but is expected of every citizen under the Coalition. This has allowed the C.O.G millitary to have unmatched manpower and millitary budget for the production of high quality equipment.</description>
 	 <baseCost>1000</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
@@ -32,27 +32,12 @@
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>
    </ResearchProjectDef>
-   
-   <!--ResearchProjectDef>
-	 <defName>GOW_CogArmor</defName>
-	 <label>Specialized Armor</label>
-	 <techLevel>Industrial</techLevel>
-	 <description>Information and schematics on the multitude of variants and advancements on the traditional COG Trooper armor.</description>
-	 <baseCost>1250</baseCost>
-	 <tab>GOW_Cog</tab>
-     <prerequisites>
-	  <li>GOW_Cogmillitary</li>
-	 </prerequisites>
-	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
-    <researchViewX>2.00</researchViewX>
-    <researchViewY>0.00</researchViewY>
-   </ResearchProjectDef-->
-   
+      
    <ResearchProjectDef>
 	 <defName>GOW_CogWeapons</defName>
-	 <label>Coalition Armaments</label>
+	 <label>Emergence Day</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>Design specs on the munitions and weaponry of the Coalition, allowing production of baseline Coalition firearms.</description>
+	 <description>Soon after Emergence Day, martial law was enacted enmasse among the Coalition and all resources were put to researching new ways to combat the Locust Threat, resulting in many inventions such as the Lancer MK2.</description>
 	 <baseCost>1250</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
@@ -63,5 +48,50 @@
     <researchViewX>2.00</researchViewX>
     <researchViewY>1.00</researchViewY>
    </ResearchProjectDef>
+   
+   <!--ResearchProjectDef>
+	 <defName>GOW_CogLeaders</defName>
+	 <label>Council of Sovreigns</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>WIP.</description>
+	 <baseCost>1250</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_Cogbasic</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
+	 <defName>GOW_CogSpecOps</defName>
+	 <label>Coalition Spec-Ops</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>Highly trained Gears who typically answer only to the highest of millitary command or the leader of the C.O.G directly, taking missions that are either too important or too "delicate" to be left to normal Gears. While there are multiple organizations who fall under this classification, the most well known is the Onyx Guard.</description>
+	 <baseCost>1750</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_CogLeaders</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.25</researchViewX>
+    <researchViewY>3.5</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
+	 <defName>GOW_NewCogSpecOps</defName>
+	 <label>Restoration Operations</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>The role that Special Operations Gears take in the Coalition has not changed following the end of the Locust Wars, with the only notable shift being the higher budgets for equipment and an increase in missions related to suppressing insurgency.</description>
+	 <baseCost>1750</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_CogSpecOps</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.50</researchViewX>
+    <researchViewY>4</researchViewY>
+   </ResearchProjectDef-->
 
 </Defs>

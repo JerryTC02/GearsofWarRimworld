@@ -91,7 +91,7 @@
     <description>Based on the common Hammerburst, the MK2 variant has been improved with an extended barrel and more refined ironsights to provide higher accuracy at long ranges. Much like its predecessor, it still lacks good defense against CQC.</description>
 	<techLevel>Industrial</techLevel>
     <graphicData>
-      <texPath>Things/RWlocust/Weapons/GOW_HammerburstAssaultRifleTwo</texPath>
+      <texPath>Things/RWlocust/Weapons/GOW_HammerburstIIAssaultRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <drawSize>0.90</drawSize>
     </graphicData>

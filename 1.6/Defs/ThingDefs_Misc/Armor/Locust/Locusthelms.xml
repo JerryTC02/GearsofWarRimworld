@@ -4,6 +4,12 @@
 
 <Defs>
 
+    <ThingCategoryDef>
+        <defName>GOW_Category_Locust_Headgear</defName>
+        <label>Locust</label>
+        <parent>ArmorHeadgear</parent>
+    </ThingCategoryDef>
+
   <ThingDef ParentName="RWLocustArmorMachineableBase">
     <defName>Apparel_GOW_BeastriderHelm</defName>
     <label>Beastrider Helmet</label>
@@ -31,7 +37,7 @@
       <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.30</ArmorRating_Heat>
-      <Insulation_Cold>2</Insulation_Cold>
+      <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>3</Insulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
@@ -40,8 +46,8 @@
 	 <AnimalGatherYield>0.10</AnimalGatherYield>
 	 <HuntingStealth>0.10</HuntingStealth>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>25</Leather_Patch>
@@ -99,8 +105,8 @@
 	 <RangedCooldownFactor>-0.1</RangedCooldownFactor>
 	 <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>55</Steel>
@@ -154,11 +160,11 @@
     </statBases>
     <equippedStatOffsets>
 	 <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
-	 <RangedCooldownFactor>-0.1</RangedCooldownFactor>
+	 <RangedCooldownFactor>-0.15</RangedCooldownFactor>
 	 <MoveSpeed>0.05</MoveSpeed>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>60</Steel>
@@ -216,8 +222,8 @@
 	 <MiningSpeed>0.15</MiningSpeed>
 	 <SmoothingSpeed>0.10</SmoothingSpeed>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>50</Leather_Patch>
@@ -272,8 +278,8 @@
     <equippedStatOffsets>
 	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>10</Steel>
@@ -333,8 +339,8 @@
 	 <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
 	 <MoveSpeed>-0.05</MoveSpeed>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>15</Leather_Patch>
@@ -392,8 +398,8 @@
 	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
 	 <MoveSpeed>0.10</MoveSpeed>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>10</Leather_Patch>
@@ -449,8 +455,8 @@
     <equippedStatOffsets>
 	 <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>55</Steel>
@@ -504,8 +510,8 @@
     </statBases>
     <equippedStatOffsets>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>55</Steel>
@@ -553,7 +559,7 @@
       <ArmorRating_Sharp>0.90</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Heat>0.40</ArmorRating_Heat>
-      <Insulation_Cold>2</Insulation_Cold>
+      <Insulation_Cold>5</Insulation_Cold>
       <Insulation_Heat>4</Insulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
@@ -562,8 +568,8 @@
 	  <SocialImpact>-0.1</SocialImpact>
 	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>45</Leather_Patch>
@@ -619,8 +625,8 @@
     </statBases>
     <equippedStatOffsets>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Leather_Patch>50</Leather_Patch>
@@ -667,17 +673,18 @@
       <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Heat>0.33</ArmorRating_Heat>
-      <Insulation_Cold>1</Insulation_Cold>
-      <Insulation_Heat>1</Insulation_Heat>
+      <Insulation_Cold>3</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
 	  <SocialImpact>0.15</SocialImpact>
+	  <NegotiationAbility>0.05</NegotiationAbility>
 	  <PsychicSensitivityOffset>0.05</PsychicSensitivityOffset>
       <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.10</PsychicEntropyRecoveryRate>
     </equippedStatOffsets>
-	<thingCategories>
-      <li>ArmorHeadgear</li>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_Locust_Headgear</li>
     </thingCategories>
     <costList>
 	  <Steel>40</Steel>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <BackstoryDef>
+    <defName>GOW_COGminer</defName>
+    <identifier>Immulsion Miner</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+      <Mining>5</Mining>
+	  <Construction>2</Construction>
+	  <Social>-1</Social>
+	  <Medicine>-2</Medicine>
+	  <Intellectual>-3</Intellectual>
+    </skillGains>
+	<forcedTraits>
+      <Immunity>-1</Immunity>
+    </forcedTraits>
+    <title>Immulsion Miner</title>
+    <titleShort>Immulsion Miner</titleShort>
+    <description>[PAWN_nameDef] had one of the worst jobs of all, mining immulsion to fuel [PAWN_possessive] nations power demands.\n\nFending off attacks by various underground monsters and dealing with the longterm effects of immulsion fume inhalation has left [PAWN_possessive] body damaged and sickly.</description>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Mining</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>COG</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Gear</defName>
+    <identifier>Gear</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+      <Social>-1</Social>
+	  <Shooting>4</Shooting>
+	  <Melee>2</Melee>
+    </skillGains>
+    <title>Gear</title>
+    <titleShort>Gear</titleShort>
+    <description>[PAWN_nameDef] didnt wait to be asked, [PAWN_pronoun] signed up to join the C.O.Gs armed forces the moment [PAWN_pronoun] was of age.\n\n[PAWN_nameDef] is seen by The C.O.G as the prime example of what a citizen should be, and as little more then a pathetic dog by the C.O.G's enemies.</description>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>COGmillitary</li>
+	  <li>COG</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Thrashball</defName>
+    <identifier>Thrashball Player</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+      <Intellectual>-2</Intellectual>
+      <Social>2</Social>
+	  <Melee>3</Melee>
+    </skillGains>
+	<forcedTraits>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <title>Thrashball Player</title>
+    <titleShort>Thrashball Player</titleShort>
+    <description>Thrashball, a sport so important to the C.O.G that even during wartimes games are held in any city they can be to boost morale, [PAWN_nameDef] was one of many players looking for fame and fortune.\n\nAfter a particularly brutal attack on [PAWN_possessive] home town, [PAWN_pronoun] decided to enlist in the army instead of extending [PAWN_possessive] contract and urged others to do the same.</description>
+    <requiredWorkTags>
+      <li>Violent</li>
+	  <li>Social</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>COGmillitary</li>
+	  <li>COG</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <TraitDef>
+    <defName>GOW_Thrashball</defName>
+    <commonality>0.000000001</commonality>
+    <degreeDatas>
+      <li>
+        <label>Thrashballer</label>
+        <description>Thrashball teachs you 2 things, run fast, and not to flinch when someone hits you.</description>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+        </statOffsets>
+		<statFactors>
+         <StaggerDurationFactor>0.35</StaggerDurationFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+	  <li>Large</li>
+      <li>Gigantism</li>
+      <li>Small</li>
+      <li>Dwarfism</li>
+    </exclusionTags>
+  </TraitDef>
+
+</Defs>

@@ -27,7 +27,7 @@
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Plasteel</thingDef>
-        <countRange>50~125</countRange>
+        <countRange>75~150</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Uranium</thingDef>
@@ -38,8 +38,8 @@
         <countRange>100~300</countRange>
       </li>
 	  <li Class="StockGenerator_SingleDef">
-        <thingDef>Leather_Patch</thingDef>
-        <countRange>450~750</countRange>
+        <thingDef>GOW_Leather_Hollow</thingDef>
+        <countRange>350~500</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Gold</thingDef>
@@ -112,7 +112,7 @@
       <!-- Weapons -->
       <li Class="StockGenerator_MarketValue">
         <tradeTag>LocustRanged</tradeTag>
-        <countRange>2~4</countRange>
+        <countRange>2~5</countRange>
       </li>
       <li Class="StockGenerator_MarketValue">
         <tradeTag>WeaponRanged</tradeTag>
@@ -120,19 +120,19 @@
       </li>
 	  <li Class="StockGenerator_MarketValue">
         <tradeTag>LocustMelee</tradeTag>
-        <countRange>1~3</countRange>
+        <countRange>2~4</countRange>
       </li>
 	  <li Class="StockGenerator_MarketValue">
         <tradeTag>WeaponsMelee</tradeTag>
-        <countRange>1~2</countRange>
+        <countRange>1~4</countRange>
       </li>
 	  <li Class="StockGenerator_MarketValue">
         <tradeTag>CogRanged</tradeTag>
-        <countRange>1~2</countRange>
+        <countRange>1~3</countRange>
       </li>
       <li Class="StockGenerator_MarketValue">
         <tradeTag>CogMelee</tradeTag>
-        <countRange>1~2</countRange>
+        <countRange>1~3</countRange>
       </li>
       <!-- Apparel -->
       <li Class="StockGenerator_MarketValue">
@@ -188,6 +188,11 @@
         <respectPopulationIntent>false</respectPopulationIntent>
         <countRange>10~15</countRange>
 		<slaveKindDef>GOW_Locust_POW</slaveKindDef>
+      </li>
+	  <li Class="StockGenerator_Slaves">
+        <respectPopulationIntent>false</respectPopulationIntent>
+        <countRange>1~1</countRange>
+		<slaveKindDef>GOW_Locust_Fighter_Berserker</slaveKindDef>
       </li>
       <!-- Animals -->
       <li Class="StockGenerator_Animals">

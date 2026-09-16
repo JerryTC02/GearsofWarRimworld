@@ -183,9 +183,9 @@
 </Operation>
 
 <Operation Class="PatchOperationConditional">
-   <xpath>Defs/ThoughtDef[defName="Disfigured"]/nullifyingGenes</xpath>
+   <xpath>Defs/ThoughtDef[defName="WantToSleepWithSpouseOrLover"]/nullifyingGenes</xpath>
    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ThoughtDef[defName="Disfigured"]</xpath>
+      <xpath>Defs/ThoughtDef[defName="WantToSleepWithSpouseOrLover"]</xpath>
       <value>
        <nullifyingGenes>
        </nullifyingGenes>
@@ -194,9 +194,189 @@
 </Operation>
     
 <Operation Class="PatchOperationAdd">
-   <xpath>Defs/ThoughtDef[defName="Disfigured"]/nullifyingGenes</xpath>
+   <xpath>Defs/ThoughtDef[defName="WantToSleepWithSpouseOrLover"]/nullifyingGenes</xpath>
    <value>
       <li>GOW_LocustMental</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="NeedJoy"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="NeedJoy"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="NeedJoy"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="NeedComfort"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="NeedComfort"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="NeedComfort"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="NeedBeauty"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="NeedBeauty"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="NeedBeauty"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef["@Name=DeathMemoryFamily"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="@Name=DeathMemoryFamily"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef["@Name=DeathMemoryFamily"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="FailedToRescueRelative"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="FailedToRescueRelative"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="FailedToRescueRelative"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="Naked"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="Naked"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="Naked"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteCorpse"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteCorpse"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteCorpse"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteKibble"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteKibble"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteKibble"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatDirect"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatDirect"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatDirect"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteInsectMeatDirect"]/nullifyingGenes</xpath>
+   <value>
+      <li>GOW_LocustBerserker</li>  
    </value>
 </Operation>
 

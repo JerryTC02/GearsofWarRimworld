@@ -14,6 +14,8 @@
     <maxGenerationAge>50</maxGenerationAge>
     <trader>true</trader>
     <isFighter>false</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
     <chemicalAddictionChance>0</chemicalAddictionChance>
     <invNutrition>2</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -117,7 +119,7 @@
     <defName>Locust_Fighter_FactionLeader</defName>
     <label>High General</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>45</combatPower>
+	<combatPower>75</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -204,7 +206,8 @@
     <defName>GOW_Locust_Fighter_DroneGuard</defName>
     <label>Drone Guard</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>28</combatPower>
+    <combatPower>45</combatPower>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 	<invNutrition>2</invNutrition>
 	<backstoryFiltersOverride>
       <li>
@@ -282,13 +285,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_CyclopsGuard</defName>
     <label>Cyclops Guard</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>33</combatPower>
+    <combatPower>65</combatPower>
     <invNutrition>2</invNutrition>
 	<backstoryFiltersOverride>
       <li>
@@ -366,13 +370,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_BoomerGuard</defName>
     <label>Boomer Guard</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>45</combatPower>
+	<combatPower>75</combatPower>
     <invNutrition>3</invNutrition>
     <backstoryFiltersOverride>
       <li>
@@ -441,13 +446,14 @@
         <Locust_Boomer>1</Locust_Boomer>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_ButcherGuard</defName>
     <label>Butcher Guard</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>40</combatPower>
+	<combatPower>55</combatPower>
 	<invNutrition>6</invNutrition>
     <backstoryFiltersOverride>
       <li>
@@ -524,6 +530,7 @@
         <Locust_Boomer>1</Locust_Boomer>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
 
   <!--===================== Locust Combat =========================-->
@@ -543,6 +550,39 @@
     <techHediffsChance>0</techHediffsChance>
     <techHediffsMoney>1000~1500</techHediffsMoney>
     <biocodeWeaponChance>0</biocodeWeaponChance>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+	<inventoryOptions>
+      <skipChance>0.90</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+	<useFactionXenotypes>false</useFactionXenotypes>
+    <disallowedTraits>
+      <li>Nudist</li>
+    </disallowedTraits>
+	<initialWillRange>23~28</initialWillRange>
+  </PawnKindDef>
+  
+ <PawnKindDef Name="LocustFemFighterBase" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>LocustRoughFaction</defaultFactionType>
+	<minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>35</maxGenerationAge>
+    <invNutrition>0</invNutrition>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>0~1</combatEnhancingDrugsCount>
+    <itemQuality>Normal</itemQuality>
+    <techHediffsChance>0</techHediffsChance>
+    <techHediffsMoney>1000~1500</techHediffsMoney>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
 	<inventoryOptions>
       <skipChance>0.90</skipChance>
       <subOptionsChooseOne>
@@ -563,7 +603,7 @@
     <fixedGender>Male</fixedGender>
   </PawnKindDef>
   
-  <PawnKindDef Name="LocustBerserker" Abstract="True" ParentName="LocustFighterBase">
+  <PawnKindDef Name="LocustFighterFemale" Abstract="True" ParentName="LocustFemFighterBase">
     <fixedGender>Female</fixedGender>
   </PawnKindDef>
   
@@ -571,7 +611,8 @@
     <defName>GOW_Locust_Fighter_Drone</defName>
     <label>Drone</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>28</combatPower>
+    <combatPower>45</combatPower>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -591,6 +632,7 @@
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Drone</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -648,13 +690,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Cyclops</defName>
     <label>Cyclops</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>33</combatPower>
+    <combatPower>65</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -674,6 +717,7 @@
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Drone</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -731,13 +775,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Bolter</defName>
     <label>Bolter</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>30</combatPower>
+    <combatPower>60</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -756,6 +801,7 @@
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Drone</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -813,13 +859,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Beastrider</defName>
     <label>Beastrider</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>28</combatPower>
+	<combatPower>40</combatPower>
     <backstoryFiltersOverride>
       <li>
         <categories>
@@ -840,6 +887,7 @@
     <apparelRequired>
       <li>Apparel_GOW_Drone</li>
 	  <li>Apparel_GOW_BeastriderHelm</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -889,13 +937,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Theron</defName>
     <label>Theron Guard</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>45</combatPower>
+    <combatPower>75</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -917,6 +966,7 @@
 	<apparelRequired>
       <li>Apparel_GOW_Theron</li>
 	  <li>Apparel_GOW_TheronHelm</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -974,13 +1024,14 @@
         <Locust_Drone>1</Locust_Drone>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Boomer</defName>
     <label>Boomer</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>45</combatPower>
+	<combatPower>75</combatPower>
     <backstoryFiltersOverride>
       <li>
         <categories>
@@ -999,6 +1050,7 @@
     </apparelTags>
     <apparelRequired>
       <li>Apparel_GOW_Boomer</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -1052,13 +1104,14 @@
         <Locust_Boomer>1</Locust_Boomer>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Butcher</defName>
     <label>Butcher</label>
 	<nameMaker>NamerLocustPersonDrone</nameMaker>
-	<combatPower>40</combatPower>
+	<combatPower>55</combatPower>
     <backstoryFiltersOverride>
       <li>
         <categories>
@@ -1077,6 +1130,7 @@
     </apparelTags>
     <apparelRequired>
       <li>Apparel_GOW_Boomer</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -1134,13 +1188,14 @@
         <Locust_Boomer>1</Locust_Boomer>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_KantusAcolyte</defName>
     <label>Acolyte</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>25</combatPower>
+    <combatPower>50</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -1217,13 +1272,14 @@
         <Locust_Kantus>1</Locust_Kantus>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
   <PawnKindDef ParentName="LocustFighterMale">
     <defName>GOW_Locust_Fighter_Kantus</defName>
     <label>Kantus</label>
     <nameMaker>NamerLocustPersonDrone</nameMaker>
-    <combatPower>35</combatPower>
+    <combatPower>65</combatPower>
 	<backstoryFiltersOverride>
       <li>
         <categories>
@@ -1300,6 +1356,36 @@
         <Locust_Kantus>1</Locust_Kantus>
       </xenotypeChances>
     </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="LocustFighterFemale">
+    <defName>GOW_Locust_Fighter_Berserker</defName>
+    <label>Berserker</label>
+    <nameMaker>NamerLocustBerserker</nameMaker>
+    <combatPower>500</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+                <li>LocustLarva</li>
+                <li>LocustBerserker</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>4~6</range>
+      </li>
+    </skills>
+    <initialResistanceRange>80~105</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Locust_Berserker>1</Locust_Berserker>
+      </xenotypeChances>
+    </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
   </PawnKindDef>
   
     <!--===================== Locust Faction =========================-->
@@ -1400,7 +1486,14 @@
 	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Disapproved</li>
 	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Prohibited</li>
 	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Disapproved</li>
-	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Horrible</li>	  
+	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Horrible</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">FungusEating_Despised</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
     </disallowedPrecepts>
 	<deityPresets>
       <li>
@@ -1477,7 +1570,6 @@
           <Dromedary>5</Dromedary>
         </carriers>
         <guards>
-		  <Megaspider>45</Megaspider>
 		  <GOW_Locust_Fighter_CyclopsGuard>3</GOW_Locust_Fighter_CyclopsGuard>
 		  <GOW_Locust_Fighter_DroneGuard>5</GOW_Locust_Fighter_DroneGuard>
 		  <GOW_Locust_Fighter_BoomerGuard>2</GOW_Locust_Fighter_BoomerGuard>
@@ -1494,8 +1586,8 @@
         <options>
 		  <GOW_Locust_Fighter_Butcher>2</GOW_Locust_Fighter_Butcher>
 		  <GOW_Locust_Fighter_Kantus>1</GOW_Locust_Fighter_Kantus>
-		  <Spelopede>85</Spelopede>
-		  <Megaspider>55</Megaspider>
+		  <Spelopede>10</Spelopede>
+		  <Megaspider>5</Megaspider>
         </options>
       </li>
 	  <li>
@@ -1510,7 +1602,6 @@
 		  <GOW_Locust_Fighter_Drone>2</GOW_Locust_Fighter_Drone>
 		  <GOW_Locust_Fighter_Beastrider>5</GOW_Locust_Fighter_Beastrider>
 		  <GOW_Locust_Fighter_Cyclops>3</GOW_Locust_Fighter_Cyclops>
-		  <Megaspider>25</Megaspider>
         </options>
       </li>
       <li>
@@ -1524,7 +1615,6 @@
 		  <GOW_Locust_Fighter_Drone>7</GOW_Locust_Fighter_Drone>
 		  <GOW_Locust_Fighter_Cyclops>5</GOW_Locust_Fighter_Cyclops>
 		  <GOW_Locust_Fighter_KantusAcolyte>1</GOW_Locust_Fighter_KantusAcolyte>
-		  <Megaspider>25</Megaspider>
         </options>
       </li>
 	  <li>
@@ -1545,11 +1635,12 @@
         <kindDef>Combat</kindDef>
         <commonality>25</commonality>
         <options>
-		  <GOW_Locust_Fighter_Kantus>1</GOW_Locust_Fighter_Kantus>
-		  <GOW_Locust_Fighter_Theron>2</GOW_Locust_Fighter_Theron>
-		  <GOW_Locust_Fighter_Boomer>4</GOW_Locust_Fighter_Boomer>
+		  <GOW_Locust_Fighter_Kantus>2</GOW_Locust_Fighter_Kantus>
+		  <GOW_Locust_Fighter_Theron>3</GOW_Locust_Fighter_Theron>
+		  <GOW_Locust_Fighter_Boomer>5</GOW_Locust_Fighter_Boomer>
 		  <GOW_Locust_Fighter_Cyclops>7</GOW_Locust_Fighter_Cyclops>
-		  <GOW_Locust_Fighter_Drone>8</GOW_Locust_Fighter_Drone>
+		  <GOW_Locust_Fighter_Drone>6</GOW_Locust_Fighter_Drone>
+		  <GOW_Locust_Fighter_Berserker>1</GOW_Locust_Fighter_Berserker>
         </options>
       </li>
       <li>
@@ -1565,7 +1656,7 @@
     </pawnGroupMakers>
 	<apparelStuffFilter>
       <thingDefs>
-        <li>Leather_Patch</li>
+        <li>GOW_Leather_Hollow</li>
       </thingDefs>
     </apparelStuffFilter>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
@@ -1578,6 +1669,7 @@
     <naturalEnemy>true</naturalEnemy>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
     </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>150</configurationListOrderPriority>

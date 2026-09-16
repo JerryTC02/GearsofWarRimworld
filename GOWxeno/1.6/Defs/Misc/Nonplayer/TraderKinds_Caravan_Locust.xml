@@ -44,8 +44,8 @@
         <countRange>75~125</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>Leather_Patch</thingDef>
-        <countRange>250~500</countRange>
+        <thingDef>GOW_Leather_Hollow</thingDef>
+        <countRange>150~350</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Chemfuel</thingDef>
@@ -172,6 +172,10 @@
 	  <li Class="StockGenerator_SingleDef">
         <thingDef>MedicineHerbal</thingDef>
         <countRange>3~5</countRange>
+      </li>
+	  <li Class="StockGenerator_SingleDef">
+        <thingDef>GOW_Leather_Hollow</thingDef>
+        <countRange>50~125</countRange>
       </li>
 	  <li Class="StockGenerator_SingleDef">
         <thingDef>Leather_Human</thingDef>

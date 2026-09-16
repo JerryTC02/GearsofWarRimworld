@@ -12,6 +12,7 @@
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustLarva</li>
+	  <li>LocustBerserker</li>
     </spawnCategories>
     <shuffleable>True</shuffleable>
   </BackstoryDef>
@@ -59,10 +60,6 @@
     <defName>GOW_Beastrider</defName>
     <identifier>Beastrider</identifier>
     <slot>Adulthood</slot>
-	<workDisables>
-      <li>Intellectual</li>
-      <li>Artistic</li>
-    </workDisables>
     <skillGains>
       <Animals>2</Animals>
     </skillGains>	
@@ -89,7 +86,6 @@
     </spawnCategories>
 	<skillGains>
       <Shooting>3</Shooting>
-      <Plants>1</Plants>
 	  <Social>-1</Social>
     </skillGains>
 	<forcedTraits>
@@ -122,6 +118,9 @@
     <defName>GOW_Theron</defName>
     <identifier>Theron Guard</identifier>
     <slot>Adulthood</slot>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
     <skillGains>
       <Shooting>4</Shooting>
       <Melee>3</Melee>
@@ -145,7 +144,8 @@
     <identifier>Boomer</identifier>
     <slot>Adulthood</slot> 
     <workDisables>
-      <li>Intellectual</li>
+      <li>Crafting</li>
+	  <li>Cooking</li>
     </workDisables>
     <title>Boomer</title>
     <titleShort>Boomer</titleShort>
@@ -201,7 +201,10 @@
   <BackstoryDef>
     <defName>GOW_Kantus</defName>
     <identifier>Kantus Priest</identifier>
-    <slot>Adulthood</slot> 
+    <slot>Adulthood</slot>
+	<workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
     <skillGains>
 	  <Melee>2</Melee>
       <Animals>1</Animals>
@@ -209,12 +212,29 @@
     </skillGains>
     <title>Kantus</title>
     <titleShort>Kantus</titleShort>
-    <description>[PAWN_nameDef] finished training as an Acolyte and now serves as a full Priest of the Trinity of Worms, [PAWN_pronoun] is a leader in every sense of the word, enforcing the queens law without question.</description>
+    <description>[PAWN_nameDef] finished training as an Acolyte and now serves as a full Priest of the Trinity of Worms, [PAWN_pronoun] is a leader in every sense of the word, enforcing the Queens law without question.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustKantus</li>
     </spawnCategories>
     <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>GOW_Berserker</defName>
+    <identifier>Beserker</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>7</Melee>
+    </skillGains>
+    <title>Berserker</title>
+    <titleShort>Berserker</titleShort>
+    <description>[PAWN_nameDef] was unfortunate enough to be born a Berserker, and has spent the majority of her life fighting or being abused.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>LocustBerserker</li>
+    </spawnCategories>
+    <shuffleable>true</shuffleable>
   </BackstoryDef>
     
 </Defs>

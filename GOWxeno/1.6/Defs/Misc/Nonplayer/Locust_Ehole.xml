@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<IncidentDef>
+		<defName>GOW_Ehole_Small</defName>
+		<label>Emergence</label>
+		<workerClass>BurrowRaid.IncidentWorker_BurrowRaid</workerClass>
+		<baseChance>1</baseChance>
+		<letterLabel>Emergence Holes</letterLabel>
+		<letterText>The ground quakes, and sounds of war chants from below your feet can only mean one thing, the Locust are opening E-holes to assault your colony.</letterText>
+		<letterTextPlural>The ground quakes, and sounds of war chants from below your feet can only mean one thing, the Locust are opening E-holes to assault your colony.</letterTextPlural>
+		<letterDef>ThreatBig</letterDef>
+		<earliestDay>15</earliestDay>
+		<tale>Raid</tale>
+		<targetTags>
+		  <li>Map_PlayerHome</li>
+		</targetTags>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<ignoreRecentSelectionWeighting>true</ignoreRecentSelectionWeighting>
+		<canOccurOnAllPlanetLayers>true</canOccurOnAllPlanetLayers>
+		<modExtensions>
+			<li Class="BurrowRaid.IncidentExtension_BurrowRaid">
+                <isDelayedSpawn>true</isDelayedSpawn>
+                <spawnerIncoming>GOW_EholeSpawner</spawnerIncoming>
+                <spawnerThingDef>GOW_Ehole_Small</spawnerThingDef>
+                <factionDef>LocustRoughFaction</factionDef>
+                <isSplitSpawner>true</isSplitSpawner>
+                <minPointPerSpawner>50</minPointPerSpawner>
+                <spawnerCount>5</spawnerCount>
+            </li>
+		</modExtensions>
+	</IncidentDef>
+	
+	<ThingDef>
+        <defName>GOW_EholeSpawner</defName>
+        <label>incoming emergence</label>
+        <description>Something is emerging from the ground here.</description>
+        <thingClass>BuildingGroundSpawner</thingClass>
+        <destroyable>false</destroyable>
+        <holdsRoof>true</holdsRoof>
+        <selectable>true</selectable>
+        <tickerType>Normal</tickerType>
+        <useHitPoints>false</useHitPoints>
+        <drawerType>RealtimeOnly</drawerType>
+        <size>(3, 3)</size>
+        <building>
+            <groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+            <groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+            <groundSpawnerThingToSpawn>GOW_Ehole_Small</groundSpawnerThingToSpawn>
+            <groundSpawnerSpawnDelay>800</groundSpawnerSpawnDelay>
+            <groundSpawnerDestroyAdjacent>true</groundSpawnerDestroyAdjacent>
+        </building>
+    </ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>GOW_Ehole_Small</defName>
+		<label>E-hole</label>
+		<description>Emergence holes, otherwise known as "Grub-Holes" or "E-holes" are a common tactic employed by the Locust Horde to deploy troops deep into enemy territory. This hole is thankfully one of the small ones dug by Drones or Boomers, so nothing too dangerous should come out of it.</description>
+		<size>(2, 2)</size>
+		<graphicData>
+		  <texPath>Things/Building/Crater/3x3</texPath>
+		  <drawSize>(2, 2)</drawSize>
+		  <graphicClass>Graphic_Random</graphicClass>
+		  <shaderType>Transparent</shaderType>
+		</graphicData>
+		<useHitPoints>true</useHitPoints>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<canOverlapZones>false</canOverlapZones>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Normal</tickerType>
+		<pathCost>42</pathCost>
+		<building>
+		  <deconstructible>false</deconstructible>
+		  <isInert>true</isInert>
+		  <claimable>false</claimable>
+		  <expandHomeArea>false</expandHomeArea>
+		  <uninstallWork>2500</uninstallWork>
+		</building>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+        <comps>
+            <li Class="CompProperties_LeaveFilthOnDestroyed">
+                <filthDef>Filth_LooseGround</filthDef>
+                <thickness>5</thickness>
+            </li>
+            <li Class="BurrowRaid.CompProperties_GauntletSpawner">
+                <spawnPerTrigger>1</spawnPerTrigger>
+                <pawnGroupKindDef>Combat</pawnGroupKindDef>
+                <pawnGroupMakers>
+                    <li>
+                        <kindDef>Combat</kindDef>
+                        <commonality>25</commonality>
+                        <options>
+		                 <GOW_Locust_Fighter_Boomer>2</GOW_Locust_Fighter_Boomer>
+		                 <GOW_Locust_Fighter_Butcher>3</GOW_Locust_Fighter_Butcher>
+		                 <GOW_Locust_Fighter_Bolter>2</GOW_Locust_Fighter_Bolter>
+		                 <GOW_Locust_Fighter_Drone>8</GOW_Locust_Fighter_Drone>
+		                 <GOW_Locust_Fighter_Cyclops>5</GOW_Locust_Fighter_Cyclops>
+		                 <GOW_Locust_Fighter_KantusAcolyte>1</GOW_Locust_Fighter_KantusAcolyte>
+                        </options>
+                    </li>
+                </pawnGroupMakers>
+            </li>
+        </comps>
+	</ThingDef>
+
+</Defs>

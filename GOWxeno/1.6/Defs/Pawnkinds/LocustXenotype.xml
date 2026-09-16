@@ -2,36 +2,6 @@
 
 <Defs>
 
- <!-- if its commented like this? IT ISNT READY SO DONT GO TOUCHING IT -->
-
-  <FurDef>
-    <defName>GOW_LocustDrone</defName>
-    <noGraphic>true</noGraphic>
-    <bodyTypeGraphicPaths>
-      <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
-      <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
-	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
-	  <Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Fat>
-      <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
-	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
-      <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
-    </bodyTypeGraphicPaths>
-  </FurDef>
-  
-  <FurDef>
-    <defName>GOW_LocustBoomer</defName>
-    <noGraphic>true</noGraphic>
-    <bodyTypeGraphicPaths>
-      <Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Male>
-      <Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Female>
-	  <Hulk>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Hulk>
-	  <Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Fat>
-      <Thin>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Thin>
-	  <Child>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Child>
-      <Baby>Things/Pawn/Humanlike/Bodies/BS_NoFurLocust</Baby>
-    </bodyTypeGraphicPaths>
-  </FurDef>
-
   <GeneCategoryDef>
     <defName>LOCUST</defName>
     <label>LOCUST</label>
@@ -50,7 +20,6 @@
     <displayOrderInCategory>1</displayOrderInCategory>
     <biostatMet>-1</biostatMet>
     <biostatCpx>5</biostatCpx>
-    <fur>GOW_LocustDrone</fur>
 	<forcedHeadTypes>
       <li>Male_Locust_Drone</li>
     </forcedHeadTypes>
@@ -71,18 +40,15 @@
       <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
     </statOffsets>
     <skinIsHairColor>false</skinIsHairColor>
-    <renderNodeProperties Inherit="False">
-      <li>
-        <parentTagDef>Body</parentTagDef>
-        <useSkinShader>true</useSkinShader>
-        <debugLabel>Fur</debugLabel>
-        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
-        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
-        <baseLayer>5</baseLayer>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <colorType>Skin</colorType>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <bodyPaths>
+          <Body_Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Body_Female>
+          <Body_Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Body_Male>
+		  <Body_Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Body_Fat>
+        </bodyPaths>
       </li>
-    </renderNodeProperties>
+    </modExtensions>
   </GeneDef>
   
   <GeneDef ParentName="LocustGenes">
@@ -91,9 +57,11 @@
     <description>Boomers are the dumb muscle of the Locust Horde, dealing with heavy lifting and menial tasks. Boomer hides are thicker then the standard Locust hide.</description>
     <iconPath>UI/Icons/Xenotypes/GOW_Boomer</iconPath>
     <displayOrderInCategory>1</displayOrderInCategory>
+	<disabledWorkTags>
+      <li>Intellectual</li>
+    </disabledWorkTags>
     <biostatMet>-1</biostatMet>
     <biostatCpx>5</biostatCpx>
-    <fur>GOW_LocustBoomer</fur>
 	<forcedHeadTypes>
       <li>Male_Locust_Boomer</li>
     </forcedHeadTypes>
@@ -104,39 +72,36 @@
       <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.15</CertaintyLossFactor>
 	  <SM_BodySizeMultiplier>1.35</SM_BodySizeMultiplier>
 	  <IncomingDamageFactor>0.80</IncomingDamageFactor>
+	  <StaggerDurationFactor>0.9</StaggerDurationFactor>
     </statFactors>
     <damageFactors>
       <Flame>1.10</Flame>
     </damageFactors>
     <statOffsets>
-	  <PainShockThreshold>0.20</PainShockThreshold>
-      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+	  <PainShockThreshold>0.25</PainShockThreshold>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
     </statOffsets>
     <skinIsHairColor>false</skinIsHairColor>
-    <renderNodeProperties Inherit="False">
-      <li>
-        <parentTagDef>Body</parentTagDef>
-        <useSkinShader>true</useSkinShader>
-        <debugLabel>Fur</debugLabel>
-        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
-        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
-        <baseLayer>5</baseLayer>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <colorType>Skin</colorType>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <bodyPaths>
+          <Body_Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Body_Female>
+          <Body_Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Body_Male>
+		  <Body_Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Body_Fat>
+        </bodyPaths>
       </li>
-    </renderNodeProperties>
+    </modExtensions>
   </GeneDef>
   
   <GeneDef ParentName="LocustGenes">
     <defName>GOW_LocustKantus</defName>
     <label>Kantus Caste</label>
-    <description>Kantus are the religious leaders of the Locust Horde, orchestrating and adminstering the Queens Will. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
+    <description>Kantus are the religious leaders of the Locust Horde and some theories suggest they are true natives of the Hollow unlike the Locust themselves. All locust possess a thick hide that can shrug off and dampen lesser blows.</description>
     <iconPath>UI/Icons/Xenotypes/GOW_Kantus</iconPath>
     <displayOrderInCategory>1</displayOrderInCategory>
     <biostatMet>1</biostatMet>
     <biostatCpx>5</biostatCpx>
-    <fur>GOW_LocustDrone</fur>
 	<forcedHeadTypes>
       <li>Male_Locust_Kantus</li>
     </forcedHeadTypes>
@@ -145,6 +110,8 @@
     </exclusionTags>
 	<abilities>
       <li>Locust_AnimalWarcall</li>
+	  <li>Locust_HealingWarcall</li>
+	  <li>Locust_StunningWarcall</li>
     </abilities>
     <descriptionHyperlinks>
       <AbilityDef>Locust_AnimalWarcall</AbilityDef>
@@ -152,73 +119,131 @@
     <statFactors>
       <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
 	  <SM_BodySizeMultiplier>1.20</SM_BodySizeMultiplier>
-	  <IncomingDamageFactor>0.90</IncomingDamageFactor>
+	  <IncomingDamageFactor>0.85</IncomingDamageFactor>
+	  <InjuryHealingFactor>1.15</InjuryHealingFactor>
+	  <ImmunityGainSpeed>1.05</ImmunityGainSpeed>
+	  <LifespanFactor>1.25</LifespanFactor>
     </statFactors>
 	<damageFactors>
       <Flame>1.20</Flame>
     </damageFactors>
     <statOffsets>
-	  <PainShockThreshold>0.15</PainShockThreshold>
-      <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.07</ArmorRating_Blunt>
+	  <PainShockThreshold>0.20</PainShockThreshold>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
     </statOffsets>
     <skinIsHairColor>false</skinIsHairColor>
-    <renderNodeProperties Inherit="False">
-      <li>
-        <parentTagDef>Body</parentTagDef>
-        <useSkinShader>true</useSkinShader>
-        <debugLabel>Fur</debugLabel>
-        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
-        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
-        <baseLayer>5</baseLayer>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <colorType>Skin</colorType>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <bodyPaths>
+          <Body_Female>Things/Pawn/Humanlike/Bodies/Naked_Drone_Female</Body_Female>
+          <Body_Male>Things/Pawn/Humanlike/Bodies/Naked_Drone_Male</Body_Male>
+		  <Body_Fat>Things/Pawn/Humanlike/Bodies/Naked_Boomer_Fat</Body_Fat>
+        </bodyPaths>
       </li>
-    </renderNodeProperties>
+    </modExtensions>
   </GeneDef>
   
-  <!--GeneDef ParentName="LocustGenes">
+  <GeneDef ParentName="LocustGenes">
     <defName>GOW_LocustBerserker</defName>
     <label>Berserker Caste</label>
-    <description>Berserkers are the giant females of the Locust, incapable of most higher thoughts except rage and hatred.</description>
-    <iconPath>UI/Icons/Xenotypes/GOW_Drone</iconPath>
+    <description>Berserkers are the giant heavily armored females of the Locust, incapable of most higher thoughts except rage and hatred.</description>
+    <iconPath>UI/Icons/Xenotypes/GOW_Berserker</iconPath>
     <displayOrderInCategory>1</displayOrderInCategory>
-    <biostatMet>0</biostatMet>
+	<forcedTraits>
+      <li>
+        <def>Psychopath</def>
+      </li>
+    </forcedTraits>
+    <disabledWorkTags>
+      <li>Social</li>
+	  <li>Commoner</li>
+    </disabledWorkTags>
+    <biostatMet>5</biostatMet>
     <biostatCpx>5</biostatCpx>
-    <fur>GOW_LocustDrone</fur>
 	<forcedHeadTypes>
-      <li>Male_Locust_Drone</li>
+      <li>Female_Locust_Berserker</li>
     </forcedHeadTypes>
 	<exclusionTags>
       <li>Fur</li>
     </exclusionTags>
+	<tattoosVisible>false</tattoosVisible>
     <statFactors>
-      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</CertaintyLossFactor>
-	  <SM_BodySizeMultiplier>1.75</SM_BodySizeMultiplier>
-	  <IncomingDamageFactor>0.75</IncomingDamageFactor>
+      <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.02</CertaintyLossFactor>
+	  <SM_BodySizeMultiplier>3.5</SM_BodySizeMultiplier>
+	  <IncomingDamageFactor>0.60</IncomingDamageFactor>
+	  <ImmunityGainSpeed>1.25</ImmunityGainSpeed>
+	  <InjuryHealingFactor>2</InjuryHealingFactor>
+	  <Fertility>3</Fertility>
+	  <StaggerDurationFactor>0.25</StaggerDurationFactor>
     </statFactors>
+	<painFactor>0.25</painFactor>
 	<damageFactors>
-      <Flame>1.10</Flame>
+      <Flame>1.50</Flame>
     </damageFactors>
     <statOffsets>
-	  <PainShockThreshold>0.30</PainShockThreshold>
-      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.70</ArmorRating_Blunt>
+	  <ComfyTemperatureMax>20</ComfyTemperatureMax>
+	  <ComfyTemperatureMin>-40</ComfyTemperatureMin>
     </statOffsets>
     <skinIsHairColor>false</skinIsHairColor>
-    <renderNodeProperties Inherit="False">
-      <li>
-        <parentTagDef>Body</parentTagDef>
-        <useSkinShader>true</useSkinShader>
-        <debugLabel>Fur</debugLabel>
-        <nodeClass>BigAndSmall.PawnRenderNode_FurSkinClr</nodeClass>
-        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
-        <baseLayer>5</baseLayer>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <colorType>Skin</colorType>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <bodyPaths>
+          <Body_Female>Things/Pawn/Humanlike/Bodies/Berserker_Female</Body_Female>
+        </bodyPaths>
+		<headDrawData>
+          <dataSouth>
+            <offset>(0.0, 0, -0.25)</offset>
+          </dataSouth>
+		  <dataNorth>
+            <offset>(0.0, -1, -0.25)</offset>
+          </dataNorth>
+          <dataEast>
+            <offset>(0.0, 0, -0.27)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.0, 0, -0.27)</offset>
+          </dataWest>
+        </headDrawData>
+		<bodyMaterial>
+          <shader>CutoutComplex</shader>
+          <overrideDesiccated>true</overrideDesiccated>
+        </bodyMaterial>
+		<apparelRestrictions>
+          <absolutelyNothing>true</absolutelyNothing>
+        </apparelRestrictions>
+		<babyStartAge>7</babyStartAge>
+		<pregnancyQuality>0.75</pregnancyQuality>
+		<pregnancySpeedMultiplier>3</pregnancySpeedMultiplier>
       </li>
-    </renderNodeProperties>
-  </GeneDef-->
+	  <li Class="BirthOutcome.GeneExtension_BirthXenotype">
+            <chanceToApply>1.0</chanceToApply>
+            <chance>0.02</chance>                
+            <xenotypeDefA>Locust_Berserker</xenotypeDefA>
+            <isFixGenderA>True</isFixGenderA>
+            <fixedGenderA>Female</fixedGenderA>
+            <xenotypeDefB></xenotypeDefB>
+            <xenotypeSetB>
+                <li>
+                    <xenotypeDef>Locust_Drone</xenotypeDef>
+                    <weight>0.65</weight>
+                </li>
+                <li>
+                    <xenotypeDef>Locust_Boomer</xenotypeDef>
+                    <weight>0.25</weight>
+                </li>
+                <li>
+                    <xenotypeDef>Locust_Kantus</xenotypeDef>
+                    <weight>0.10</weight>
+                </li>
+            </xenotypeSetB>
+            <isFixGenderB>True</isFixGenderB>
+            <fixedGenderB>Male</fixedGenderB>
+     </li>
+    </modExtensions>
+  </GeneDef>
 
   <GeneDef ParentName="LocustGenes">
     <defName>GOW_LocustMental</defName>
@@ -397,10 +422,10 @@
   
   <AbilityDef>
     <defName>Locust_AnimalWarcall</defName>
-    <label>Hollow Chant</label>
-    <description>A guttural shriek that invokes the essence of the hollows, it is capable of instilling rage and fear in even the most docile of animals.</description>
-    <iconPath>UI/Icons/Xenotypes/GOW_Kantus</iconPath>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <label>Hollow Scream</label>
+    <description>A feral scream that invokes the essence of the hollows, capable of instilling rage and fear in even the most docile of animals.</description>
+    <iconPath>UI/Icons/KantusAnimalScream</iconPath>
+    <cooldownTicksRange>25000</cooldownTicksRange>
     <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
     <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
@@ -413,13 +438,13 @@
     <cooldownPerCharge>true</cooldownPerCharge>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <label>warcall</label>
+      <label>scream</label>
       <warmupTime>2</warmupTime>
-      <range>49.9</range>
+      <range>25.9</range>
       <drawAimPie>true</drawAimPie>      
       <requireLineOfSight>false</requireLineOfSight>
-      <warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
-      <mouseTargetingText>Choose an animal to call</mouseTargetingText>
+	  <soundCast>Shot_GOW_LocustAnimalScream</soundCast>
+      <mouseTargetingText>Choose a beast to enrage</mouseTargetingText>
       <targetParams>
         <canTargetLocations>false</canTargetLocations>
         <canTargetPawns>true</canTargetPawns>
@@ -437,11 +462,241 @@
         <compClass>CompAbilityEffect_GiveMentalState</compClass>
         <stateDef>BerserkWarcall</stateDef>
         <goodwillImpact>-75</goodwillImpact>
-        <casterEffect>AnimalWarcall_Cast</casterEffect>
         <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
         <excludeNPCFactions>true</excludeNPCFactions>
       </li>
     </comps>
   </AbilityDef>
+  
+  <AbilityDef>
+	<defName>Locust_StunningWarcall</defName>
+	<label>Sonic Shriek</label>
+	<description>A quick and horrible shriek that disorientates nearby foes, for reasons unknown this sound does not effect Locust.</description>
+	<iconPath>UI/Icons/KantusStunScream</iconPath>
+	<cooldownTicksRange>2500</cooldownTicksRange>
+	<stunTargetWhileCasting>false</stunTargetWhileCasting>
+	<targetRequired>false</targetRequired>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+	<statBases>
+		<Ability_EffectRadius>4.9</Ability_EffectRadius>
+	</statBases>
+	<abilityClass>CVNPatronAbilities.Ability_AreaScaling</abilityClass>
+	<verbProperties>
+		<verbClass>CVNPatronAbilities.Verb_CastAbilityScalingRadius</verbClass>
+		<!-- <verbClass>Verb_CastAbility</verbClass> -->
+		<range>4.9</range>
+		<warmupTime>2</warmupTime>
+		<requireLineOfSight>false</requireLineOfSight>
+		<warmupEffecter>Locust_Sonic_Warmup</warmupEffecter>
+		<soundCast>Shot_GOW_LocustStunScreamtwo</soundCast>
+		<targetParams>
+			<canTargetSelf>true</canTargetSelf>
+			<canTargetPawns>true</canTargetPawns>
+			<canTargetBuildings>false</canTargetBuildings>
+			<canTargetAnimals>true</canTargetAnimals>
+			<canTargetHumans>true</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+		</targetParams>
+	</verbProperties>
+	<comps>
+		<li Class="CompProperties_AbilityEffecterOnCaster">
+			<effecterDef>AnimalWarcall_Cast</effecterDef>
+			<maintainTicks>20</maintainTicks>
+		</li>
+		<li Class="CVNPatronAbilities.CompProperties_AbilityGiveHediffFilter">
+            <hediffDefMatch>GOW_Kantus_Shriek</hediffDefMatch>
+              <requiredGeneDefs>
+               <li>GOW_LocustMental</li>
+              </requiredGeneDefs>
+            <hediffDefNoMatch>GOW_Kantus_Shriek</hediffDefNoMatch>
+			<isAffectCaster>false</isAffectCaster>
+            <stunDuration>240</stunDuration>
+            <initialSeverity>1</initialSeverity>
+            <chance>1</chance>
+         </li>
+	</comps>
+		<modExtensions>
+		 <li Class="CVNPatronAbilities.AbilityExtension_ScalingRadius">
+			<statDef>PsychicSensitivity</statDef>
+		 </li>
+	    </modExtensions>
+  </AbilityDef>
+  
+  <EffecterDef>
+    <defName>Locust_Sonic_Warmup</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <spawnLocType>OnSource</spawnLocType>
+        <soundDef>Shot_GOW_LocustStunScreamone</soundDef>
+      </li>
+    </children>
+  </EffecterDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+		<defName>GOW_Kantus_Shriek</defName>
+		<label>deafened</label>
+		<description>a sonic shriek is causing disorientation.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>true</isBad>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>750</min>
+					<max>800</max>
+				</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<postFactor>0.25</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+  </HediffDef>
+  
+  <AbilityDef>
+	<defName>Locust_HealingWarcall</defName>
+	<label>Rising Call</label>
+	<description>A shout that builds to a loud crescendo to command nearby Locust to fight on despite their pain, as well as miraciously healing simple injuries inflicted on them.</description>
+	<iconPath>UI/Icons/KantusHealScream</iconPath>
+	<cooldownTicksRange>5000</cooldownTicksRange>
+	<stunTargetWhileCasting>false</stunTargetWhileCasting>
+	<targetRequired>false</targetRequired>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_EffectRadius>8.9</Ability_EffectRadius>
+		</statBases>
+		<abilityClass>CVNPatronAbilities.Ability_AreaScaling</abilityClass>
+		<verbProperties>
+			<verbClass>CVNPatronAbilities.Verb_CastAbilityScalingRadius</verbClass>
+			<!-- <verbClass>Verb_CastAbility</verbClass> -->
+			<range>7.9</range>
+			<warmupTime>4.5</warmupTime>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter>Locust_Heal_Warmup</warmupEffecter>
+			<soundCast></soundCast>
+			<targetParams>
+				<canTargetSelf>true</canTargetSelf>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>true</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityEffecterOnCaster">
+				<effecterDef>AnimalWarcall_Cast</effecterDef>
+				<maintainTicks>20</maintainTicks>
+			</li>
+			<li Class="CVNPatronAbilities.CompProperties_AbilityGiveHediffFilter">
+             <hediffDefMatch>GOW_Kantus_Heal</hediffDefMatch>
+              <requiredGeneDefs>
+               <li>GOW_LocustMental</li>
+              </requiredGeneDefs>
+             <hediffDefNoMatch></hediffDefNoMatch>
+			 <isAffectCaster>false</isAffectCaster>
+             <stunDuration>0</stunDuration>
+             <initialSeverity>1</initialSeverity>
+             <chance>1</chance>
+            </li>
+		</comps>
+		<modExtensions>
+			<li Class="CVNPatronAbilities.AbilityExtension_ScalingRadius">
+				<statDef>PsychicSensitivity</statDef>
+			</li>
+		</modExtensions>
+  </AbilityDef>
+  
+  <EffecterDef>
+    <defName>Locust_Heal_Warmup</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>
+        <spawnLocType>OnSource</spawnLocType>
+        <soundDef>Shot_GOW_LocustHealScream</soundDef>
+      </li>
+    </children>
+  </EffecterDef>
+  
+  <HediffDef ParentName="DiseaseBase">
+		<defName>GOW_Kantus_Heal</defName>
+		<label>rising call</label>
+		<description>the power of the kantus is forcing wounds to heal.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>true</isBad>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>485</min>
+					<max>500</max>
+				</disappearsAfterTicks>
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="CVNPatronAbilities.HediffCompProperties_HealingOvertime">
+                <totalHealAmount>56</totalHealAmount>
+                <amountHealedPerTrigger>2</amountHealedPerTrigger>
+                <interval>10</interval>
+                <isHealingOneAtATime>false</isHealingOneAtATime>
+                <isPrioritizeWorstInjury>true</isPrioritizeWorstInjury>
+                <isHealingAllInjuryEvenly>true</isHealingAllInjuryEvenly>
+                <isRemoveOnceFullyHeal>false</isRemoveOnceFullyHeal>
+            </li>
+		</comps>
+		<stages>
+			<li>
+			 <painFactor>0.75</painFactor>
+			</li>
+		</stages>
+  </HediffDef>
+  
+  <XenotypeDef>
+    <defName>Locust_Berserker</defName>
+    <label>Berserker</label>
+    <description>A rare breed of Locust, Berserkers spend most of their lives in securely guarded holding cells deep in the Nexus, with their sole task being birthing new Locust for the Horde. It is unclear if Berserkers are naturally violent or become so through the mistreatment they receive by their own kind but what is known is that due to this extreme rage they are utterly incapable of speech or reasoning, at best barely being kept docile until they are needed. Although uncommon, the Horde has been known in times of desperation or tactical advantage to unchain a Berserker and let them loose on the surface, acting as effective terror weapons.</description>
+    <descriptionShort>Berserkers are female locusts that exist solely for one of 2 purposes. Birthing new members of The Horde, or being set loose as deadly war-beasts capable of rending entire squadrons apart.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/GOW_Berserker</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_FemaleOnly</li>
+	  <li>GOW_LocustBerserker</li>
+	  <li>GOW_LocustMental</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>Aggression_HyperAggressive</li>
+	  <li>StrongStomach</li>
+	  <li>Unstoppable</li>
+	  <li>Mood_Pessimist</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>MeleeDamage_Strong</li>
+	  <li>KillThirst</li>
+	  <li>Nearsighted</li>
+	  <li>Body_Standard</li>
+	  <li>Skin_Locust_pale</li>
+	  <li>Skin_Locust_palee</li>
+	  <li>Skin_Locust_paleee</li>
+	  <li>Skin_Locust_paleeee</li>
+    </genes>
+	<modExtensions>
+      <li Class="BigAndSmall.XenotypeExtension">
+        <setRace>GOW_Berserker</setRace>
+        <forceRace>true</forceRace>
+      </li>
+    </modExtensions>
+  </XenotypeDef>
 
 </Defs>

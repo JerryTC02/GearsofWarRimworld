@@ -48,7 +48,7 @@
     </skillGains>
     <title>Cyclops</title>
     <titleShort>Cyclops</titleShort>
-    <description>[PAWN_nameDef] has survived many battles on the surface world, and developed a tendency to loot the equipment of fallen enemy soldiers.</description>
+    <description>[PAWN_nameDef] has survived many battles on the surface, and developed a tendency to loot the equipment of fallen enemy soldiers.</description>
     <requiredWorkTags>None</requiredWorkTags>
     <spawnCategories>
       <li>LocustCyclops</li>
@@ -61,7 +61,8 @@
     <identifier>Beastrider</identifier>
     <slot>Adulthood</slot>
     <skillGains>
-      <Animals>2</Animals>
+      <Animals>3</Animals>
+      <Shooting>1</Shooting>
     </skillGains>	
     <title>Beastrider</title>
     <titleShort>Beastrider</titleShort>
@@ -173,7 +174,7 @@
       <li>LocustButcher</li>
     </spawnCategories>
     <skillGains>
-      <Melee>4</Melee>
+      <Melee>5</Melee>
       <Cooking>2</Cooking>
 	  <Animals>1</Animals>
     </skillGains>
@@ -187,6 +188,7 @@
     <skillGains>
 	  <Melee>2</Melee>
 	  <Social>2</Social>
+	  <Medicine>1</Medicine>
     </skillGains>
     <title>Kantus Acolyte</title>
     <titleShort>Acolyte</titleShort>
@@ -206,9 +208,10 @@
       <li>ManualDumb</li>
     </workDisables>
     <skillGains>
-	  <Melee>2</Melee>
+	  <Melee>3</Melee>
       <Animals>1</Animals>
-	  <Social>3</Social>
+	  <Medicine>2</Medicine>
+	  <Social>4</Social>
     </skillGains>
     <title>Kantus</title>
     <titleShort>Kantus</titleShort>

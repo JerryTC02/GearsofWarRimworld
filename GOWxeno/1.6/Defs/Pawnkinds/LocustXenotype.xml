@@ -159,7 +159,7 @@
       <li>Social</li>
 	  <li>Commoner</li>
     </disabledWorkTags>
-    <biostatMet>5</biostatMet>
+    <biostatMet>1</biostatMet>
     <biostatCpx>5</biostatCpx>
 	<forcedHeadTypes>
       <li>Female_Locust_Berserker</li>
@@ -211,6 +211,8 @@
           <shader>CutoutComplex</shader>
           <overrideDesiccated>true</overrideDesiccated>
         </bodyMaterial>
+	    <forceUnarmed>true</forceUnarmed>
+		<canWieldThings>false</canWieldThings>
 		<apparelRestrictions>
           <absolutelyNothing>true</absolutelyNothing>
         </apparelRestrictions>
@@ -220,7 +222,7 @@
       </li>
 	  <li Class="BirthOutcome.GeneExtension_BirthXenotype">
             <chanceToApply>1.0</chanceToApply>
-            <chance>0.02</chance>                
+            <chance>0.05</chance>                
             <xenotypeDefA>Locust_Berserker</xenotypeDefA>
             <isFixGenderA>True</isFixGenderA>
             <fixedGenderA>Female</fixedGenderA>
@@ -228,15 +230,15 @@
             <xenotypeSetB>
                 <li>
                     <xenotypeDef>Locust_Drone</xenotypeDef>
-                    <weight>0.65</weight>
+                    <weight>20</weight>
                 </li>
                 <li>
                     <xenotypeDef>Locust_Boomer</xenotypeDef>
-                    <weight>0.25</weight>
+                    <weight>15</weight>
                 </li>
                 <li>
                     <xenotypeDef>Locust_Kantus</xenotypeDef>
-                    <weight>0.10</weight>
+                    <weight>5</weight>
                 </li>
             </xenotypeSetB>
             <isFixGenderB>True</isFixGenderB>
@@ -685,6 +687,7 @@
 	  <li>MeleeDamage_Strong</li>
 	  <li>KillThirst</li>
 	  <li>Nearsighted</li>
+	  <li>PsychicAbility_Enhanced</li>
 	  <li>Body_Standard</li>
 	  <li>Skin_Locust_pale</li>
 	  <li>Skin_Locust_palee</li>

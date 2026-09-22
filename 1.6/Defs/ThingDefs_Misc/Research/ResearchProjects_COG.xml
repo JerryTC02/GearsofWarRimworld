@@ -17,11 +17,25 @@
    </ResearchProjectDef>
    
    <ResearchProjectDef>
+	 <defName>GOW_CogFurniturebasic</defName>
+	 <label>Coalition Traditions</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>The Coalition is known for its heavy use of millitary centric decorations in its cities, to ensure its citizens always remember the men who fell to defend them.</description>
+	 <baseCost>350</baseCost>
+	 <tab>GOW_Cog</tab>
+     <prerequisites>
+	  <li>GOW_Cogbasic</li>
+	 </prerequisites>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
 	 <defName>GOW_Cogmillitary</defName>
 	 <label>Enlistment Propaganda</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>To fight for your country is not just considered honorable, but is expected of every citizen under the Coalition. This has allowed the C.O.G millitary to have unmatched manpower and millitary budget for the production of high quality equipment.</description>
-	 <baseCost>1000</baseCost>
+	 <baseCost>1250</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
 	  <li>GOW_Cogbasic</li>
@@ -38,7 +52,7 @@
 	 <label>Emergence Day</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>Soon after Emergence Day, martial law was enacted enmasse among the Coalition and all resources were put to researching new ways to combat the Locust Threat, resulting in many inventions such as the Lancer MK2.</description>
-	 <baseCost>1250</baseCost>
+	 <baseCost>1500</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
 	  <li>GOW_Cogmillitary</li>
@@ -49,12 +63,12 @@
     <researchViewY>1.00</researchViewY>
    </ResearchProjectDef>
    
-   <!--ResearchProjectDef>
+   <ResearchProjectDef>
 	 <defName>GOW_CogLeaders</defName>
 	 <label>Council of Sovreigns</label>
 	 <techLevel>Industrial</techLevel>
-	 <description>WIP.</description>
-	 <baseCost>1250</baseCost>
+	 <description>The primary political body of the Coalition, the Council was made up of appointed delegates from the various member-states of the C.O.G. Although technically capable of electing the Chairman of the Coalition, the Council was often lacking for proper control during times of war, which on Sera? was very often.</description>
+	 <baseCost>850</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
 	  <li>GOW_Cogbasic</li>
@@ -84,7 +98,7 @@
 	 <label>Restoration Operations</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>The role that Special Operations Gears take in the Coalition has not changed following the end of the Locust Wars, with the only notable shift being the higher budgets for equipment and an increase in missions related to suppressing insurgency.</description>
-	 <baseCost>1750</baseCost>
+	 <baseCost>1000</baseCost>
 	 <tab>GOW_Cog</tab>
      <prerequisites>
 	  <li>GOW_CogSpecOps</li>
@@ -92,6 +106,6 @@
 	 <requiredResearchBuilding>GOW_COG_SimpleResearchBench</requiredResearchBuilding>
     <researchViewX>2.50</researchViewX>
     <researchViewY>4</researchViewY>
-   </ResearchProjectDef-->
+   </ResearchProjectDef>
 
 </Defs>

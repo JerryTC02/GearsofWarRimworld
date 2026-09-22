@@ -21,7 +21,7 @@
       <displayPriority>2000</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>47500</WorkToMake>
+      <WorkToMake>43750</WorkToMake>
       <Mass>5</Mass>
       <AccuracyTouch>0.40</AccuracyTouch>
       <AccuracyShort>0.55</AccuracyShort>
@@ -30,7 +30,7 @@
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>100</Steel>
+      <Steel>95</Steel>
       <ComponentIndustrial>9</ComponentIndustrial>
     </costList>
     <weaponTags>
@@ -98,14 +98,14 @@
     <equippedAngleOffset>40</equippedAngleOffset>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
-      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdronestwo</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
       <displayPriority>2001</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>52500</WorkToMake>
+      <WorkToMake>46500</WorkToMake>
       <Mass>5.5</Mass>
       <AccuracyTouch>0.45</AccuracyTouch>
       <AccuracyShort>0.63</AccuracyShort>
@@ -115,7 +115,7 @@
     </statBases>
     <costList>
       <Steel>110</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentIndustrial>9</ComponentIndustrial>
     </costList>
     <weaponTags>
 	 <li>LocustHammerburstTwo</li>

@@ -46,6 +46,10 @@
         <tradeTag>CogArmor</tradeTag>
         <countRange>2~5</countRange>
       </li>
+	  <li Class="StockGenerator_MarketValue">
+        <tradeTag>CogArmorRare</tradeTag>
+        <countRange>0~1</countRange>
+      </li>
       <!-- Implants -->
       <!-- none -->
       <!-- Buildings -->

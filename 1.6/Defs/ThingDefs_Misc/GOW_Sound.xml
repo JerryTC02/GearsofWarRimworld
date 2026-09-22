@@ -47,7 +47,7 @@
             <clipFolderPath>Weapon/Cogmk2lance</clipFolderPath>
           </li>
         </grains>      
-        <volumeRange>45.2941~45.2941</volumeRange>      
+        <volumeRange>32.2941~34.2941</volumeRange>      
         <pitchRange>1.091765~1</pitchRange>      
         <sustainLoop>False</sustainLoop>
       </li>
@@ -84,6 +84,60 @@
           </li>
         </grains>      
         <volumeRange>45.2941~45.2941</volumeRange>      
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_MK1Lancer</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Cogmk1lance</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>80.2941~82.2941</volumeRange>
+        <pitchRange>1~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_RetroLancerMiss</defName>  
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+			<clipFolderPath>Weapon/Melee/RetroLancerMeleeMiss</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>73.2941~74.2941</volumeRange>
+        <pitchRange>1.091765~1</pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Shot_GOW_RetroLancerHit</defName>
+    <context>MapOnly</context>  
+    <maxSimultaneous>5</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/Melee/RetroLancerMeleeHit</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>73.2941~74.2941</volumeRange>
         <pitchRange>1.091765~1</pitchRange>      
         <sustainLoop>False</sustainLoop>
       </li>

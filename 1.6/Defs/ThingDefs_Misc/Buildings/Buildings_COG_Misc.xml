@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <ThingDef Name="COGSteleBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>Misc</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <stuffCategories>
+      <li>Stony</li>
+	  <li>Metallic</li>
+    </stuffCategories>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>50</pathCost>
+    <rotatable>true</rotatable>
+    <castEdgeShadows>True</castEdgeShadows>
+    <researchPrerequisites>
+      <li>GOW_CogFurniturebasic</li>
+    </researchPrerequisites>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtFurniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Awful</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef ParentName="COGSteleBase">
+    <defName>GOW_COGMemorial</defName>
+    <label>Coalition Memorial</label>
+    <description>Simple stone or metal memorials dedicated to the brave Gears that fell in the line of duty.</description>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>19500</WorkToBuild>
+      <Beauty>25</Beauty>
+      <MeditationFocusStrength>0.18</MeditationFocusStrength>
+    </statBases>
+    <costStuffCount>150</costStuffCount>
+    <uiIconScale>0.8</uiIconScale>
+    <uiIconOffset>(0, 0.04)</uiIconOffset>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/RWcog/Buildings/GOW_Memorial/GOW_Memorial</texPath>
+      <drawSize>(4,4)</drawSize>
+      <drawOffset>(0,0,0.05)</drawOffset>
+      <shadowData>
+        <volume>(1.5, 0.6, 1.5)</volume>
+        <offset>(0, 0, -0.15)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.1,0.1,1.9,1.9)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Artistic</li>
+		  <li>Morbid</li>
+        </focusTypes>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Name="COGShelfBase" ParentName="FurnitureBase" Abstract="True">
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.75</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <Flammability>0.80</Flammability>
+      <Beauty>0.65</Beauty>
+    </statBases>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>2</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <paintable>true</paintable>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <staticSunShadowHeight>0.75</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <researchPrerequisites>
+      <li>GOW_CogFurniturebasic</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Styleable" />
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Name="COGWeaponStorageShelfBase" ParentName="COGShelfBase" Abstract="True">
+    <thingClass>Building_Storage</thingClass>
+    <building>
+      <storageGroupTag>Shelf</storageGroupTag>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+			<li>Foods</li>
+            <li>Manufactured</li>
+            <li>ResourcesRaw</li>
+            <li>Items</li>
+			<li>BodyParts</li>
+			<li>Apparel</li>
+			<li>Items</li>
+          </disallowedCategories>
+          <disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+            <li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+          </disallowedThingDefs>
+          <specialFiltersToDisallow>
+            <li>AllowLargeCorpses</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Preferred</priority>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="COGWeaponStorageShelfBase">
+    <defName>GOW_COGWeaponShelf</defName>
+    <label>Coalition Weapon-Rack</label>
+    <description>A simple metal rack with built in lights to store and display C.O.G weaponry. Items stored inside will never deteriorate and don't affect the beauty of their surroundings.</description>
+    <graphicData>
+      <texPath>Things/RWcog/Buildings/GOW_WeaponShelf/WeaponShelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <statBases>
+      <MaxHitPoints>175</MaxHitPoints> 
+      <Mass>9</Mass>
+      <WorkToBuild>850</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    </statBases>
+    <size>(2,1)</size>
+    <building>
+    </building>
+  </ThingDef>
+
+</Defs>

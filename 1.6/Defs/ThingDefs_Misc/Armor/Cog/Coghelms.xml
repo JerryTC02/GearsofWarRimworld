@@ -8,7 +8,7 @@
         <parent>ArmorHeadgear</parent>
     </ThingCategoryDef>
 	
-	<!--ThingDef ParentName="RWCogArmorMachineableBase">
+  <ThingDef ParentName="RWCogArmorMachineableBase">
      <defName>Apparel_GOW_Cogtag</defName>
      <label>COG Dogtags</label>
      <description>Steel plates made in the shape of a cog stamped with the name of the soldier carrying it, used as a way to identify Gears who fell in battle.\n\n"Property of the Coalition of Ordered Governments" is stamped on another part of the tag.</description>
@@ -24,13 +24,13 @@
      <graphicData>
        <texPath>Things/RWcog/Apparel/GOW_Cogtag/COGTag_item</texPath>
        <graphicClass>Graphic_Single</graphicClass>
-	   <drawSize>1.2</drawSize>
+	   <drawSize>0.8</drawSize>
      </graphicData>
     <uiIconScale>1.25</uiIconScale>
     <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <MaxHitPoints>1000</MaxHitPoints>
-      <Mass>0.10</Mass>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.02</Mass>
       <Flammability>0</Flammability>
       <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
@@ -40,43 +40,35 @@
       <EquipDelay>0.2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-	  <MentalBreakThreshold>-0.05</MentalBreakThreshold>
-	  <PainShockThreshold>0.05</PainShockThreshold>
+	  <MentalBreakThreshold>-0.02</MentalBreakThreshold>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <ShootingAccuracyPawn>0.01</ShootingAccuracyPawn>
     </equippedStatOffsets>
 	<thingCategories Inherit="False">
       <li>GOW_Category_COG_Headgear</li>
     </thingCategories>
     <costList>
-	  <Steel>5</Steel>
+	  <Steel>2</Steel>
     </costList>
     <apparel>
-		  	<drawData>
-                <dataSouth>
-                </dataSouth>
-                <dataWest>
-                </dataWest>
-                <dataEast>
-                </dataEast>
-                <dataNorth>
-                </dataNorth>
-            </drawData>
       <bodyPartGroups>
         <li>Neck</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/RWcog/Apparel/GOW_Cogtag/COGTag</wornGraphicPath>
+	  <wornGraphicPath>Things/RWcog/Apparel/GOW_Cogtag/COGTag</wornGraphicPath>
+	  <countsAsClothingForNudity>false</countsAsClothingForNudity>
 	  <tags>
         <li>COGGearTag</li>
       </tags>
       <layers>
-        <li>Overhead</li>
+        <li>GOW_Dogtag</li>
       </layers>
 	  <renderSkipFlags>
         <li>None</li>
       </renderSkipFlags>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-  </ThingDef-->
-
+  </ThingDef>
+  
   <ThingDef ParentName="RWCogArmorMachineableBase">
     <defName>Apparel_GOW_CoghelmA</defName>
     <label>COG Combat Helmet</label>
@@ -144,7 +136,74 @@
     </apparel>
   </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogArmorMachineableBase">
+    <defName>Apparel_GOW_Cogbandana</defName>
+    <label>COG Bandana</label>
+    <description>A simple cloth bandana worn by less conventional gears.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>GOW_Cogmillitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	  <displayPriority>151</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/RWcog/Apparel/GOW_CogSoldier/FenixBandana/FenixBandana_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.1</Flammability>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Insulation_Cold>5</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	  <MentalBreakThreshold>-0.02</MentalBreakThreshold>
+	  <PainShockThreshold>0.02</PainShockThreshold>
+	  <MeleeHitChance>0.10</MeleeHitChance>
+    </equippedStatOffsets>
+	<thingCategories Inherit="False">
+      <li>GOW_Category_COG_Headgear</li>
+    </thingCategories>
+    <costList>
+	  <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <apparel>
+		  	<drawData>
+                <dataSouth>
+                </dataSouth>
+                <dataWest>
+                </dataWest>
+                <dataEast>
+                </dataEast>
+                <dataNorth>
+                </dataNorth>
+            </drawData>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/RWcog/Apparel/GOW_CogSoldier/FenixBandana/FenixBandana</wornGraphicPath>
+	  <tags>
+        <li>COGGear</li>
+      </tags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+  
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_OnyxGuardhelmA</defName>
     <label>Onyx Guard Helmet</label>
     <description>Sleek black helmets worn by members of the Onyx Guard, with enhanced filtration systems and optics allowing for operation in a wider range of enviroments compared to average Gear helmets.</description>
@@ -212,9 +271,9 @@
       </layers>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-  </ThingDef-->
+  </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_NewOnyxGuardhelmA</defName>
     <label>Onyx Guard Helmet (R.E)</label>
     <description>Sleek black helmets worn by members of the Onyx Guard, with enhanced filtration systems and optics allowing for operation in a wider range of enviroments compared to average Gear helmets.\n\nDespite this variant coming from the Post Locust-War Era, the fundamental design has changed little, with the primary changes being in production quality and material budget.</description>
@@ -282,6 +341,6 @@
       </layers>
       <useDeflectMetalEffect>true</useDeflectMetalEffect>
     </apparel>
-  </ThingDef-->
+  </ThingDef>
   
 </Defs>

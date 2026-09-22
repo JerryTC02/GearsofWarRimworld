@@ -7,7 +7,7 @@
     <label>Locust Bolo-Frag</label>
     <description>A small explosive tied to the end of a long chain, capable of reaching further distances then standard grenades. This Bolo is of locust manufacture.</description>
     <recipeMaker>
-      <researchPrerequisite>GOW_Locustbasic</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
 	  <displayPriority>900</displayPriority>
     </recipeMaker>
     <tickerType>Normal</tickerType>
@@ -95,16 +95,16 @@
       <displayPriority>1001</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>6500</WorkToMake>
-      <Mass>2.5</Mass>
+      <WorkToMake>7250</WorkToMake>
+      <Mass>2.65</Mass>
       <AccuracyTouch>0.70</AccuracyTouch>
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
+      <AccuracyLong>0.35</AccuracyLong>
       <RangedWeapon_Cooldown>1.9</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>65</Steel>
+      <Steel>70</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<weaponTags>
@@ -129,7 +129,7 @@
           <li>Blunt</li>
         </capacities>
         <power>8</power>
-        <cooldownTime>1.8</cooldownTime>
+        <cooldownTime>1.85</cooldownTime>
       </li>
     </tools>
   </ThingDef>
@@ -162,14 +162,14 @@
     <uiIconScale>1.4</uiIconScale>
     <soundInteract>Interact_Autopistol</soundInteract>
     <recipeMaker>
-      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdronestwo</researchPrerequisite>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
       <displayPriority>1002</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>8500</WorkToMake>
+      <WorkToMake>8950</WorkToMake>
       <Mass>2.9</Mass>
       <AccuracyTouch>0.75</AccuracyTouch>
       <AccuracyShort>0.40</AccuracyShort>
@@ -192,7 +192,7 @@
 		<burstShotCount>8</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
         <warmupTime>0.5</warmupTime>
-        <range>21.9</range>
+        <range>22.9</range>
         <soundCast>Shot_GOW_Gorgon</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>

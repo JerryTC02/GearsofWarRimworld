@@ -7,7 +7,7 @@
 	 <label>Nexus Plate Study</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>A deep investigation on the Trinity of Worms oldest scripture, the founding beliefs of the Locust Horde.</description>
-	 <baseCost>2500</baseCost>
+	 <baseCost>750</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
 	  <li>FlakArmor</li>
@@ -22,7 +22,7 @@
 	 <label>Drones</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>The backbone of the Horde, expanding and securing the Nexus so that it may prosper.</description>
-	 <baseCost>5000</baseCost>
+	 <baseCost>1250</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
 	  <li>GOW_Locustbasic</li>
@@ -30,7 +30,22 @@
 	 </prerequisites>
 	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
     <researchViewX>1.00</researchViewX>
-    <researchViewY>2.00</researchViewY>
+    <researchViewY>1.00</researchViewY>
+   </ResearchProjectDef>
+   
+   <ResearchProjectDef>
+	 <defName>GOW_Locustdronestwo</defName>
+	 <label>Specialized Drones</label>
+	 <techLevel>Industrial</techLevel>
+	 <description>Drones are some of the most adaptable units in the Locust Horde, and much like how Gears are expected to be the best of the best among humanity, Drones grow larger and more dangerous overtime, with many going on to take specialized roles such as Grenadiers and Hunters.</description>
+	 <baseCost>1750</baseCost>
+	 <tab>GOW_Locust</tab>
+     <prerequisites>
+	  <li>GOW_Locustdrones</li>
+	 </prerequisites>
+	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
    </ResearchProjectDef>
    
    <ResearchProjectDef>
@@ -38,14 +53,14 @@
 	 <label>Boomers</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>The logistical muscle of the Horde, building the Nexus up and crushing its enemies.</description>
-	 <baseCost>2500</baseCost>
+	 <baseCost>2250</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
 	  <li>GOW_Locustdrones</li>
 	 </prerequisites>
 	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
     <researchViewX>2.00</researchViewX>
-    <researchViewY>2.00</researchViewY>
+    <researchViewY>0.00</researchViewY>
    </ResearchProjectDef>
    
    <ResearchProjectDef>
@@ -53,14 +68,15 @@
 	 <label>Kantus Priesthood</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>The spiritual leaders of the Horde, maintaining faith and inventing new ways for Nexus to prosper.</description>
-	 <baseCost>1750</baseCost>
+	 <baseCost>2250</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
-	  <li>GOW_Locustboomers</li>
+	  <li>GOW_Locustbasic</li>
+	  <li>GOW_Locustdronestwo</li>
 	 </prerequisites>
 	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
-    <researchViewX>3.00</researchViewX>
-    <researchViewY>2.00</researchViewY>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
    </ResearchProjectDef>
    
    <ResearchProjectDef>
@@ -68,13 +84,13 @@
 	 <label>Queens Guard</label>
 	 <techLevel>Industrial</techLevel>
 	 <description>The Queen produces strong drones, and leads the Horde to glory.</description>
-	 <baseCost>3500</baseCost>
+	 <baseCost>3000</baseCost>
 	 <tab>GOW_Locust</tab>
      <prerequisites>
-	  <li>GOW_Locustbasic</li>
-	  <li>GOW_Locustboomers</li>
+	  <li>GOW_Locustkantus</li>
 	 </prerequisites>
-    <researchViewX>1.00</researchViewX>
+	 <requiredResearchBuilding>GOW_Locust_SimpleResearchBench</requiredResearchBuilding>
+    <researchViewX>2.00</researchViewX>
     <researchViewY>3.00</researchViewY>
    </ResearchProjectDef>
    

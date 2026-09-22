@@ -307,7 +307,7 @@
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdronestwo</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -369,7 +369,7 @@
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdronestwo</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -428,7 +428,7 @@
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <researchPrerequisite>GOW_Locustdrones</researchPrerequisite>
+      <researchPrerequisite>GOW_Locustdronestwo</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>

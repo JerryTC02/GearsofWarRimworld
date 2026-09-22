@@ -57,7 +57,7 @@
       <wornGraphicPath>Things/RWcog/Apparel/GOW_CogSoldier/GOW_CogSoldier</wornGraphicPath>
       <layers>
         <li>Middle</li>
-		<li>Shell</li>
+	    <li>Shell</li>
       </layers>
     </apparel>
 	<modExtensions>
@@ -133,10 +133,10 @@
     </modExtensions>
   </ThingDef-->
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_OnyxGuard</defName>
     <label>Onyx Guard Armor</label>
-    <description>Black Trooper Armor worn exclusively by members of the Special Operations branch known as the Onyx Guard. Fully enclosed and made from lighter yet higher grade materials, this armor is better in every way from basic Gear equipment.</description>
+    <description>Black Trooper Armor worn exclusively by members of the Special Operations branch known as the Onyx Guard. Fully enclosed and made from lightweight highgrade materials, this armor is better in every way from basic Gear equipment.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
@@ -164,7 +164,7 @@
       <EquipDelay>5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.05</MoveSpeed>
+      <MoveSpeed>-0.07</MoveSpeed>
 	  <PainShockThreshold>0.10</PainShockThreshold>
 	  <RangedCooldownFactor>-0.1</RangedCooldownFactor>
 	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
@@ -203,12 +203,12 @@
       <maleBody>Male</maleBody>
      </li>
     </modExtensions>
-  </ThingDef-->
+  </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_OnyxGuardOfficer</defName>
-    <label>Onyx Guard Officer Armor</label>
-    <description>Modified Onyx Guard Armor that has been decorated with a large silver symbol representing the Coalition. Worn by Officers of the Onyx Guard, who unlike the typical Officers seen among the standard COG millitary, rarely receive the rank through political connections and tend to show almost fanatical dedication to achieving victory for the Coalition.</description>
+    <label>Onyx Officer Armor</label>
+    <description>Modified Onyx Guard Armor that has been decorated with a large silver C.O.G symbol. Worn by Officers of the Onyx Guard, who unlike the typical Officers seen among the standard COG millitary, rarely receive the rank through political connections and tend to show almost fanatical dedication to achieving victory for the Coalition.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
@@ -276,9 +276,9 @@
       <maleBody>Male</maleBody>
      </li>
     </modExtensions>
-  </ThingDef-->
+  </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_NewOnyxGuard</defName>
     <label>Onyx Guard Armor (R.E)</label>
     <description>Black Trooper Armor worn exclusively by members of the Special Operations branch known as the Onyx Guard. Fully enclosed and made from lighter yet higher grade materials, this armor is better in every way from basic Gear equipment.\n\nDespite this variant coming from the Post Locust-War Era, the fundamental design has changed little, with the primary changes being in production quality and material budget.</description>
@@ -309,7 +309,7 @@
       <EquipDelay>5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.05</MoveSpeed>
+      <MoveSpeed>-0.06</MoveSpeed>
 	  <PainShockThreshold>0.15</PainShockThreshold>
 	  <RangedCooldownFactor>-0.15</RangedCooldownFactor>
 	  <MentalBreakThreshold>-0.10</MentalBreakThreshold>
@@ -348,12 +348,12 @@
       <maleBody>Male</maleBody>
      </li>
     </modExtensions>
-  </ThingDef-->
+  </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_CouncilArmor</defName>
-    <label>COG Councilman Armor</label>
-    <description>A lightweight and simplified armor that appears to be somewhere between Cadet and Trooper armor, typically worn by Coalition councilmen or the children of important politicians.</description>
+    <label>COG Councillor Armor</label>
+    <description>A lightweight and simplified suit of armor that appears to be somewhere between the Cadet and Trooper model, mostly worn by Coalition councillors who are operating in dangerous areas or the children of important politicians.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
@@ -417,11 +417,11 @@
       <maleBody>Male</maleBody>
      </li>
     </modExtensions>
-  </ThingDef-->
+  </ThingDef>
   
-  <!--ThingDef ParentName="RWCogRAREArmorMachineableBase">
+  <ThingDef ParentName="RWCogRAREArmorMachineableBase">
     <defName>Apparel_GOW_Council</defName>
-    <label>COG Councilman Suit</label>
+    <label>COG Councillor Suit</label>
     <description>A fairly plain suit decorated with small golden medals, worn by high ranking politicians and the Chairman of the Coalition.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
@@ -459,7 +459,7 @@
       <li>ApparelArmor</li>
     </thingCategories>
     <costList>
-	  <Cloth>125</Cloth>
+	  <Cloth>85</Cloth>
 	  <Silver>5</Silver>
 	  <Gold>1</Gold>
     </costList>
@@ -475,7 +475,7 @@
       </tags>
       <wornGraphicPath>Things/RWcog/Apparel/GOW_PrescottUniform/PrescottUniform</wornGraphicPath>
       <layers>
-        <li>Shell</li>
+        <li>Middle</li>
       </layers>
     </apparel>
 	<modExtensions>
@@ -485,6 +485,6 @@
       <maleBody>Male</maleBody>
      </li>
     </modExtensions>
-  </ThingDef-->
+  </ThingDef>
 
 </Defs>

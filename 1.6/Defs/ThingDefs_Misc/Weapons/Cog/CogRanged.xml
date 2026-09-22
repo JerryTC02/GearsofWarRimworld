@@ -21,17 +21,17 @@
       <displayPriority>2001</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>48500</WorkToMake>
-      <Mass>5.2</Mass>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>5.8</Mass>
       <AccuracyTouch>0.55</AccuracyTouch>
       <AccuracyShort>0.55</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
       <AccuracyLong>0.25</AccuracyLong>
-      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>100</Steel>
-      <ComponentIndustrial>9</ComponentIndustrial>
+      <Steel>115</Steel>
+      <ComponentIndustrial>11</ComponentIndustrial>
     </costList>
     <weaponTags>
 	 <li>COGlancer</li>
@@ -41,7 +41,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MK2Lancer</defaultProjectile>
-        <warmupTime>1.0</warmupTime>
+        <warmupTime>1</warmupTime>
         <range>28.9</range>
         <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
@@ -56,28 +56,28 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>15</power>
+        <power>16</power>
 		<soundMeleeHit>Shot_GOW_LancerHit</soundMeleeHit>
         <soundMeleeMiss>Shot_GOW_LancerMiss</soundMeleeMiss>
 	    <extraMeleeDamages>
           <li>
             <def>Cut</def>
-            <amount>3</amount>
+            <amount>4</amount>
             <chance>1</chance>
           </li>
 		  <li>
             <def>Cut</def>
-            <amount>3</amount>
+            <amount>4</amount>
             <chance>1</chance>
           </li>
 		  <li>
             <def>Cut</def>
-            <amount>3</amount>
+            <amount>4</amount>
             <chance>1</chance>
           </li>
 		  <li>
             <def>Cut</def>
-            <amount>3</amount>
+            <amount>4</amount>
             <chance>1</chance>
           </li>
         </extraMeleeDamages>
@@ -100,16 +100,17 @@
     </projectile>
   </ThingDef>
   
-  <!--ThingDef ParentName="RWCogBaseHumanMakeableGun">
+  <ThingDef ParentName="RWCogBaseHumanMakeableGun">
     <defName>Gun_GOW_RetroLancer</defName>
     <label>MK1 Lancer Assault Rifle</label>
-    <description>The Mk I Lancer was once the standard infantry assault weapon for COG forces during the later decades of the Pendulum Wars, undergoing very little change due to its reliability. Once renowned for its ability to strike fear into UIR forces, the MK1 was phased out early into the Locust Wars in favor of its chainsaw bearing successor.</description>
+    <description>The Mk I Lancer was once the standard infantry assault weapon for COG forces during the later years of the Pendulum Wars, undergoing very little change due to its reliability. Once renowned for its ability to strike fear into UIR forces with its infamous bayonet charges, the so called "Retro Lancer" was phased out early into the Locust Wars in favor of its chainsaw bearing successor.</description>
 	<techLevel>Industrial</techLevel>
     <graphicData>
-      <texPath>Things/RWcog/Weapons/GOW_Mark1LancerAssaultRifle</texPath>
+      <texPath>Things/RWcog/Weapons/GOW_RetroLancer</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>1.1</drawSize>
+	  <drawSize>1.05</drawSize>
     </graphicData>
+    <equippedAngleOffset>45</equippedAngleOffset>
     <soundInteract>Interact_Rifle</soundInteract>
     <recipeMaker>
       <researchPrerequisite>GOW_CogWeapons</researchPrerequisite>
@@ -119,16 +120,16 @@
       <displayPriority>2000</displayPriority>
     </recipeMaker>
     <statBases>
-      <WorkToMake>40500</WorkToMake>
-      <Mass>4.7</Mass>
+      <WorkToMake>41250</WorkToMake>
+      <Mass>4.8</Mass>
       <AccuracyTouch>0.55</AccuracyTouch>
-      <AccuracyShort>0.50</AccuracyShort>
-      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
       <AccuracyLong>0.20</AccuracyLong>
-      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-      <Steel>80</Steel>
+      <Steel>75</Steel>
       <ComponentIndustrial>8</ComponentIndustrial>
     </costList>
     <weaponTags>
@@ -140,10 +141,10 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MK2Lancer</defaultProjectile>
         <warmupTime>1.0</warmupTime>
-        <range>28.9</range>
+        <range>26.9</range>
         <burstShotCount>4</burstShotCount>
-        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-        <soundCast>Bullet_MK1Lancer</soundCast>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_GOW_MK1Lancer</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -161,13 +162,16 @@
         <label>bayonet</label>
         <capacities>
           <li>Stab</li>
-          <li>edge</li>
+          <li>Cut</li>
         </capacities>
-        <power>17</power>
-        <cooldownTime>1.9</cooldownTime>
+		<armorPenetration>0.25</armorPenetration>
+        <power>19</power>
+	    <soundMeleeHit>Shot_GOW_RetroLancerHit</soundMeleeHit>
+        <soundMeleeMiss>Shot_GOW_RetroLancerMiss</soundMeleeMiss>
+        <cooldownTime>2.0</cooldownTime>
       </li>
     </tools>
-  </ThingDef-->
+  </ThingDef>
   
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_MK1Lancer</defName>
@@ -178,7 +182,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>9</damageAmountBase>
+      <damageAmountBase>13</damageAmountBase>
       <speed>65</speed>
     </projectile>
   </ThingDef>

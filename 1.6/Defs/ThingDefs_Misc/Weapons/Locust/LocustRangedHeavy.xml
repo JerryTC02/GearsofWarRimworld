@@ -46,7 +46,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Boomshot</defaultProjectile>
         <warmupTime>1.5</warmupTime>
-        <range>24.9</range>
+        <range>25.9</range>
         <soundCast>Shot_GOW_Boomshot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
 		<targetParams>

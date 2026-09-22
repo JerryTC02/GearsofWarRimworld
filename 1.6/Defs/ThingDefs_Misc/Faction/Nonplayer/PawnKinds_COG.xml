@@ -148,7 +148,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Fighter_GearGuard</defName>
     <label>Gear Caravan Guard</label>
-    <combatPower>40</combatPower>
+    <combatPower>55</combatPower>
 	<invNutrition>2</invNutrition>
 	<weaponTags>
 	  <li>COGlancer</li>
@@ -158,10 +158,12 @@
     <apparelTags>
 		<li>COGGear</li>
 		<li>IndustrialBasic</li>
+		<li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Cogsoldier</li>
 	  <li>Apparel_GOW_CoghelmA</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -219,7 +221,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Onyx_GearGuard</defName>
     <label>Onyx Caravan Guard</label>
-    <combatPower>45</combatPower>
+    <combatPower>70</combatPower>
 	<invNutrition>2</invNutrition>
 	<weaponTags>
 	  <li>COGlancer</li>
@@ -227,12 +229,14 @@
     </weaponTags>
 	<weaponMoney>500~1500</weaponMoney>
     <apparelTags>
-		<li>COGGear</li>
+		<li>COGOnyxGuard</li>
 		<li>IndustrialBasic</li>
+	    <li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
-      <li>Apparel_GOW_Cogsoldier</li>
-	  <li>Apparel_GOW_CoghelmA</li>
+      <li>Apparel_GOW_OnyxGuard</li>
+	  <li>Apparel_GOW_OnyxGuardhelmA</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -310,18 +314,19 @@
        </li>
      </subOptionsTakeAll>
    </inventoryOptions>
-    <combatPower>35</combatPower>
+    <combatPower>40</combatPower>
     <weaponTags>
       <li>COGSnub</li>
     </weaponTags>
     <weaponMoney>500~1000</weaponMoney>
     <apparelMoney>850~1250</apparelMoney>
     <apparelTags>
-		<li>COGGear</li>
+		<li>COGChairmanBattle</li>
 		<li>IndustrialBasic</li>
     </apparelTags>
 	<apparelRequired>
-      <li>Apparel_GOW_Cogsoldier</li>
+      <li>Apparel_GOW_CouncilArmor</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <techHediffsChance>0.1</techHediffsChance>
     <techHediffsMoney>500~750</techHediffsMoney>
@@ -393,8 +398,13 @@
       <li>COGSnub</li>
     </weaponTags>
     <apparelTags>
+	  <li>COGChairman</li>
       <li>IndustrialBasic</li>
     </apparelTags>
+    <apparelRequired>
+      <li>Apparel_GOW_Council</li>
+	  <li>Apparel_Pants</li>
+    </apparelRequired>
 	<invNutrition>2.25</invNutrition>
     <skills>
       <li>
@@ -507,19 +517,22 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COGC_Fighter_Gear</defName>
     <label>Gear Cadet</label>
-    <combatPower>45</combatPower>
+    <combatPower>55</combatPower>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 	<weaponTags>
 	  <li>COGlancer</li>
+	  <li>COGRetrolancer</li>
 	  <li>COGSnub</li>
     </weaponTags>
-	<weaponMoney>325~925</weaponMoney>
+	<weaponMoney>325~1325</weaponMoney>
     <apparelTags>
 		<li>COGGear</li>
 		<li>IndustrialBasic</li>
+	    <li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Cogsoldier</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -577,7 +590,7 @@
   <!--PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Sapper_Gear</defName>
     <label>Gear Sapper</label>
-    <combatPower>45</combatPower>
+    <combatPower>50</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
     </weaponTags>
@@ -585,9 +598,11 @@
     <apparelTags>
 		<li>COGGear</li>
 		<li>IndustrialBasic</li>
+	    <li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Cogsoldier</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -645,19 +660,22 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Fighter_Gear</defName>
     <label>Gear</label>
-    <combatPower>50</combatPower>
+    <combatPower>60</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
+	  <li>COGRetrolancer</li>
 	  <li>COGGnasher</li>
     </weaponTags>
-	<weaponMoney>500~1150</weaponMoney>
+	<weaponMoney>500~1350</weaponMoney>
     <apparelTags>
 		<li>COGGear</li>
 		<li>IndustrialBasic</li>
+		<li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Cogsoldier</li>
 	  <li>Apparel_GOW_CoghelmA</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -715,19 +733,21 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Onyx_Gear</defName>
     <label>Onyx Guard</label>
-    <combatPower>65</combatPower>
+    <combatPower>75</combatPower>
 	<weaponTags>
 	  <li>COGlancer</li>
 	  <li>COGGnasher</li>
     </weaponTags>
 	<weaponMoney>500~1500</weaponMoney>
     <apparelTags>
-		<li>COGGear</li>
+		<li>COGOnyxGuard</li>
 		<li>IndustrialBasic</li>
+	    <li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
-      <li>Apparel_GOW_Cogsoldier</li>
-	  <li>Apparel_GOW_CoghelmA</li>
+      <li>Apparel_GOW_OnyxGuard</li>
+	  <li>Apparel_GOW_OnyxGuardhelmA</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -785,7 +805,7 @@
   <PawnKindDef ParentName="COGfighterBase">
     <defName>GOW_COG_Sniper_Gear</defName>
     <label>Gear Sniper</label>
-    <combatPower>55</combatPower>
+    <combatPower>65</combatPower>
 	<weaponTags>
 	  <li>COGLongshot</li>
     </weaponTags>
@@ -793,10 +813,12 @@
     <apparelTags>
 		<li>COGGear</li>
 		<li>IndustrialBasic</li>
+	    <li>COGGearTag</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_GOW_Cogsoldier</li>
 	  <li>Apparel_GOW_CoghelmA</li>
+	  <li>Apparel_Pants</li>
     </apparelRequired>
     <skills>
       <li>
@@ -876,6 +898,28 @@
 	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
 	  <li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
     </disallowedMemes>
+    <disallowedPrecepts>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Prohibited</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Disapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">AnimalSlaughter_Horrible</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">FungusEating_Despised</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">NobleDespisedWeapons</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestOrHairDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestOrHairDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestHairOrFaceDisapproved</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
+    </disallowedPrecepts>
     <structureMemeWeights>
       <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
       <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
@@ -961,7 +1005,7 @@
         </disallowedStrategies>
         <options>
           <GOW_COGC_Fighter_Gear>10</GOW_COGC_Fighter_Gear>
-		  <GOW_COG_Fighter_Gear>3</GOW_COG_Fighter_Gear>
+		  <GOW_COG_Fighter_Gear>4</GOW_COG_Fighter_Gear>
         </options>
       </li>
 	  <li>
@@ -972,8 +1016,8 @@
           <li>Siege</li>
         </disallowedStrategies>
         <options>
-          <GOW_COGC_Fighter_Gear>7</GOW_COGC_Fighter_Gear>
-		  <GOW_COG_Fighter_Gear>5</GOW_COG_Fighter_Gear>
+          <GOW_COGC_Fighter_Gear>5</GOW_COGC_Fighter_Gear>
+		  <GOW_COG_Fighter_Gear>6</GOW_COG_Fighter_Gear>
         </options>
       </li>
       <li>
